@@ -1,0 +1,10 @@
+duration_seconds: 659.0
+lambda_per_day: 0.121
+beam_window_seconds: 72.0
+horn_gap_seconds: 162.0
+baseline_days: 2673.0
+followup_hours: 192.0
+realisations_per_seed: 10000
+seeds: [1977, 2022, 4242, 8675309]
+source: "Kipping & Gray 2022; parsed bundled upstream wow.f90 dates"
+status: "Restricted comparison configuration, not a validated reproduction."

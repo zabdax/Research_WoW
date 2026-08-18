@@ -1,0 +1,40 @@
+sources:
+  kipping_gray_2022:
+    citation: "Kipping & Gray (2022)"
+    source_class: peer_reviewed
+    local_asset: data/sources_cache/kipping_gray_2022.pdf
+    locator: "Abstract; Sections 2--4; bundled upstream wow.f90"
+    downstream_use: ["H5 restricted replication", "beam and horn timing constraints"]
+  mendez_2024:
+    citation: "Méndez et al. (2024)"
+    source_class: preprint
+    local_asset: data/sources_cache/mendez_2024.pdf
+    locator: "Sections V--VII; Table 5; Section VI.4"
+    downstream_use: ["H3 reference flux and cloud parameters", "bandwidth/SNR context"]
+  mendez_2025:
+    citation: "Méndez et al. (2025)"
+    source_class: preprint
+    local_asset: data/sources_cache/mendez_2025.pdf
+    locator: "Abstract"
+    downstream_use: ["frequency, flux lower bound, candidate positions"]
+  benford_2010b:
+    citation: "Benford, Benford & Benford (2010)"
+    source_class: preprint_or_archival_copy
+    local_asset: data/sources_cache/benford_2010b.pdf
+    locator: "Abstract and worked examples"
+    downstream_use: ["H4 engineering feasibility only"]
+  paris_davies_2017:
+    citation: "Paris & Davies (2017)"
+    source_class: peer_reviewed
+    local_asset: data/sources_cache/paris_davies_2017.pdf
+    locator: "Tables 6--8; p. 13"
+    downstream_use: ["H2 secondary coordinate/emission context only"]
+  naapo_rebuttal:
+    citation: "NAAPO comet rebuttal"
+    source_class: web_secondary
+    local_asset: data/sources_cache/naapo_rebuttal.htm
+    locator: "Web page"
+    downstream_use: ["H2 exploratory offset sensitivity only"]
+policy:
+  likelihood_support: "No web_secondary or preprint source may be sole support for a confirmatory likelihood term."
+  status: "Source class is distinct from extraction verification."

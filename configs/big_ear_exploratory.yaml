@@ -1,0 +1,7 @@
+calibration_status: exploratory
+ra_fwhm_seconds: 180.0
+dec_fwhm_deg: 0.5
+horn_offset_seconds: 162.0
+source: "Legacy project approximation derived from discussion of ~3-minute beam window"
+locator: "data/parameters.yaml; not an archival beam calibration"
+use_restriction: "Geometry sensitivity and visualization only; not confirmatory evidence."

@@ -1,0 +1,7 @@
+reference_flux_jy: 0.001
+reference_distance_kpc: 0.4
+observed_flux_lower_bound_jy: 250.0
+distance_min_kpc: 2.0
+distance_max_kpc: 4.9
+source: "Méndez et al. 2024 Sections VI/VI.4; Méndez et al. 2025 abstract"
+status: "Reference scaling only; not a population or event-rate prior."
