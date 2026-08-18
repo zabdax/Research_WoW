@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def geocentric_offset_report(path: Path | None = None) -> dict[str, object]:
-    source = path or ROOT / "research" / "data" / "processed" / "horizons_266p_1977_geocentric.json"
+    source = (path or ROOT / "research" / "data" / "processed" / "horizons_266p_1977_geocentric.json").resolve()
     payload = json.loads(source.read_text(encoding="utf-8"))
     record = payload["records"][0]
     candidates = {

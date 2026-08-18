@@ -1,0 +1,12 @@
+provider: NASA/JPL Horizons API
+endpoint: https://ssd.jpl.nasa.gov/api/horizons.api
+command: "90001326;"
+object_label: "335P/Gibbs (P/2008 Y2) selected JPL#39 solution"
+center: "500"
+ephem_type: OBSERVER
+start_time: "1977-08-15"
+stop_time: "1977-08-16"
+step_size: "1 h"
+quantities: "1,3,4,20,24,29"
+csv_format: true
+purpose: "Geocentric H2 geometry sensitivity only. Big Ear topocentric response requires confirmed site/beam data."

@@ -42,6 +42,13 @@ sources:
     locator: "Horizons API observer ephemeris, ICRF RA/Dec, 1977-08-15"
     downstream_use: ["H2 geocentric sensitivity only"]
     limitations: "No covariance in retrieved response; geocentric center; does not validate H2 emission or Big Ear beam intersection."
+  horizons_335p_1977:
+    citation: "NASA/JPL Horizons API, selected 335P/Gibbs JPL#39 solution"
+    source_class: authoritative_public_api
+    local_asset: research/data/raw/horizons_335p_1977_geocentric.txt
+    locator: "Horizons API observer ephemeris, ICRF RA/Dec, 1977-08-15"
+    downstream_use: ["H2 geocentric sensitivity only"]
+    limitations: "No covariance in retrieved response; geocentric center; does not validate H2 emission or Big Ear beam intersection."
 policy:
   likelihood_support: "No web_secondary or preprint source may be sole support for a confirmatory likelihood term."
   status: "Source class is distinct from extraction verification."

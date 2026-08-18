@@ -15,6 +15,21 @@ items:
     status: acquired-and-validated-for-geocentric-sensitivity-only
     limitation: "Geocentric response has no covariance and does not replace topocentric Big Ear geometry or physical emission likelihood."
     next_action: "Request/obtain confirmed Big Ear beam calibration and repeat with observer-specific location."
+  h2_335p_ephemeris:
+    question: "Was 335P/Gibbs (P/2008 Y2) geometrically consistent with either Wow! candidate direction on 1977-08-15?"
+    dependencies: ["H2 geometry likelihood"]
+    required_product: "Observer/geocentric RA, Dec, epoch, coordinate frame, object solution identity, and uncertainty status"
+    minimum_authority: "Authoritative ephemeris service with documented solution identifier"
+    route:
+      mode: automatable_public_api
+      provider: "NASA/JPL Horizons API"
+      endpoint: "https://ssd.jpl.nasa.gov/api/horizons.api"
+      query_template: "configs/acquisition/horizons_335p_1977.yaml"
+    validation: ["selected solution record captured", "SOE/EOE block present", "epoch and frame parsed", "raw response SHA-256 stored", "uncertainty status explicit"]
+    failure_condition: "No selected authoritative solution, malformed response, or incompatible coordinate metadata"
+    status: acquired-and-validated-for-geocentric-sensitivity-only
+    limitation: "Geocentric response has no covariance and does not replace topocentric Big Ear geometry or physical emission likelihood."
+    next_action: "Request/obtain confirmed Big Ear beam calibration and repeat with observer-specific location."
   big_ear_beam_calibration:
     question: "What was the 1977 dual-horn beam response, orientation, and calibration?"
     dependencies: ["H1", "H2", "H3", "H4", "Big Ear geometry"]

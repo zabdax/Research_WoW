@@ -1,0 +1,282 @@
+{
+  "schema_version": "0.1.0",
+  "authority": "NASA/JPL Horizons API",
+  "interpretation": "Geocentric geometry sensitivity only; uncertainty/covariance absent from retrieved response.",
+  "records": [
+    {
+      "epoch_utc": "1977-Aug-15 00:00",
+      "right_ascension": "18h39m40.26s",
+      "declination": "-29d38m29.4s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 01:00",
+      "right_ascension": "18h39m39.23s",
+      "declination": "-29d38m26.2s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 02:00",
+      "right_ascension": "18h39m38.19s",
+      "declination": "-29d38m23.0s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 03:00",
+      "right_ascension": "18h39m37.15s",
+      "declination": "-29d38m19.8s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 04:00",
+      "right_ascension": "18h39m36.12s",
+      "declination": "-29d38m16.6s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 05:00",
+      "right_ascension": "18h39m35.09s",
+      "declination": "-29d38m13.3s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 06:00",
+      "right_ascension": "18h39m34.06s",
+      "declination": "-29d38m10.1s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 07:00",
+      "right_ascension": "18h39m33.03s",
+      "declination": "-29d38m06.9s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 08:00",
+      "right_ascension": "18h39m32.00s",
+      "declination": "-29d38m03.7s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 09:00",
+      "right_ascension": "18h39m30.98s",
+      "declination": "-29d38m00.5s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 10:00",
+      "right_ascension": "18h39m29.95s",
+      "declination": "-29d37m57.2s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 11:00",
+      "right_ascension": "18h39m28.93s",
+      "declination": "-29d37m54.0s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 12:00",
+      "right_ascension": "18h39m27.91s",
+      "declination": "-29d37m50.8s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 13:00",
+      "right_ascension": "18h39m26.89s",
+      "declination": "-29d37m47.5s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 14:00",
+      "right_ascension": "18h39m25.88s",
+      "declination": "-29d37m44.3s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 15:00",
+      "right_ascension": "18h39m24.86s",
+      "declination": "-29d37m41.0s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 16:00",
+      "right_ascension": "18h39m23.85s",
+      "declination": "-29d37m37.8s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 17:00",
+      "right_ascension": "18h39m22.84s",
+      "declination": "-29d37m34.5s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 18:00",
+      "right_ascension": "18h39m21.83s",
+      "declination": "-29d37m31.3s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 19:00",
+      "right_ascension": "18h39m20.82s",
+      "declination": "-29d37m28.0s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 20:00",
+      "right_ascension": "18h39m19.82s",
+      "declination": "-29d37m24.8s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 21:00",
+      "right_ascension": "18h39m18.81s",
+      "declination": "-29d37m21.5s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 22:00",
+      "right_ascension": "18h39m17.81s",
+      "declination": "-29d37m18.2s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 23:00",
+      "right_ascension": "18h39m16.81s",
+      "declination": "-29d37m15.0s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    },
+    {
+      "epoch_utc": "1977-Aug-16 00:00",
+      "right_ascension": "18h39m15.81s",
+      "declination": "-29d37m11.7s",
+      "frame": "ICRF",
+      "solution_command": "90001326;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "retrieved_prior_to_import; see raw response manifest if present",
+      "raw_sha256": "9c4f0f3444427222730c1c5ccf02acdb1c822cdd61810a84ff84afaf7c131503"
+    }
+  ]
+}

@@ -13,6 +13,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default=str(ROOT / "configs" / "acquisition" / "horizons_266p_1977.yaml"))
     parser.add_argument("--raw", default=str(ROOT / "research" / "data" / "raw" / "horizons_266p_1977_geocentric.txt"))
+    parser.add_argument("--output", default=None, help="Processed JSON destination; defaults to a name derived from --raw.")
     parser.add_argument("--fetch", action="store_true")
     args = parser.parse_args()
     raw = Path(args.raw)
@@ -25,7 +26,8 @@ def main() -> None:
         config = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
         url = "retrieved_prior_to_import; see raw response manifest if present"
     records = parse_observer_ephemeris(raw, url, str(config["command"]), str(config["center"]))
-    destination = ROOT / "research" / "data" / "processed" / "horizons_266p_1977_geocentric.json"
+    destination = Path(args.output) if args.output else ROOT / "research" / "data" / "processed" / (raw.stem + ".json")
+    destination.parent.mkdir(parents=True, exist_ok=True)
     write_processed(records, destination)
     print(destination)
 
