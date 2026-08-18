@@ -1,0 +1,255 @@
+{
+  "priors": {
+    "H1": 0.1,
+    "H2": 0.02,
+    "H3": 0.4,
+    "H4": 0.15,
+    "H5": 0.33
+  },
+  "likelihoods": {
+    "H1": {
+      "hypothesis_id": "H1",
+      "hypothesis_name": "Instrumental / RFI",
+      "likelihood": 2.5e-05,
+      "components": {
+        "p_gaussian_transit_given_rfi": 0.01,
+        "p_protected_freq_given_rfi": 0.05,
+        "p_high_snr_given_rfi": 0.1,
+        "p_single_detection_given_rfi": 0.5
+      },
+      "justification": "Signal characteristics (clean Gaussian transit at protected 1420.726 MHz with 30.5\u03c3 SNR) are strongly inconsistent with typical RFI patterns. Assessed via Sheikh et al. (2021) verification framework structure.",
+      "sources": [
+        "M\u00e9ndez et al. 2025, arXiv:2508.10657",
+        "Sheikh et al. 2021, DOI:10.1038/s41550-021-01508-8"
+      ],
+      "assumptions": [
+        "ASSUMPTION: Component probabilities are agent-derived estimates, not directly from a published source. Requires human review.",
+        "ASSUMPTION: Independence of component factors assumed for multiplicative combination."
+      ]
+    },
+    "H2": {
+      "hypothesis_id": "H2",
+      "hypothesis_name": "Cometary hydrogen emission",
+      "likelihood": 7.675654321143888e-68,
+      "components": {
+        "p_geometric_in_beam": 7.6756543211438885e-62,
+        "p_1420mhz_emission_from_comet": 0.001,
+        "p_250jy_flux_from_comet": 0.001
+      },
+      "justification": "Positional mismatch (~3\u00b0 dec, ~47 min RA vs Big Ear's ~3-min beam) makes geometric probability negligible. No confirmed precedent for cometary 1420 MHz emission at relevant heliocentric distance. Treated as near-refuted validation control per AGENT_BRAIN_v2 \u00a72.2.",
+      "sources": [
+        "NAAPO Comet Hypothesis Rebuttal, naapo.org/WOWCometRebuttal.html",
+        "Paris & Davies 2017, arXiv:1706.03259"
+      ],
+      "assumptions": [
+        "ASSUMPTION: Gaussian beam approximation for positional probability. Actual beam shape may differ.",
+        "ASSUMPTION: This is a validation control \u2014 posterior should be near-zero. If not, indicates a bug (Rule 13)."
+      ]
+    },
+    "H3": {
+      "hypothesis_id": "H3",
+      "hypothesis_name": "Interstellar HI cloud / maser flare",
+      "likelihood": 0.038971785388551464,
+      "components": {
+        "p_freq_bandwidth_given_maser": 0.9,
+        "p_flux_given_dsr": 0.3,
+        "p_single_detection_given_transient": 0.5,
+        "p_mini_wow_analogs": 0.8,
+        "p_gaussian_transit_given_celestial": 0.95,
+        "rarity_penalty": 0.3798419628513787,
+        "intrinsic_likelihood": 0.10260000000000001
+      },
+      "justification": "HI maser/DSR model produces narrowband emission at exactly the hydrogen line frequency. Mini-Wow analogs provide direct supporting evidence. Flux requires favorable geometry. Rarity penalty applied via shared Benford correction.",
+      "sources": [
+        "M\u00e9ndez et al. 2024, arXiv:2408.08513",
+        "M\u00e9ndez et al. 2025, arXiv:2508.10657"
+      ],
+      "assumptions": [
+        "ASSUMPTION: Component probabilities are agent-derived from qualitative assessment of published evidence. Requires human review (PRD \u00a713, checkpoint 1).",
+        "ASSUMPTION: Mini-Wow analogs genuinely support H3 (not independently caused).",
+        "ASSUMPTION: Rarity penalty applied equally to H3/H4/H5 per Benford correction."
+      ]
+    },
+    "H4": {
+      "hypothesis_id": "H4",
+      "hypothesis_name": "Artificial interstellar power beam",
+      "likelihood": 0.01104200586008958,
+      "components": {
+        "p_bandwidth_given_beam": 0.85,
+        "p_freq_given_beam": 0.3,
+        "p_flux_given_beam": 0.2,
+        "p_single_given_sweeping": 0.6,
+        "p_gaussian_transit_given_celestial": 0.95,
+        "rarity_penalty": 0.3798419628513787,
+        "intrinsic_likelihood": 0.029070000000000002,
+        "quarantined_dwell_time_match": "NOT USED (see A-020)"
+      },
+      "justification": "Power beam physics naturally produces narrowband emission. Cost optimization favors higher frequencies than 1420 MHz, reducing likelihood. EIRP requirement is achievable but demanding. 72s duration match is QUARANTINED \u2014 it reflects Big Ear's beam transit time, not signal characteristics.",
+      "sources": [
+        "Benford et al. 2010a, arXiv:0810.3966",
+        "Benford et al. 2010b, arXiv:0810.3964",
+        "Benford 2025, centauri-dreams.org"
+      ],
+      "assumptions": [
+        "ASSUMPTION: 72s dwell time match quarantined (A-020).",
+        "ASSUMPTION: 1420 MHz Schelling point probability is agent-estimated. Requires human review.",
+        "ASSUMPTION: Rarity penalty applied equally to H3/H4/H5."
+      ]
+    },
+    "H5": {
+      "hypothesis_id": "H5",
+      "hypothesis_name": "Stochastic repeating ETI beacon",
+      "likelihood": 0.0076095,
+      "components": {
+        "kg_map_likelihood": 0.0178,
+        "p_gaussian_transit": 0.95,
+        "p_narrowband": 0.9,
+        "p_freq_schelling_point": 0.5,
+        "consistency_factor": 0.4275,
+        "rarity_penalty_applied": false,
+        "rarity_penalty_note": "K&G MAP already incorporates 192h of non-detection data. Additional rarity penalty would double-count."
+      },
+      "justification": "Validated Kipping & Gray (2022) MAP likelihood of 1.78% directly used. K&G already incorporates META + Hobart + ATA non-detection data, so no additional rarity penalty applied (would double-count). Signal characteristics (narrowband, 1420 MHz, Gaussian transit) are consistent with ETI beacon.",
+      "sources": [
+        "Kipping & Gray 2022, MNRAS 515:1122, arXiv:2206.08374"
+      ],
+      "assumptions": [
+        "ASSUMPTION: K&G MAP likelihood (1.78%) used directly. This is a MAP likelihood, NOT a posterior probability (Rule 19).",
+        "ASSUMPTION: No additional rarity penalty applied to avoid double-counting K&G's built-in non-detection evidence.",
+        "ASSUMPTION: Consistency factors are agent-estimated."
+      ]
+    }
+  },
+  "posteriors": {
+    "H1": 0.00012652686269776383,
+    "H2": 7.769411683254962e-68,
+    "H3": 0.7889564382310351,
+    "H4": 0.08382662156204747,
+    "H5": 0.12709041334421967
+  },
+  "bayes_factors": {
+    "H1_vs_H2": {
+      "numerator_id": "H1",
+      "denominator_id": "H2",
+      "value": 3.257051314978226e+62,
+      "log10_value": 62.5128246009463,
+      "interpretation": "Decisive"
+    },
+    "H1_vs_H3": {
+      "numerator_id": "H1",
+      "denominator_id": "H3",
+      "value": 0.0006414897277799369,
+      "log10_value": -3.192810293621412,
+      "interpretation": "Not worth more than a bare mention"
+    },
+    "H1_vs_H4": {
+      "numerator_id": "H1",
+      "denominator_id": "H4",
+      "value": 0.0022640813921644834,
+      "log10_value": -2.6451079646160425,
+      "interpretation": "Not worth more than a bare mention"
+    },
+    "H1_vs_H5": {
+      "numerator_id": "H1",
+      "denominator_id": "H5",
+      "value": 0.0032853669754911627,
+      "log10_value": -2.4834161127010477,
+      "interpretation": "Not worth more than a bare mention"
+    },
+    "H2_vs_H3": {
+      "numerator_id": "H2",
+      "denominator_id": "H3",
+      "value": 1.9695413604013956e-66,
+      "log10_value": -65.70563489456772,
+      "interpretation": "Not worth more than a bare mention"
+    },
+    "H2_vs_H4": {
+      "numerator_id": "H2",
+      "denominator_id": "H4",
+      "value": 6.951322448475514e-66,
+      "log10_value": -65.15793256556235,
+      "interpretation": "Not worth more than a bare mention"
+    },
+    "H2_vs_H5": {
+      "numerator_id": "H2",
+      "denominator_id": "H5",
+      "value": 1.0086936488788865e-65,
+      "log10_value": -64.99624071364735,
+      "interpretation": "Not worth more than a bare mention"
+    },
+    "H3_vs_H4": {
+      "numerator_id": "H3",
+      "denominator_id": "H4",
+      "value": 3.5294117647058827,
+      "log10_value": 0.5477023290053697,
+      "interpretation": "Substantial"
+    },
+    "H3_vs_H5": {
+      "numerator_id": "H3",
+      "denominator_id": "H5",
+      "value": 5.12146466765904,
+      "log10_value": 0.7093941809203643,
+      "interpretation": "Substantial"
+    },
+    "H4_vs_H5": {
+      "numerator_id": "H4",
+      "denominator_id": "H5",
+      "value": 1.4510816558367279,
+      "log10_value": 0.16169185191499466,
+      "interpretation": "Not worth more than a bare mention"
+    }
+  },
+  "ranking": [
+    [
+      "H3",
+      0.7889564382310351
+    ],
+    [
+      "H5",
+      0.12709041334421967
+    ],
+    [
+      "H4",
+      0.08382662156204747
+    ],
+    [
+      "H1",
+      0.00012652686269776383
+    ],
+    [
+      "H2",
+      7.769411683254962e-68
+    ]
+  ],
+  "shared_rarity_parameter": {
+    "penalty_factor": 0.3798419628513787,
+    "lambda_map_per_day": 0.121,
+    "total_followup_hours": 192.0,
+    "applies_to": [
+      "H3",
+      "H4",
+      "H5"
+    ],
+    "does_not_apply_to": [
+      "H1",
+      "H2"
+    ],
+    "justification": "Non-detection data constrains the event rate (rarity) but does not discriminate between natural (H3) and artificial (H4, H5) explanations. Per Benford correction (AGENT_BRAIN_v2 \u00a72.4).",
+    "source": "Kipping & Gray 2022; Benford correction principle"
+  },
+  "metadata": {
+    "timestamp": "2026-08-18T18:43:04.404429Z",
+    "random_seed": 42,
+    "sanity_checks": {
+      "h2_lowest": true,
+      "posteriors_sum_to_1": true,
+      "bayes_factor_consistency": true
+    },
+    "claim_tier": "Agent-derived computation",
+    "notes": [
+      "All component probabilities are agent-derived estimates requiring human review (PRD \u00a713).",
+      "Results are prior-sensitive \u2014 see sensitivity analysis.",
+      "This is a probabilistic comparison, never a verdict (AGENT_BRAIN_v2 \u00a74, Rule 18)."
+    ]
+  }
+}

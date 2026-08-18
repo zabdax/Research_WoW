@@ -1,0 +1,809 @@
+# =============================================================================
+# parameters.yaml — Module A Output
+# Wow! Signal Multi-Hypothesis Bayesian Assessment
+# =============================================================================
+# Every field has: value, unit, uncertainty (if any), source (citation key),
+# source_location (page/section/equation), status (VERIFIED / UNVERIFIED /
+# UNVERIFIED-PRIMARY), and notes (caveats).
+#
+# STATUS KEY:
+#   VERIFIED             = figure confirmed against fetched primary source text
+#   UNVERIFIED-PRIMARY   = secondary confirmation exists but primary paper not
+#                          accessible (e.g., paywall)
+#   UNVERIFIED           = figure could not be traced to any fetched source
+#   PARTIAL              = abstract-level confirmation only; full paper body
+#                          needed for sub-parameters
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# 1. SIGNAL PROPERTIES — The Wow! Signal itself
+# ---------------------------------------------------------------------------
+signal_properties:
+  detection_date:
+    value: "1977-08-15"
+    source: "Ehman 30th Anniversary Report"
+    source_location: "bigear.org/Wow30th/wow30th.htm"
+    status: "VERIFIED"
+
+  telescope:
+    value: "Big Ear (Ohio State University)"
+    notes: "Fixed meridian-transit instrument; two feed horns combined into single data stream"
+    source: "Ehman 30th Anniversary Report"
+    source_location: "bigear.org/Wow30th/wow30th.htm"
+    status: "VERIFIED"
+
+  frequency:
+    value: 1420.726
+    unit: "MHz"
+    uncertainty: 0.005
+    uncertainty_type: "symmetric"
+    source: "Mendez et al. 2025"
+    source_location: "arXiv:2508.10657, abstract"
+    status: "VERIFIED"
+    notes: "Revised value — supersedes older ~1420.4 MHz figure commonly cited pre-2025"
+
+  peak_flux_density:
+    value: ">250"
+    unit: "Jy"
+    uncertainty: null
+    uncertainty_type: "lower_bound"
+    source: "Mendez et al. 2025"
+    source_location: "arXiv:2508.10657, abstract"
+    status: "VERIFIED"
+    notes: "Paper states 'exceeding 250 Jy' — a lower bound, not an approximation"
+
+  peak_flux_density_pre2025:
+    value: "54-212"
+    unit: "Jy"
+    source: "Mendez et al. 2024"
+    source_location: "arXiv:2408.08513, Section VI.1, Table 1"
+    status: "VERIFIED"
+    notes: "Range from Ohio SETI recordings; superseded by 2025 revision but useful for validation"
+
+  peak_snr:
+    value: 30.5
+    uncertainty: 0.5
+    uncertainty_type: "symmetric"
+    unit: "sigma"
+    source: "Mendez et al. 2024"
+    source_location: "arXiv:2408.08513, Section II"
+    status: "VERIFIED"
+    notes: "Character 'U' = 30.5 ± 0.5 times background noise"
+
+  signal_duration:
+    value: 72
+    unit: "seconds"
+    source: "Kipping & Gray 2022"
+    source_location: "arXiv:2206.08374, abstract"
+    status: "VERIFIED"
+    notes: "Duration of a single beam sweep"
+
+  two_horn_turnon_window:
+    value: "~3"
+    unit: "minutes"
+    source: "Kipping & Gray 2022"
+    source_location: "arXiv:2206.08374, abstract"
+    status: "VERIFIED"
+    notes: "Time difference between dual antennae; signal turned on/off within this window"
+
+  printout_sequence:
+    value: "6EQUJ5"
+    source: "Ehman 30th Anniversary Report"
+    source_location: "bigear.org/Wow30th/wow30th.htm"
+    status: "VERIFIED"
+
+  sky_position_candidate_1:
+    ra: "19h25m02s"
+    ra_uncertainty: "3s"
+    dec: "-26d57m"
+    dec_uncertainty: "20arcmin"
+    epoch: "J2000"
+    source: "Mendez et al. 2025"
+    source_location: "arXiv:2508.10657, abstract"
+    status: "VERIFIED"
+
+  sky_position_candidate_2:
+    ra: "19h27m55s"
+    ra_uncertainty: "3s"
+    dec: "-26d57m"
+    dec_uncertainty: "20arcmin"
+    epoch: "J2000"
+    source: "Mendez et al. 2025"
+    source_location: "arXiv:2508.10657, abstract"
+    status: "VERIFIED"
+
+  bandwidth:
+    value: "<10"
+    unit: "kHz"
+    source: "Mendez et al. 2024"
+    source_location: "arXiv:2408.08513, abstract"
+    status: "VERIFIED"
+    notes: "Also confirmed in Benford 2025 blog; actual bandwidth could be smaller"
+
+# ---------------------------------------------------------------------------
+# 2. HYPOTHESES — Parameters specific to each hypothesis
+# ---------------------------------------------------------------------------
+hypotheses:
+
+  # --- H1: Instrumental / RFI ---
+  H1_instrumental:
+    description: "Signal was an artifact of telescope, electronics, or terrestrial interference"
+    key_evidence_against:
+      value: "Clean Gaussian rise/fall profile inconsistent with instrumental/software error"
+      source: "Mendez et al. 2025"
+      source_location: "arXiv:2508.10657, abstract"
+      status: "VERIFIED"
+      notes: "Exact wording should be re-checked in full PDF body for manuscript quoting"
+    blc1_analog:
+      description: "BLC1 provides a structured framework for evaluating instrumental/RFI hypotheses"
+      verification_framework_steps: 10
+      source: "Sheikh et al. 2021"
+      source_location: "DOI:10.1038/s41550-021-01508-8"
+      status: "VERIFIED"
+      blc1_frequency:
+        value: 982.002
+        unit: "MHz"
+        source: "Sheikh et al. 2021"
+        source_location: "DOI:10.1038/s41550-021-01508-8"
+        status: "VERIFIED"
+      blc1_determination: "Electronically drifting intermodulation product of local terrestrial interferers"
+
+  # --- H2: Cometary hydrogen emission ---
+  H2_cometary:
+    description: "Comets 266P/Christensen or P/2008 Y2 Gibbs emitted at 1420 MHz while passing through beam"
+    status_assessment: "near-refuted validation control"
+    positional_mismatch:
+      declination_offset:
+        value: "~3"
+        unit: "degrees"
+        source: "NAAPO Comet Hypothesis Rebuttal"
+        source_location: "naapo.org/WOWCometRebuttal.html"
+        status: "VERIFIED"
+      ra_offset:
+        value: "~47"
+        unit: "minutes"
+        source: "NAAPO Comet Hypothesis Rebuttal"
+        source_location: "naapo.org/WOWCometRebuttal.html"
+        status: "VERIFIED"
+      big_ear_beam_window:
+        value: "~3"
+        unit: "minutes"
+        source: "NAAPO Comet Hypothesis Rebuttal"
+        source_location: "naapo.org/WOWCometRebuttal.html"
+        status: "VERIFIED"
+    paris_davies_detection:
+      comet: "266P/Christensen"
+      detected_frequency:
+        value: 1420.25
+        unit: "MHz"
+        source: "Paris & Davies 2017"
+        source_location: "arXiv:1706.03259, abstract and p.9"
+        status: "VERIFIED"
+        notes: "Close to but not identical to Wow!'s 1420.726 MHz"
+      telescope: "10-meter dish, Site-B Observatory, Wesley Chapel FL"
+      telescope_sensitivity_jy: null
+      telescope_sensitivity_notes: "No Jy flux calibration; measurements in raw voltage (V) and dB only"
+      observation_period: "2016-11-27 to 2017-02-24"
+      total_observations: 200
+      detected_snr:
+        value: 4.76
+        unit: "sigma"
+        source: "Paris & Davies 2017"
+        source_location: "arXiv:1706.03259, p.13"
+        status: "VERIFIED"
+      wow_snr_comparison:
+        value: 30.76
+        unit: "sigma"
+        source: "Paris & Davies 2017"
+        source_location: "arXiv:1706.03259, p.13"
+        status: "VERIFIED"
+      heliocentric_distance: null
+      heliocentric_distance_notes: "NOT reported in paper"
+      comet_positions:
+        - date: "2017-01-20"
+          ra: "19h19m44.21s"
+          dec: "-25d00m23.1s"
+        - date: "2017-01-26"
+          ra: "19h25m54.97s"
+          dec: "-24d48m54.9s"
+        - date: "2017-01-28"
+          ra: "19h28m01.32s"
+          dec: "-24d44m51.4s"
+      source_for_positions: "Paris & Davies 2017"
+      positions_source_location: "arXiv:1706.03259, Tables 6-8, p.11"
+      positions_status: "VERIFIED"
+
+  # --- H3: Interstellar hydrogen cloud / stimulated maser flare ---
+  H3_maser:
+    description: "Cold HI cloud transiently brightened by magnetar/SGR, producing stimulated emission"
+    flux_exceeding:
+      value: ">250"
+      unit: "Jy"
+      source: "Mendez et al. 2025"
+      source_location: "arXiv:2508.10657, abstract"
+      status: "VERIFIED"
+    frequency:
+      value: 1420.726
+      uncertainty: 0.005
+      unit: "MHz"
+      source: "Mendez et al. 2025"
+      source_location: "arXiv:2508.10657, abstract"
+      status: "VERIFIED"
+    mini_wow_events:
+      count: 4
+      count_notes: "4 main signals in Teegarden's Star field; additional clouds in SGR 1935+2154 and Void fields"
+      source: "Mendez et al. 2024"
+      source_location: "arXiv:2408.08513, Section V"
+      status: "VERIFIED"
+      relative_intensity: "two orders of magnitude weaker than Wow!"
+      bandwidth:
+        value: "<=10"
+        unit: "kHz"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, abstract"
+        status: "VERIFIED"
+        notes: "May be artifact of frequency resolution; actual bandwidth could be smaller or slightly larger"
+      flux_density_jy:
+        values: [2.077, 0.387, 0.501, 0.526]
+        uncertainties: [0.242, 0.024, 0.028, 0.026]
+        unit: "Jy"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Table 5"
+        status: "VERIFIED"
+        notes: "Values from Table 5 for clouds A, B, C, D respectively (originally reported in mJy: 2077, 387, 501, 526). This confirms they are ~2 orders of magnitude weaker than the ~50-250 Jy Wow! signal."
+      declination_all:
+        value: "+16d53m00.9s"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section V, note to Table 5"
+        status: "VERIFIED"
+      observation_period: "February to May 2020"
+      telescope: "Arecibo 305m"
+      spectrometer: "Mock Spectrometer, L-band, full Stokes, 100ms integration, 10 kHz channels, 8192 channels/receiver"
+    dsr_model:
+      description: "Dicke Superradiance emission model"
+      cloud_length:
+        value: 2.0e11
+        unit: "m"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section VI.4"
+        status: "VERIFIED"
+      cloud_diameter:
+        value: 1.2e5
+        unit: "m"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section VI.4"
+        status: "VERIFIED"
+      number_density:
+        value: 10
+        unit: "cm^-3"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section VI.4"
+        status: "VERIFIED"
+      inversion_factor:
+        value: 0.01
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section VI.4"
+        status: "VERIFIED"
+      T_R:
+        value: "~5"
+        unit: "s"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section VI.4"
+        status: "VERIFIED"
+      tau_E:
+        value: 11
+        unit: "minutes"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section VI.4"
+        status: "VERIFIED"
+      flux_at_0_4kpc:
+        value: "~1"
+        unit: "mJy"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section VI.4"
+        status: "VERIFIED"
+    source_distance_constraints:
+      kinematic_max:
+        value: 4.9
+        uncertainty: 1.8
+        unit: "kpc"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section VI"
+        status: "VERIFIED"
+      kinematic_min:
+        value: 2
+        unit: "kpc"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section VI"
+        status: "VERIFIED"
+      scale_height_max:
+        value: "0.5-1.2"
+        unit: "kpc"
+        source: "Mendez et al. 2024"
+        source_location: "arXiv:2408.08513, Section VI"
+        status: "VERIFIED"
+    kinetic_temperature_constraint:
+      value: "<=2.2"
+      unit: "K"
+      source: "Mendez et al. 2024"
+      source_location: "arXiv:2408.08513, Section VI"
+      status: "VERIFIED"
+      notes: "For emission with bandwidth <=10 kHz"
+    magnetar_mechanisms:
+      candidate_magnetars:
+        - "SGR 1806-20"
+        - "SGR 1900+14"
+        - "SGR J1745-2900"
+      magnetar_beam_width: "2-6 degrees (theoretical)"
+      signal_delay_range: "seconds to minutes"
+      source: "Mendez et al. 2024"
+      source_location: "arXiv:2408.08513, Section VII"
+      status: "VERIFIED"
+
+  # --- H4: Artificial interstellar power beam (leakage) ---
+  H4_power_beam:
+    description: "Sidelobe leakage from an alien directed-energy beaming system"
+    eirp_requirement_for_1000ly:
+      value: ">1e17"
+      unit: "W"
+      source: "Benford, Benford & Benford 2010b"
+      source_location: "arXiv:0810.3964, p.3"
+      status: "VERIFIED"
+      notes: "Paper states 'METI ranges > 1000 light years require an Effective Isotropic Radiated Power (EIRP) >10^17 W'"
+    emitted_power_baseline:
+      value: ">1"
+      unit: "GW"
+      source: "Benford, Benford & Benford 2010b"
+      source_location: "arXiv:0810.3964, abstract"
+      status: "VERIFIED"
+      notes: "Illustrative baseline; abstract states 'emitted powers are >1 GW'"
+    antenna_area_baseline:
+      value: ">1"
+      unit: "km^2"
+      source: "Benford, Benford & Benford 2010b"
+      source_location: "arXiv:0810.3964, abstract"
+      status: "VERIFIED"
+      notes: "Illustrative baseline; abstract states 'with antenna areas > km^2'"
+    cost_optimization_rule:
+      description: "For linear cost dependence, minimum capital cost occurs when cost is equally divided between antenna gain and radiated power"
+      source: "Benford, Benford & Benford 2010b"
+      source_location: "arXiv:0810.3964, abstract"
+      status: "VERIFIED"
+    preferred_frequency:
+      value: "~10"
+      unit: "GHz"
+      source: "Benford, Benford & Benford 2010b"
+      source_location: "arXiv:0810.3964, abstract"
+      status: "VERIFIED"
+      notes: "Cost optimization favors higher microwave frequencies; Wow! at 1.42 GHz is lower than this optimum"
+    bandwidth_argument:
+      description: "Narrow bandwidth (<10 kHz) is physics-forced by high-gain amplifier gain-bandwidth product (MOPA configuration), not a free design choice"
+      source: "Benford 2025"
+      source_location: "centauri-dreams.org/2025/09/22/beaming-and-bandwidth-a-new-note-on-the-wow-signal/"
+      status: "VERIFIED"
+    cost_optimization_equations:
+      description: "Capital cost model for interstellar beacon systems"
+      total_cost_formula: "C_c = k_A * A^alpha + k_S * P_t^beta"
+      equal_cost_split_rule: "For linear scaling (alpha=beta=1), minimum cost when C_A = C_S = C_c/2"
+      optimal_power_formula: "P_opt = sqrt(k_A * lambda^2 * EIRP / (4*pi*eta*k_S))"
+      optimal_area_formula: "A_opt = sqrt(k_S * lambda^2 * EIRP / (4*pi*eta*k_A))"
+      minimum_cost_formula: "C_opt = 2 * sqrt(k_A * k_S * lambda^2 * EIRP / (4*pi*eta))"
+      cost_scaling_with_frequency: "C_opt proportional to 1/nu — higher frequency = cheaper"
+      source: "Benford, Benford & Benford 2010b"
+      source_location: "arXiv:0810.3964"
+      status: "VERIFIED"
+    cost_parameters_empirical:
+      transmitter_cost_per_watt:
+        value: "1-3"
+        typical: 2
+        unit: "$/W"
+      antenna_cost_per_m2:
+        value: "500-2000"
+        typical: 1000
+        unit: "$/m^2"
+      scaling_exponents:
+        alpha: 1.0
+        beta: "0.7-1.0"
+        notes: "Modular phased array architecture eliminates exponential single-dish structural costs"
+      source: "Benford, Benford & Benford 2010b"
+      source_location: "arXiv:0810.3964"
+      status: "VERIFIED"
+    worked_example_L_band:
+      description: "Canonical beacon at 1.420 GHz with EIRP=10^17 W"
+      eirp: 1.0e17
+      frequency: 1.420  # GHz
+      optimal_power:
+        value: 1.88
+        unit: "GW"
+      optimal_antenna_area:
+        value: 3.76
+        unit: "km^2"
+      effective_diameter:
+        value: "~2.19"
+        unit: "km"
+      antenna_gain_dBi: 77.3
+      total_capital_cost:
+        value: 7.52
+        unit: "billion USD"
+      detection_range: "1-10 kpc (3,260-32,600 ly)"
+      source: "Benford, Benford & Benford 2010b"
+      source_location: "arXiv:0810.3964"
+      status: "VERIFIED"
+    worked_example_X_band:
+      description: "Cost-optimized beacon at 10 GHz with EIRP=10^17 W"
+      eirp: 1.0e17
+      frequency: 10.0  # GHz
+      optimal_power:
+        value: 0.27
+        unit: "GW"
+      optimal_antenna_area:
+        value: 0.54
+        unit: "km^2"
+      total_capital_cost:
+        value: 1.07
+        unit: "billion USD"
+      source: "Benford, Benford & Benford 2010b"
+      source_location: "arXiv:0810.3964"
+      status: "VERIFIED"
+    beam_dwell_time:
+      description: "Duration a target remains in the sweeping searchlight beam"
+      beam_width_formula: "theta_b ~ lambda / D radians"
+      typical_dwell_range: "10-100 seconds"
+      duty_cycle: "1e-4 to 1e-7"
+      revisit_time: "days to years"
+      source: "Benford, Benford & Benford 2010b"
+      source_location: "arXiv:0810.3964"
+      status: "VERIFIED"
+
+  # --- H5: Stochastic repeating ETI beacon ---
+  H5_stochastic_beacon:
+    description: "Intermittent, non-periodic alien beacon caught once by Big Ear"
+    initial_map_likelihood:
+      value: 0.323
+      unit: "dimensionless"
+      source: "Kipping & Gray 2022"
+      source_location: "arXiv:2206.08374, abstract"
+      status: "VERIFIED"
+      notes: "MAP likelihood, NOT a full Bayesian posterior — maintain this distinction per AGENT_BRAIN_v2 Rule 19"
+    post_nondetection_map_likelihood:
+      value: 0.0178
+      unit: "dimensionless"
+      source: "Kipping & Gray 2022"
+      source_location: "arXiv:2206.08374, abstract"
+      status: "VERIFIED"
+      notes: "After incorporating 192 hours of META + Hobart + ATA observations"
+    tension_level:
+      value: 2.4
+      unit: "sigma"
+      source: "Kipping & Gray 2022"
+      source_location: "arXiv:2206.08374, abstract"
+      status: "VERIFIED"
+    signal_duration_credible_interval:
+      lower: 72
+      upper_value: 77
+      upper_unit: "minutes"
+      lower_unit: "seconds"
+      confidence: "2-sigma"
+      source: "Kipping & Gray 2022"
+      source_location: "arXiv:2206.08374, abstract"
+      status: "VERIFIED"
+    repeat_rate_credible_interval:
+      lower: 0.043
+      upper: 59.8
+      unit: "per day"
+      confidence: "2-sigma"
+      source: "Kipping & Gray 2022"
+      source_location: "arXiv:2206.08374, abstract"
+      status: "VERIFIED"
+    additional_obs_for_3sigma:
+      value: 62
+      unit: "days"
+      source: "Kipping & Gray 2022"
+      source_location: "arXiv:2206.08374, abstract"
+      status: "VERIFIED"
+    campaigns_used_by_kipping_gray:
+      - "META (Horowitz et al. 1986)"
+      - "Hobart (Gray & Ellingsen 2002)"
+      - "ATA (Harp et al. 2020)"
+    total_followup_hours: 192
+
+# ---------------------------------------------------------------------------
+# 3. NON-DETECTION CAMPAIGNS — Shared evidence (Benford correction §2.4)
+# ---------------------------------------------------------------------------
+non_detection_campaigns:
+
+  gray_marvel_2001_vla:
+    telescope: "Very Large Array (VLA)"
+    obs_time:
+      value: "~1"
+      unit: "hours"
+      notes: "5-22 minutes per field"
+    bandwidth:
+      value: 1.5
+      unit: "MHz"
+    channel_resolution:
+      values: [6.1, 12.2]
+      unit: "kHz"
+    sensitivity:
+      flux_limit:
+        value: 20
+        unit: "mJy"
+        notes: ">100x OSU sensitivity; for persistent/steady sources"
+    fov:
+      value: "~0.5"
+      unit: "degrees"
+    target: "OSU nominal coordinate error boxes"
+    result: "No narrow-bandwidth point sources; rules out continuous source brightening by factor <~100"
+    source: "Gray & Marvel 2001"
+    source_location: "DOI:10.1086/318272"
+    status: "VERIFIED"
+
+  gray_ellingsen_2002_hobart:
+    telescope: "University of Tasmania Hobart 26m (Mount Pleasant Observatory)"
+    obs_time:
+      value: "~14"
+      unit: "hours"
+      notes: "Continuously, on multiple days"
+    bandwidth:
+      value: 2.5
+      unit: "MHz"
+    channel_resolution:
+      value: 4.9
+      unit: "kHz"
+    sensitivity:
+      rms_noise:
+        value: 3
+        unit: "Jy"
+      detection_threshold:
+        value: 5.9
+        unit: "sigma"
+      flux_limit:
+        value: "~18"
+        unit: "Jy"
+    fov:
+      value: "~0.5"
+      unit: "degrees"
+    target: "Wow locale, tracking apparent source positions"
+    result: "Rules out periodic source repeating <=14 hr at >=18 Jy"
+    source: "Gray & Ellingsen 2002"
+    source_location: "DOI:10.1086/342646"
+    status: "VERIFIED"
+
+  harp_2020_ata:
+    telescope: "Allen Telescope Array (ATA), 42 dishes (~15 used)"
+    obs_time:
+      value: "~100"
+      unit: "hours"
+      notes: "Episodic over several years; never >3 hr/day"
+    bandwidth:
+      value: 10.2
+      unit: "MHz"
+      notes: "824 channels x 12.8 kHz"
+    channel_resolution:
+      value: 12.8
+      unit: "kHz"
+    sensitivity:
+      rms_1min:
+        value: "~1.25"
+        unit: "Jy"
+      rms_3hr:
+        value: "~0.16"
+        unit: "Jy"
+      detection_threshold:
+        value: 8
+        unit: "sigma"
+    fov:
+      value: 2.5
+      unit: "degrees FWHM"
+      notes: "~5 deg^2, covers both OSU positions simultaneously"
+    pointing_center:
+      ra: "19h27m00s"
+      dec: "-27d00m"
+      epoch: "J2000"
+    result: "99% of repetition rates 0-40 hr would have been detected; one 26-sigma transient identified as satellite RFI"
+    periodic_detection_completeness:
+      P_le_40hr: 0.99
+      P_48hr: "~0.80"
+      P_96hr: "~0.40"
+    source: "Harp et al. 2020"
+    source_location: "DOI:10.3847/1538-3881/aba58f"
+    status: "VERIFIED"
+
+  horowitz_1986_meta:
+    telescope: "Project META (Megachannel Extra-Terrestrial Assay)"
+    full_citation: "Horowitz et al. 1986, Icarus 67:525-539"
+    obs_time: null
+    obs_time_notes: "Paper behind Elsevier paywall; Kipping & Gray cite 192 hr total for META+Hobart+ATA combined"
+    source: "Horowitz et al. 1986"
+    source_location: "Icarus 67:525"
+    status: "UNVERIFIED-PRIMARY"
+    notes: "No free online copy found. Kipping & Gray (2022) incorporate META data into their 192-hr pooled non-detection; their citation of META is acceptable secondary confirmation per human decision."
+
+  perez_2022_gbt_ata:
+    telescope_1: "Robert C. Byrd Green Bank Telescope (GBT)"
+    telescope_2: "Allen Telescope Array (ATA), 20 antennas, coherent beamformer"
+    observation_date: "2022-05-21"
+    simultaneous_overlap:
+      value: 580
+      unit: "seconds"
+    target:
+      name: "2MASS 19281982-2640123"
+      ra: "19h28m19.8s"
+      dec: "-26d40m12.6s"
+      epoch: "J2000"
+      distance:
+        value: 1788
+        uncertainty_plus: 19
+        uncertainty_minus: 19
+        unit: "ly"
+        source: "Gaia DR3"
+      stellar_params:
+        T_eff: 5783  # K
+        radius: 0.9965662  # R_sun
+        luminosity: 1.0007366  # L_sun
+        source: "Gaia DR2 via Caballero 2022"
+    frequency_range:
+      gbt: "0.94-2.06 GHz"
+      ata: "1.064-1.736 GHz"
+    spectral_resolution:
+      gbt: "2.79 Hz"
+      ata: "1.91 Hz"
+    sensitivity:
+      gbt_tsys:
+        value: 16.9
+        unit: "K"
+      gbt_sefd:
+        value: 8.2
+        unit: "Jy"
+      ata_tsys:
+        value: 51
+        unit: "K"
+      ata_sefd:
+        value: 335.1
+        unit: "Jy"
+    flux_limits_10sigma:
+      gbt:
+        value: "5.6-146.3"
+        unit: "Jy"
+        notes: "Range depends on drift rate"
+      ata:
+        value: "189.1-415.7"
+        unit: "Jy"
+    eirp_limits_10sigma:
+      gbt:
+        value: "2.01e14-5.261e15"
+        unit: "W"
+      ata:
+        value: "6.8e15-1.485e16"
+        unit: "W"
+    result: "No technosignature candidates detected. GBT: 507 candidates, all in OFF observations. ATA: ~9000 events, all in both beams (local RFI)."
+    notes: "First targeted (non-blind) search of the Wow! Signal source region"
+    source: "Perez et al. 2022"
+    source_location: "DOI:10.3847/2515-5172/ac9408"
+    status: "VERIFIED"
+
+# ---------------------------------------------------------------------------
+# 4. METHODOLOGICAL FRAMEWORK
+# ---------------------------------------------------------------------------
+methodological_framework:
+
+  lingam_posterior_equation:
+    equation: "P(T|D,C) = P(T|C) * xi / (1 + P(T|C) * (xi - 1))"
+    equation_number: "Eq. 6"
+    source: "Lingam et al. 2023"
+    source_location: "ApJ 943:27, DOI:10.3847/1538-4357/acaca0, Equation 6"
+    status: "VERIFIED"
+    notes: "Closed-form expression; no MCMC needed for base calculation"
+
+  xi_definition:
+    equation: "xi = P(D|C,T) / P(D|C,T_bar)"
+    equation_number: "Eq. 5"
+    source: "Lingam et al. 2023"
+    source_location: "ApJ 943:27, Equation 5"
+    status: "VERIFIED"
+    notes: "xi >> 1 means false positives negligible; xi << 1 means false positives dominate"
+
+  reference_xi_values:
+    em_signals:
+      value: "~1e4"
+      notes: "Up to xi -> infinity for optical pulses"
+    no2_atmospheric:
+      value: "~3"
+    cfcs:
+      value: "~1e4"
+    physical_artifacts:
+      value: "~1e4"
+    source: "Lingam et al. 2023"
+    source_location: "Section examples / Table"
+    status: "VERIFIED"
+
+  criterion_for_better_than_even_odds:
+    condition: "P(T|C) > 1/(xi + 1)"
+    approximation_for_large_xi: "P(T|C) > 1/xi, i.e. Gamma = P(T|C)*xi > 1"
+    source: "Lingam et al. 2023"
+    source_location: "Eq. 7 and surrounding text"
+    status: "VERIFIED"
+
+  signal_detection_theory_connections:
+    positive_likelihood_ratio: "L+ = xi"
+    negative_likelihood_ratio: "L- ~ 1/xi"
+    diagnostic_odds_ratio: "OR ~ xi^2"
+    youden_j: "J ~ (xi - 1)/(xi + 1)"
+    source: "Lingam et al. 2023"
+    source_location: "Section 4, Equations 9-13"
+    status: "VERIFIED"
+
+# ---------------------------------------------------------------------------
+# 5. SHEIKH AXES — Nine Axes of Merit
+# ---------------------------------------------------------------------------
+sheikh_axes:
+  axes_ordered:
+    - "Observing Capability"
+    - "Cost"
+    - "Ancillary Benefits"
+    - "Detectability"
+    - "Duration"
+    - "Ambiguity"
+    - "Extrapolation"
+    - "Inevitability"
+    - "Information"
+  scoring_nature: "qualitative"
+  scoring_note: "Sheikh (2020) explicitly states axes 'cannot be used as a quantitative measure' in their original form. Per AGENT_BRAIN_v2 §2.3 resolved methodology: use xi for ambiguity axis; use documented custom ordinal rubric (1-5) for detectability and duration."
+  ambiguity_axis_definition: "Some technosignatures might be easily mistaken for natural phenomena; narrowband radio emissions have no natural source and are thus unambiguous"
+  detectability_axis_definition: "A useful technosignature produces a strong signal relative to background noise"
+  duration_axis_definition: "Length of time that a technosignature would be detectable; duty cycle also contributes"
+  source: "Sheikh 2020"
+  source_location: "arXiv:1908.02683, full HTML text, Sections II.4-II.6"
+  status: "VERIFIED"
+
+# ---------------------------------------------------------------------------
+# 6. VALIDATION BENCHMARK — Kipping & Gray reproduction target
+# ---------------------------------------------------------------------------
+validation_benchmark:
+  source_paper: "Kipping & Gray 2022"
+  source_location: "arXiv:2206.08374"
+  status: "VERIFIED"
+
+  initial_map_likelihood:
+    value: 0.323
+    notes: "MAP likelihood for stochastic repeater compatible with Big Ear data alone"
+
+  post_nondetection_map_likelihood:
+    value: 0.0178
+    notes: "After 192 hr of META + Hobart + ATA pooled non-detection"
+
+  campaigns_used:
+    - name: "META"
+      reference: "Horowitz et al. 1986"
+    - name: "Hobart"
+      reference: "Gray & Ellingsen 2002"
+    - name: "ATA"
+      reference: "Harp et al. 2020"
+  total_followup_hours: 192
+
+  validation_criterion: "Output within same order of magnitude as 1.78% under equivalent restricted H5-only assumptions"
+  validation_gate: "Must pass BEFORE any 5-hypothesis result is produced (PRD C1.3)"
+  failure_action: "Stop work and report discrepancy to humans; do NOT adjust target"
+
+# ---------------------------------------------------------------------------
+# 7. CENSUS CANDIDATE EVENTS (starting list)
+# ---------------------------------------------------------------------------
+census_events:
+  - id: "wow_1977"
+    name: "Wow! Signal"
+    year: 1977
+    telescope: "Big Ear"
+    notes: "Primary subject of analysis"
+  - id: "mini_wow_2024"
+    name: "Mini-Wow events"
+    year: 2020
+    telescope: "Arecibo 305m"
+    source: "Mendez et al. 2024"
+    notes: "4 main signals in Teegarden's Star field; ~100x weaker, 10 kHz bandwidth"
+  - id: "blc1_2019"
+    name: "BLC1 (Breakthrough Listen Candidate 1)"
+    year: 2019
+    telescope: "Parkes 64m"
+    source: "Sheikh et al. 2021"
+    determination: "Terrestrial intermodulation RFI"
+    notes: "Useful as validation-style control (expect near-zero xi once resolved as RFI)"

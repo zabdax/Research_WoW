@@ -1,0 +1,15 @@
+# Cached source documents are preserved locally and tracked through their checksum manifest.
+data/sources_cache/
+
+# Nested external checkout retained in place; never treat it as a project submodule.
+data/kipping_wow_repo/
+
+# Python-generated local state.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Generated analysis outputs are regenerated from versioned configurations.
+results/
+research/results/
+

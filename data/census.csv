@@ -1,0 +1,7 @@
+id,name,year,snr,duration_s,is_narrowband,has_modulation,resolved_by_spatial_rfi,resolved_by_natural_model,notes,detectability_score,duration_score,ambiguity_xi
+wow_1977,Wow! Signal,1977,30.5,72.0,True,False,False,False,Intrinsic properties only. 72s is beam transit floor.,4,2,10000.0
+mini_wow_a,Mendez Mini-Wow Event A,2020,5.0,120.0,True,False,False,True,Mendez et al. 2024 DSR natural candidate A.,2,2,0.0001
+mini_wow_b,Mendez Mini-Wow Event B,2020,5.0,120.0,True,False,False,True,Mendez et al. 2024 DSR natural candidate B.,2,2,0.0001
+mini_wow_c,Mendez Mini-Wow Event C,2020,5.0,120.0,True,False,False,True,Mendez et al. 2024 DSR natural candidate C.,2,2,0.0001
+mini_wow_d,Mendez Mini-Wow Event D,2020,5.0,120.0,True,False,False,True,Mendez et al. 2024 DSR natural candidate D.,2,2,0.0001
+blc1_2019,BLC1,2019,15.0,18000.0,True,False,True,False,Confirmed terrestrial intermodulation via off-source spatial verification.,3,4,0.0001
