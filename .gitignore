@@ -16,3 +16,6 @@ __pycache__/
 results/
 research/results/
 
+# Raw external retrievals are provenance artifacts; commit only validated records.
+research/data/raw/*.manifest.json
+

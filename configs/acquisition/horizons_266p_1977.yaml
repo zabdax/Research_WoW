@@ -1,0 +1,12 @@
+provider: NASA/JPL Horizons API
+endpoint: https://ssd.jpl.nasa.gov/api/horizons.api
+command: "90001240;"
+object_label: "266P/Christensen selected 2008 solution"
+center: "500"
+ephem_type: OBSERVER
+start_time: "1977-08-15"
+stop_time: "1977-08-16"
+step_size: "1 h"
+quantities: "1,3,4,20,24,29"
+csv_format: true
+purpose: "Geocentric H2 geometry sensitivity only. Big Ear topocentric response requires confirmed site/beam data."

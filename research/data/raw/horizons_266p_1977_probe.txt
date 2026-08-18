@@ -1,0 +1,19 @@
+API VERSION: 1.2
+API SOURCE: NASA/JPL Horizons API
+
+*******************************************************************************
+JPL/DASTCOM            Small-body Index Search Results     2026-Aug-18 12:45:40
+
+ Comet AND asteroid index search:
+
+    DES = 266P;
+
+ Matching small-bodies: 
+
+    Record #  Epoch-yr  >MATCH DESIG<  Primary Desig  Name  
+    --------  --------  -------------  -------------  -------------------------
+    90001240    2008    266P           266P            Christensen
+    90001241    2017    266P           266P            Christensen
+
+ (2 matches. To SELECT, enter record # (integer), followed by semi-colon.)
+*******************************************************************************

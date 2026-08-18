@@ -1,0 +1,80 @@
+version: 0.1.0
+items:
+  h2_266p_ephemeris:
+    question: "Was 266P/Christensen geometrically consistent with either Wow! candidate direction on 1977-08-15?"
+    dependencies: ["H2 geometry likelihood"]
+    required_product: "Observer/geocentric RA, Dec, epoch, coordinate frame, object solution identity, and uncertainty status"
+    minimum_authority: "Authoritative ephemeris service with documented solution identifier"
+    route:
+      mode: automatable_public_api
+      provider: "NASA/JPL Horizons API"
+      endpoint: "https://ssd.jpl.nasa.gov/api/horizons.api"
+      query_template: "configs/acquisition/horizons_266p_1977.yaml"
+    validation: ["selected solution record captured", "SOE/EOE block present", "epoch and frame parsed", "raw response SHA-256 stored", "uncertainty status explicit"]
+    failure_condition: "No selected authoritative solution, malformed response, or incompatible coordinate metadata"
+    status: acquired-and-validated-for-geocentric-sensitivity-only
+    limitation: "Geocentric response has no covariance and does not replace topocentric Big Ear geometry or physical emission likelihood."
+    next_action: "Request/obtain confirmed Big Ear beam calibration and repeat with observer-specific location."
+  big_ear_beam_calibration:
+    question: "What was the 1977 dual-horn beam response, orientation, and calibration?"
+    dependencies: ["H1", "H2", "H3", "H4", "Big Ear geometry"]
+    required_product: "Beam map/FWHM, two-horn separation/orientation, receiver configuration, calibration epoch"
+    minimum_authority: "Primary technical document, observing manual, or archived engineering record"
+    route:
+      mode: archival_human_contact_required
+      provider: "Ohio State / Big Ear / NAAPO historical archives"
+      request_template: "research/data/requests/big_ear_archive_request.md"
+    validation: ["document scan or archival identifier", "instrument date/configuration", "units and coordinate conventions", "beam measurement method"]
+    failure_condition: "Approximate secondary value only"
+    status: archival/human-contact-required
+    next_action: "Use prepared request template; do not promote exploratory configuration."
+  followup_windows_completeness:
+    question: "What was each campaign's detection probability as a function of time, flux, position, linewidth and drift?"
+    dependencies: ["H1", "H2", "H3", "H4", "H5", "follow-up likelihood"]
+    required_product: "Timestamped windows, pointing, spectral coverage, sensitivity/completeness surface, detection pipeline"
+    minimum_authority: "Primary observing logs or archive products plus campaign documentation"
+    route:
+      mode: mixed_public_archive_and_contact
+      provider: "META, Hobart, ATA, VLA, GBT/ATA archives/authors"
+      request_template: "research/data/requests/followup_data_request.md"
+    validation: ["time windows", "pointing", "threshold/completeness", "frequency and drift response", "source locator"]
+    failure_condition: "Pooled exposure alone"
+    status: public-route-available-but-not-yet-acquired
+    next_action: "Acquire primary logs/metadata before rate marginalization."
+  h1_historical_rfi:
+    question: "Which plausible 1977 terrestrial/instrumental mechanisms can reproduce the observation?"
+    dependencies: ["H1 adversarial mixture"]
+    required_product: "Receiver chain, site transmitter environment, spectrum allocation, signal diagnostic records"
+    minimum_authority: "Primary engineering records and historical regulatory/operations records"
+    route:
+      mode: archival_human_contact_required
+      provider: "Big Ear archives, historical FCC/ITU material, relevant operators"
+      request_template: "research/data/requests/big_ear_archive_request.md"
+    validation: ["mechanism-specific source", "1977 applicability", "frequency/time/beam predictions"]
+    failure_condition: "Generic modern RFI assumptions"
+    status: archival/human-contact-required
+    next_action: "Collect records before assigning mixture weights."
+  h3_physical_population:
+    question: "Can a normalized HI flare/superradiance population reproduce flux, width, timing and rate?"
+    dependencies: ["H3 evidence", "posterior prediction"]
+    required_product: "Radiative/trigger model, population priors, cloud geometry, event rate and independent analogue constraints"
+    minimum_authority: "Peer-reviewed theory/observations or explicitly expert-elicited priors subject to sensitivity analysis"
+    route:
+      mode: literature_and_domain_review
+      provider: "Primary radiative-transfer and transient-population literature"
+    validation: ["normalized parameter priors", "physical forward model", "rate prior", "independent evidence classification"]
+    failure_condition: "Reference-flux scaling alone"
+    status: public-route-available-but-not-yet-acquired
+    next_action: "Complete literature extraction and expert review."
+  h4_population_alignment:
+    question: "What population/alignment model makes power-beam observation probabilistic rather than merely feasible?"
+    dependencies: ["H4 evidence"]
+    required_product: "Population, distance, EIRP, sweep, duty-cycle, alignment and revisit priors"
+    minimum_authority: "Explicit scientifically defended model/prior family"
+    route:
+      mode: theory_and_prior_elicitation
+      provider: "Technosignature/power-beaming literature and declared sensitivity priors"
+    validation: ["normalized prior family", "engineering/population separation", "posterior predictive model"]
+    failure_condition: "Engineering calculation treated as occurrence probability"
+    status: public-route-available-but-not-yet-acquired
+    next_action: "Specify prior families and sensitivity protocol."

@@ -1,0 +1,282 @@
+{
+  "schema_version": "0.1.0",
+  "authority": "NASA/JPL Horizons API",
+  "interpretation": "Geocentric geometry sensitivity only; uncertainty/covariance absent from retrieved response.",
+  "records": [
+    {
+      "epoch_utc": "1977-Aug-15 00:00",
+      "right_ascension": "18h32m14.64s",
+      "declination": "-27d22m09.5s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 01:00",
+      "right_ascension": "18h32m13.74s",
+      "declination": "-27d22m08.4s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 02:00",
+      "right_ascension": "18h32m12.84s",
+      "declination": "-27d22m07.3s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 03:00",
+      "right_ascension": "18h32m11.94s",
+      "declination": "-27d22m06.1s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 04:00",
+      "right_ascension": "18h32m11.05s",
+      "declination": "-27d22m05.0s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 05:00",
+      "right_ascension": "18h32m10.16s",
+      "declination": "-27d22m03.9s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 06:00",
+      "right_ascension": "18h32m09.26s",
+      "declination": "-27d22m02.8s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 07:00",
+      "right_ascension": "18h32m08.37s",
+      "declination": "-27d22m01.7s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 08:00",
+      "right_ascension": "18h32m07.48s",
+      "declination": "-27d22m00.6s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 09:00",
+      "right_ascension": "18h32m06.60s",
+      "declination": "-27d21m59.4s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 10:00",
+      "right_ascension": "18h32m05.71s",
+      "declination": "-27d21m58.3s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 11:00",
+      "right_ascension": "18h32m04.83s",
+      "declination": "-27d21m57.2s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 12:00",
+      "right_ascension": "18h32m03.95s",
+      "declination": "-27d21m56.0s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 13:00",
+      "right_ascension": "18h32m03.07s",
+      "declination": "-27d21m54.9s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 14:00",
+      "right_ascension": "18h32m02.19s",
+      "declination": "-27d21m53.8s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 15:00",
+      "right_ascension": "18h32m01.31s",
+      "declination": "-27d21m52.6s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 16:00",
+      "right_ascension": "18h32m00.43s",
+      "declination": "-27d21m51.5s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 17:00",
+      "right_ascension": "18h31m59.56s",
+      "declination": "-27d21m50.3s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 18:00",
+      "right_ascension": "18h31m58.69s",
+      "declination": "-27d21m49.2s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 19:00",
+      "right_ascension": "18h31m57.81s",
+      "declination": "-27d21m48.0s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 20:00",
+      "right_ascension": "18h31m56.95s",
+      "declination": "-27d21m46.9s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 21:00",
+      "right_ascension": "18h31m56.08s",
+      "declination": "-27d21m45.7s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 22:00",
+      "right_ascension": "18h31m55.21s",
+      "declination": "-27d21m44.6s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-15 23:00",
+      "right_ascension": "18h31m54.35s",
+      "declination": "-27d21m43.4s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    },
+    {
+      "epoch_utc": "1977-Aug-16 00:00",
+      "right_ascension": "18h31m53.48s",
+      "declination": "-27d21m42.3s",
+      "frame": "ICRF",
+      "solution_command": "90001240;",
+      "observer_center": "500",
+      "uncertainty_status": "not_provided_in_response",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=text&COMMAND=%2790001240%3B%27&CENTER=%27500%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27OBSERVER%27&START_TIME=%271977-08-15%27&STOP_TIME=%271977-08-16%27&STEP_SIZE=%271+h%27&QUANTITIES=%271%2C3%2C4%2C20%2C24%2C29%27&CSV_FORMAT=%27YES%27",
+      "raw_sha256": "f5fed9de7dabb104d86ae49464d9aa1003c2c96f2bfb79cea3a0dea471aab821"
+    }
+  ]
+}
