@@ -8,6 +8,7 @@ data/kipping_wow_repo/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+*.egg-info/
 
 # Generated analysis outputs are regenerated from versioned configurations.
 results/

@@ -1,0 +1,16 @@
+analysis_stage: reconstruction
+confirmatory_comparison_enabled: false
+legacy_tag: phase2-prototype-audit
+model_readiness:
+  H1: blocked
+  H2: blocked
+  H3: blocked
+  H4: blocked
+  H5: in_progress
+requirements_before_confirmatory_comparison:
+  - Big Ear beam/geometry calibration with tests
+  - Model-specific physical and observational likelihoods
+  - Model-specific event-rate priors and campaign detection efficiencies
+  - Kipping--Gray restricted-model replication with Monte Carlo uncertainty
+  - Likelihood/prior uncertainty propagation
+  - Frozen configuration and generated output provenance

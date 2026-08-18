@@ -1,19 +1,33 @@
-# Wow! Signal — Multi-Hypothesis Bayesian Assessment
+# Wow! Signal Bayesian Triage Research Program
 
-This repository contains the data, code, and manuscript drafts for a quantitative, Bayesian comparison of five competing explanations for the 1977 "Wow!" Signal, grounded by a systematic census of comparable technosignature events.
+This repository contains two deliberately separated workstreams for research on anomalous narrowband radio transients using the 1977 Wow! Signal as a case study.
 
-## Directory Structure
+- **Legacy Phase 2 prototype:** original exploratory source/data/code/manuscript artifacts at the repository root. It is preserved by Git tag `phase2-prototype-audit`. Its posterior-like outputs depend on hand-elicited component scores and are not confirmatory Bayesian evidences. See [`docs/legacy_status.md`](docs/legacy_status.md).
+- **Revised research framework:** new, provenance-aware and model-conditional work in [`research/`](research/). It is designed to admit ambiguity and block a five-way ranking until every hypothesis has a defensible physical, observational, rate, and follow-up likelihood.
 
-* `/data/` - Contains the master knowledge base (`parameters.yaml`) and the comparative event census (`census.csv`).
-* `/src/` - Python source code for the Bayesian inference engine, Bayes factor calculations, and sensitivity analysis.
-* `/tests/` - Unit tests, including the validation gate reproducing Kipping & Gray (2022) MAP likelihoods.
-* `/figures/` - Generated plots and visualizations for the manuscripts.
-* `/logs/` - Project execution logs, assumption tracking, and status reports.
-* `/manuscripts/` - LaTeX source and compiled PDFs for the RNAAS note and the full *International Journal of Astrobiology* paper.
+## Current research status
 
-## Hypotheses Evaluated
-1. **H1:** Instrumental / RFI
-2. **H2:** Cometary hydrogen emission (Control)
-3. **H3:** Interstellar hydrogen cloud / stimulated maser flare
-4. **H4:** Artificial interstellar power beam (leakage)
-5. **H5:** Stochastic repeating ETI beacon
+The project is in reconstruction, not attribution. No revised hypothesis ranking is currently produced. The next evidence gates are Big Ear geometry, a campaign-specific follow-up model, an independent restricted H5 replication, an adversarial H1 model, an H2 ephemeris reconstruction, and an H3 flux/rate feasibility analysis.
+
+## Run the preserved baseline
+
+```bash
+py -m pytest
+py -m scripts.legacy_report
+```
+
+This produces an audit report under `results/legacy/` without modifying the original `data/` result artifacts.
+
+## Validate revised structured inputs
+
+```bash
+py -m research.validation.source_audit
+```
+
+## Principles
+
+- Do not treat a normalized heuristic score as a Bayes factor or posterior evidence.
+- Do not transfer Kipping & Gray's H5 event rate to another physical model.
+- Do not discard the original work; preserve it, reproduce it, and compare it explicitly against the revised analysis.
+- Do not present preprints as peer-reviewed confirmation.
+- No result is a definitive attribution of the Wow! Signal.

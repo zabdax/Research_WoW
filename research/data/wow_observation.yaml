@@ -1,0 +1,93 @@
+schema_version: 0.1.0
+event:
+  event_date: "1977-08-15"
+  frequency:
+    value: 1420726000.0
+    unit: Hz
+    kind: point
+    uncertainty: 5000.0
+    source: "Méndez et al. 2025"
+    locator: "arXiv:2508.10657, abstract"
+    status: VERIFIED
+    notes: "Preprint; source status is verified-local extraction, not independent corroboration."
+  bandwidth:
+    value: 10000.0
+    unit: Hz
+    kind: upper_bound
+    source: "Méndez et al. 2024"
+    locator: "arXiv:2408.08513, abstract"
+    status: VERIFIED
+  flux_density:
+    value: 250.0
+    unit: Jy
+    kind: lower_bound
+    source: "Méndez et al. 2025"
+    locator: "arXiv:2508.10657, abstract"
+    status: VERIFIED
+  snr:
+    value: 30.5
+    unit: sigma
+    kind: point
+    uncertainty: 0.5
+    source: "Méndez et al. 2024"
+    locator: "arXiv:2408.08513, Section II"
+    status: VERIFIED
+  beam_crossing_duration:
+    value: 72.0
+    unit: s
+    kind: point
+    source: "Kipping & Gray 2022"
+    locator: "arXiv:2206.08374, abstract"
+    status: VERIFIED
+    notes: "Beam-crossing duration is not automatically intrinsic source duration."
+  horn_turnon_window:
+    value: 180.0
+    unit: s
+    kind: upper_bound
+    source: "Kipping & Gray 2022"
+    locator: "arXiv:2206.08374, abstract"
+    status: VERIFIED
+  sky_candidates:
+    - right_ascension: "19h25m02s"
+      declination: "-26d57m"
+      epoch: J2000
+      ra_uncertainty_seconds: 3.0
+      dec_uncertainty_arcmin: 20.0
+      source: "Méndez et al. 2025"
+      locator: "arXiv:2508.10657, abstract"
+      status: VERIFIED
+    - right_ascension: "19h27m55s"
+      declination: "-26d57m"
+      epoch: J2000
+      ra_uncertainty_seconds: 3.0
+      dec_uncertainty_arcmin: 20.0
+      source: "Méndez et al. 2025"
+      locator: "arXiv:2508.10657, abstract"
+      status: VERIFIED
+followup:
+  - identifier: gray_ellingsen_2002_hobart
+    telescope: "University of Tasmania Hobart 26m"
+    exposure_seconds: 50400.0
+    frequency_low_hz: 1419155750.0
+    frequency_high_hz: 1421655750.0
+    channel_width_hz: 4900.0
+    flux_limit_jy: 18.0
+    field_of_view_deg: 0.5
+    cadence_description: "Multiple continuous observing blocks; legacy 192-hour pooled treatment must not be used as this observation's selection function."
+    source: "Gray & Ellingsen 2002"
+    locator: "DOI:10.1086/342646"
+    status: VERIFIED
+  - identifier: harp_2020_ata
+    telescope: "Allen Telescope Array"
+    exposure_seconds: 360000.0
+    frequency_low_hz: 1415600000.0
+    frequency_high_hz: 1425800000.0
+    channel_width_hz: 12800.0
+    flux_limit_jy: null
+    field_of_view_deg: 2.5
+    pointing_ra: "19h27m00s"
+    pointing_dec: "-27d00m"
+    cadence_description: "Episodic over several years; never more than three hours per day."
+    source: "Harp et al. 2020"
+    locator: "DOI:10.3847/1538-3881/aba58f"
+    status: VERIFIED
