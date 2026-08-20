@@ -36,3 +36,9 @@ def bayes_factor(evidence_i: float, evidence_j: float) -> float:
     if evidence_j == 0:
         return math.inf if evidence_i > 0 else 1.0
     return evidence_i / evidence_j
+
+def strict_five_way_comparison(priors: dict, evidences: dict) -> dict:
+    from research.models.registry import ready_for_comparison
+    if not ready_for_comparison():
+        raise IncompleteModelError('Confirmatory comparison is blocked. Models lack evidence layers.')
+    return normalized_posteriors(priors, evidences)

@@ -93,3 +93,15 @@ items:
     failure_condition: "Engineering calculation treated as occurrence probability"
     status: public-route-available-but-not-yet-acquired
     next_action: "Specify prior families and sensitivity protocol."
+
+# [2026-08-20 Update] Data request submissions note
+# No human action has occurred. The requests remain in 'pending-human-action' state.
+# Do not assume formal emails have been dispatched unless an archival ticket or 
+# confirmed receipt is logged here.
+big_ear_archive_external:
+  status: pending-human-action
+  reference: 'research/data/requests/big_ear_archive_request.md'
+
+followup_data_external:
+  status: pending-human-action
+  reference: 'research/data/requests/followup_data_request.md'

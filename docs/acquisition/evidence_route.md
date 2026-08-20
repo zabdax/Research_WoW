@@ -6,7 +6,12 @@ An import is not evidence merely because it arrives from an API. Every record mu
 
 ## Current public acquisition result
 
-The project has retrieved a NASA/JPL Horizons geocentric observer ephemeris for the selected 2008 orbit solution of 266P/Christensen for 1977-08-15. It is suitable for a **geocentric geometry sensitivity calculation only**. It does not supply covariance, does not establish the relevant source object, does not model cometary brightness, and cannot replace a calibrated topocentric Big Ear beam response.
+The project has retrieved two NASA/JPL Horizons geocentric observer ephemerides for 1977-08-15:
+
+- 266P/Christensen (selected 2008 solution `90001240;`)
+- 335P/Gibbs = P/2008 Y2 (selected JPL#39 solution `90001326;`)
+
+Both are suitable only for **geocentric geometry sensitivity**. Neither supplies covariance, neither establishes the relevant source object, neither models cometary brightness, and neither replaces a calibrated topocentric Big Ear beam response. They must not be used as confirmatory \(P(D|H_2)\).
 
 ## Remaining authoritative routes
 

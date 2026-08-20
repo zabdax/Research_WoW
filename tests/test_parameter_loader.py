@@ -6,7 +6,8 @@ import pytest
 from src.parameter_loader import load_parameters
 
 def test_load_parameters():
-    params = load_parameters()
+    with pytest.warns(UserWarning):
+        params = load_parameters()
     
     assert params.signal.frequency_mhz == 1420.726
     assert params.signal.peak_flux_lower_bound_jy == 250.0

@@ -270,7 +270,7 @@ def load_parameters(yaml_path: Optional[str] = None) -> LoadedParameters:
     unverified = _find_unverified(raw)
     if unverified:
         for field_path in unverified:
-            warnings.warn(f"UNVERIFIED parameter: {field_path}")
+            import warnings; warnings.warn(f"UNVERIFIED parameter: {field_path}")
 
     # --- Extract SignalProperties ---
     sp = raw.get("signal_properties", {})

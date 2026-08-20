@@ -29,7 +29,7 @@ import logging
 import math
 import os
 from dataclasses import asdict, dataclass, field
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
@@ -637,7 +637,7 @@ def compute_posteriors(
     Raises:
         ValueError: If priors don't sum to ~1 or are invalid.
     """
-    timestamp = datetime.utcnow().isoformat() + "Z"
+    timestamp = datetime.now(timezone.utc).isoformat() + "Z"
 
     # Validate priors
     if priors is None:

@@ -1,3 +1,5 @@
+> **DEPRECATED**: This document contains known errors. Refer to `AGENT_BRAIN_v2.md` instead.
+
 # AGENT BRAIN — Domain Knowledge, Citation Ledger & Operating Protocol
 ## Wow! Signal Multi-Hypothesis Bayesian Assessment & Comparative Technosignature Census
 
