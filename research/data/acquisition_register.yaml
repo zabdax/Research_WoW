@@ -1,5 +1,54 @@
 version: 0.1.0
+
+# =============================================================================
+# [2026-08-23 AMENDMENT] Post-Phase-A bookkeeping (authorized):
+#   - new item arecibo_wow2_evidence records the completed source lock,
+#     extraction, and partial reproduction;
+#   - big_ear_beam_calibration status advanced from 'archival/human-contact-
+#     required' to 'partially-addressed-by-arecibo-wow2' (empirical squint
+#     128±3 s, ~27 s offset, 8' RA beam assumption now documented; full 2-D
+#     beam response still unpublished);
+#   - big_ear_archive_external updated: N50CH scans public on NAAPO (human-
+#     verified 2026-08-23; scope note in big_ear_archive_inventory.yaml).
+# Original entries preserved otherwise; no evidence values changed here.
+# =============================================================================
+
 items:
+  # [2026-08-25 AMENDMENT] New donor-supplied evidence branch, forensics-only.
+  # No quantity from this archive enters the evidence layer or any likelihood
+  # without explicit human authorization (gate_status: BLOCKED in its manifest).
+  ellingsen_hobart_followup_archive:
+    question: "What did the Mt Pleasant (Hobart) 1998–99 / 2010 / 2013–14 follow-up campaigns observe, what could they have detected, and how completely can their selection function be reconstructed?"
+    dependencies: ["followup_windows_completeness", "H5 follow-up likelihood (future)"]
+    required_product: "Frozen donor archive; inventory + SHA-256 freeze; provenance classification; campaign reconstruction; selection-function ingredient audit; H5 readiness verdict"
+    minimum_authority: "Donor-supplied primary archive (Simon Ellingsen, UTAS) with embedded headers/logs cross-checks"
+    route:
+      mode: donor_personal_communication
+      provider: "S. Ellingsen via Google Drive transfer (3 parts)"
+      endpoint: "research/sources/ellingsen_hobart/metadata/source_manifest.yaml"
+      query_template: "scripts/ellingsen_inventory.py"
+    validation: ["6681 files hashed uniquely", "inventory matches disk exactly (tests)", "tarball↔loose duplication verified benign", "calibration chain numerically reproduced for 2010 (ricky vs bruce FITS vs README)", "pointing epoch discrepancy flagged for donor follow-up"]
+    failure_condition: "Pointing-epoch intent unresolved; thresholds/RFI/candidate rules absent; 2013/14 flux chain absent — no P(detection|…) may be built yet"
+    status: acquired-frozen-forensic-audit-complete
+    limitation: "Selection function partially reconstructable for 2010 only; non-detection statements forbidden; completeness of transfer UNKNOWN; .rpf not parsed (no RPFITS tooling)"
+    next_action: "Human review of docs/acquisition/ELLINGSEN_DATASET_FORENSICS.md; targeted donor questions (field1/field2 epoch intent, search outcomes/thresholds, 2013/14 calibration, completeness)."
+
+  arecibo_wow2_evidence:
+    question: "What did the modern Arecibo Wow! II analysis reconstruct from the surviving Ohio SETI records, and can it be independently reproduced?"
+    dependencies: ["all hypotheses' observational inputs"]
+    required_product: "Frozen paper/repo artifacts; provenance-classified evidence vector; historical-vs-modern reconciliation; partial independent reproduction"
+    minimum_authority: "Authoritative modern reanalysis (Méndez et al., arXiv:2508.10657 v1) + public data repository at recorded commit"
+    route:
+      mode: automatable_public_sources_and_git
+      provider: "arXiv + planetaryhablab/Ohio-SETI + NAAPO"
+      endpoint: "https://arxiv.org/abs/2508.10657 ; https://github.com/planetaryhablab/Ohio-SETI"
+      query_template: "research/sources/mendez_arecibo/metadata/source_manifest.yaml"
+    validation: ["source-lock hashes verified by tests", "arXiv version + ApJ checks dated 2026-08-22", "evidence vector frozen with full locators", "frequency chain reproduced (AGREE, genuine verification)", "flux arithmetic reproduced (paper-stated constants only)"]
+    failure_condition: "Unfrozen sources, orphan numbers, or censored bounds encoded as point estimates"
+    status: acquired-frozen-extracted-partially-reproduced
+    limitation: "Flux calibration constants are paper-stated (no public derivation); empirical squint depends on the private Aug 16 1977 strip chart; no published 2-D beam map; PHL Big Ear Archive public Aug 2027; Table 4 positive-horn galactic b is a confirmed typo — use computed -18.82 deg or author-confirmed value"
+    next_action: "Keep evidence vector frozen; H3 population modeling only after explicit authorization."
+
   h2_266p_ephemeris:
     question: "Was 266P/Christensen geometrically consistent with either Wow! candidate direction on 1977-08-15?"
     dependencies: ["H2 geometry likelihood"]
@@ -41,8 +90,14 @@ items:
       request_template: "research/data/requests/big_ear_archive_request.md"
     validation: ["document scan or archival identifier", "instrument date/configuration", "units and coordinate conventions", "beam measurement method"]
     failure_condition: "Approximate secondary value only"
-    status: archival/human-contact-required
-    next_action: "Use prepared request template; do not promote exploratory configuration."
+    # [2026-08-23] Status advanced from 'archival/human-contact-required':
+    # Arecibo Wow! II §5 now documents the empirical squint (128±3 s, replacing
+    # Ehman's 154.95 s), a ~27 s positional offset, and an 8' RA beamwidth
+    # assumption — but these rest on the private Aug 16 1977 strip chart and no
+    # full 2-D beam map/horn response is published, so calibration remains
+    # incomplete for a confirmatory observation operator.
+    status: partially-addressed-by-arecibo-wow2
+    next_action: "Treat Arecibo II §5 quantities as paper-stated inputs; full beam response still required before any confirmatory use."
   followup_windows_completeness:
     question: "What was each campaign's detection probability as a function of time, flux, position, linewidth and drift?"
     dependencies: ["H1", "H2", "H3", "H4", "H5", "follow-up likelihood"]
@@ -96,11 +151,12 @@ items:
 
 # [2026-08-20 Update] Data request submissions note
 # No human action has occurred. The requests remain in 'pending-human-action' state.
-# Do not assume formal emails have been dispatched unless an archival ticket or 
+# Do not assume formal emails have been dispatched unless an archival ticket or
 # confirmed receipt is logged here.
 big_ear_archive_external:
-  status: pending-human-action
+  status: partially-available-public-n50ch-scans
   reference: 'research/data/requests/big_ear_archive_request.md'
+  update_2026_08_23: "N50CH printout scans are public on NAAPO (argus.naapo.org/~rchilders/N50CH_data/, human-verified); scope note applies — OCR working files private, FITS nonexistent, PHL Big Ear Archive (documents/logs/papers) public Aug 2027. See research/data/big_ear_archive_inventory.yaml amendments."
 
 followup_data_external:
   status: pending-human-action

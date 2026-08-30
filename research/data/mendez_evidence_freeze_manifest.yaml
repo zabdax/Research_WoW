@@ -1,0 +1,69 @@
+# =============================================================================
+# EVIDENCE FREEZE MANIFEST — Phase A outputs (vector + comparison) and Phase C
+# reproduction artifacts
+# =============================================================================
+# Freeze event: 2026-08-23T02:51:31Z, under Phase A explicit authorization
+# (docs/acquisition/SOURCE_LOCK_REPORT.md authorization record).
+# Policy: no frozen file may change without a new dated amendment and human
+# re-authorization. Phase C artifacts were produced AFTER the freeze of the
+# vector/CSV (authorized order) and are themselves immutable records.
+# =============================================================================
+
+freeze_version: 0.1.0
+frozen_at_utc: "2026-08-23T02:51:31Z"
+authorization: "Phase A explicit authorization 2026-08-23; SOURCE_LOCK_REPORT signed block 2026-08-22"
+
+frozen_files:
+  mendez_evidence_vector:
+    path: research/data/mendez_evidence_vector.yaml
+    sha256: ef3336e64f8bd4ca651d207ba5f0d09b8371be0d68859075e37d9cfdf7a0320a
+    freeze_status: FROZEN
+    superseded_hash: b2daa0dd2c3205df4ecd21713bbf4c989d1380800ad2477e05c2eda054764c25
+    superseded_hash_note: "pre-amendment freeze; Amendment 1 in the vector documents the authorized follow-up changes (see AMENDMENT 2 below)"
+  historical_vs_arecibo_parameters:
+    path: research/data/historical_vs_arecibo_parameters.csv
+    sha256: 0cd6eb7b1f5fdef50c503c4489a6241a775e5ab84373aac391ef3004fd2623cd
+    freeze_status: FROZEN
+    superseded_hash: aef743632520e2cb2cb622690bdb84441f556f2d567987aa0bdf3215793c2e32
+    superseded_hash_note: "original freeze with malformed CSV field counts; schema-repaired same day (values unchanged) — see AMENDMENT at bottom"
+
+post_freeze_phase_c_artifacts:   # appended after Phase C run, 2026-08-23
+  mendez_reproduction_module:
+    path: research/validation/mendez_reproduction.py
+    sha256: 2fbc2546a0df17d85fba8c18e373dc745b8a20974a393dd5df07c35b1348ea17
+    note: "one transparent correction during the run: the data-level 2LO check was initially over-strict (demanded all peak-adjacent rows equal 120.185); corrected to test the paper's actual claim (central-peak U row); see module note and results JSON"
+  mendez_reproduction_results:
+    path: research/data/processed/mendez_reproduction_results.json
+    sha256: 655453303f3ccd9cf76b95385f0c018ab2039a32cad018cd206bb39848a9c232
+    outcomes:
+      frequency_chain: "AGREE (delta 0.0004 MHz, printed-precision rounding; data-level 6EQUJ5 + 2LO 120.185 verified in frozen CSV)"
+      flux_arithmetic: "MATCH within printed rounding via paper path (255.41 vs 256); unrounded propagation gives >=250.1+/-56 Jy (-2.3%) — rounding-policy artifact documented; mode = ARITHMETIC_REPRODUCTION_ONLY"
+      galactic_consistency_check: "REPORT_ONLY — positive-horn b anomaly (+1.04 deg vs own previous column) confirmed; AMBIGUOUS, flagged for author clarification"
+
+# =============================================================================
+# AMENDMENT 2 (2026-08-23, freeze v0.1.3) — POST-PHASE-A FOLLOW-UP (authorized)
+# =============================================================================
+# Evidence vector amended under the follow-up directive (galactic-coordinate
+# verification, flux rounding-sensitivity note, censoring-prose expansion):
+#   mendez_evidence_vector.yaml:
+#     pre-amendment sha256: b2daa0dd2c3205df4ecd21713bbf4c989d1380800ad2477e05c2eda054764c25
+#     post-amendment sha256: ef3336e64f8bd4ca651d207ba5f0d09b8371be0d68859075e37d9cfdf7a0320a
+# New Task-1 artifacts:
+#   research/validation/galactic_verification.py        6ee1a7cd71e9dcff3f7a30a31cbb80a9a613bcce52b3df18ceabc9772d720338
+#   research/data/processed/galactic_verification_results.json e34d67d3cf1fdde19efceb1bb08087f69893cb5481ade8d37b46eb7d1d0ea96a
+# historical_vs_arecibo_parameters.csv UNCHANGED (sha256 0cd6eb7b... stands).
+# =============================================================================
+
+# =============================================================================
+# AMENDMENT 2026-08-23 (freeze v0.1.1) — VISIBLE CSV SCHEMA REPAIR
+# =============================================================================
+# The historical_vs_arecibo_parameters.csv as frozen at 2026-08-23T02:51:31Z
+# (sha256 aef743632520e2cb2cb622690bdb84441f556f2d567987aa0bdf3215793c2e32)
+# contained a STRUCTURAL defect: 9 of 18 rows had wrong field counts (columns
+# merged/split; discovered by tests/research/test_mendez_evidence_vector.py).
+# Repair: rows rewritten with exactly 12 fields; NO evidence value, status,
+# or provenance statement was changed — only column separation.
+# Repaired file sha256: 0cd6eb7b1f5fdef50c503c4489a6241a775e5ab84373aac391ef3004fd2623cd
+# Both hashes retained for audit. This is a formatting correction, not an
+# evidence change; recorded visibly per the no-silent-modification policy.
+# =============================================================================

@@ -16,6 +16,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]
+verify = ["astropy>=6,<8"]
 
 [project.scripts]
 wow-legacy-report = "scripts.legacy_report:main"

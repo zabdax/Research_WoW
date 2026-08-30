@@ -1,0 +1,193 @@
+# =============================================================================
+# BIG EAR / NAAPO ARCHIVE INVENTORY (Phase 0 — mapped BEFORE downloading, §0.10)
+# =============================================================================
+# Compiled 2026-08-22 (UTC). No bulk downloads performed. The controlling fact:
+# the FULL Big Ear Archive (documents, observing logs, engineering reports,
+# photographs, correspondence, software, publications, oral histories, Kraus/
+# Dixon/Ehman personal papers) is a PHL digitization initiative whose public
+# release is scheduled for AUGUST 2027 (per https://phl.upr.edu/wow/bigear,
+# checked 2026-08-22). Publicly available today are only the items below.
+# =============================================================================
+
+inventory_date: "2026-08-22"
+controlling_constraint:
+  statement: "Big Ear Archive 'scheduled to become publicly available in August 2027' (PHL /wow/bigear, checked 2026-08-22)."
+  consequence: "August 1977 records beyond the Wow! printout itself are NOT independently inspectable yet; independent OCR/transcription checking is limited to the frozen scan + transcriptions below until that release."
+
+files:
+  - file: oseti_19770815_220410.jpg
+    path: research/sources/mendez_arecibo/repositories/Ohio-SETI/oseti_19770815_220410.jpg
+    type: scanned_computer_printout
+    date: "1977-08-15 observation; scan published 2024-10-14 (repo commit db5c6e2)"
+    observation: "Wow! signal observation window (start 22:04:10 EST per filename/README)"
+    relevance: REQUIRED — the surviving scan of the original printout section
+    source: planetaryhablab/Ohio-SETI @ 28624a1eaf955ced940db347684cee61c8e4fd61
+    used_by_arecibo: yes (paper §Data Transcription: OCR of printout scans)
+    needed_by_us: yes (independent OCR/transcription verification, Phase C)
+    downloaded: yes
+    sha256: 3ca862b4cca91ce7f86ff86e0db624deea198bdcc3ff4f348de3372e929c906a
+
+  - file: oseti_19770815_220410.txt
+    path: research/sources/mendez_arecibo/repositories/Ohio-SETI/oseti_19770815_220410.txt
+    type: transcribed_data_txt_no_header
+    date: "2024-10-14 (repo v0a); transcription lineage to Hotaling 2022-07-20"
+    observation: "82 printout rows x 50 channels + RA/Dec/2nd-LO-freq/galactic-coords/EST columns"
+    relevance: REQUIRED — TRANSCRIBED_ARCHIVAL layer of the provenance chain
+    source: planetaryhablab/Ohio-SETI @ 28624a1eaf955ced940db347684cee61c8e4fd61
+    used_by_arecibo: yes
+    needed_by_us: yes
+    downloaded: yes
+    sha256: 52d0ec66dd6c5d96db4175642edf380030751e364ff8c46de4e794c94f3fb1ed
+
+  - file: oseti_19770815_220410.csv
+    path: research/sources/mendez_arecibo/repositories/Ohio-SETI/oseti_19770815_220410.csv
+    type: transcribed_data_csv_header
+    date: "2024-10-14 (repo v0a)"
+    observation: "same 82 rows as TXT; header lists 50 channels + 6 record columns"
+    relevance: REQUIRED — same layer as TXT (format duplicate)
+    source: planetaryhablab/Ohio-SETI @ 28624a1eaf955ced940db347684cee61c8e4fd61
+    used_by_arecibo: yes
+    needed_by_us: yes
+    downloaded: yes
+    sha256: 84d623a489159ffc7ae7ac216f010db8e469974ff274af6ff89ca86291df355e
+
+  - file: oseti_19770815_220410.extended.pdf
+    path: research/sources/mendez_arecibo/repositories/Ohio-SETI/oseti_19770815_220410.extended.pdf
+    type: transcribed_data_pdf_with_CNT_and_OBJECT_fields
+    date: "2024-10-14 (repo v0a)"
+    observation: "adds CNT and OBJECT (Ohio Sky Survey object in beam path) fields"
+    relevance: REQUIRED — OBJECT field links rows to catalogued survey sources
+    source: planetaryhablab/Ohio-SETI @ 28624a1eaf955ced940db347684cee61c8e4fd61
+    used_by_arecibo: yes
+    needed_by_us: yes
+    downloaded: yes
+    sha256: 50a6cc8a876fd87e983c32c3c3a5e277fb1e192ad8ed8db12f953f5689fd0333
+
+  - file: oseti_19770815_220410.sav
+    path: research/sources/mendez_arecibo/repositories/Ohio-SETI/oseti_19770815_220410.sav
+    type: idl_save_reanalysis_arrays
+    date: "2024-10-14 (repo v0a) — predates Arecibo Wow! II paper by ~10 months"
+    observation: "reanalysis arrays: corrected B1950/J2000 coords, MJD/LST, CFREQ, numeric SNR, FLUX (README: 'assuming max signal was 54 Jy'), FREQ_CHAN(+VEL), OBJECT"
+    relevance: REQUIRED with CAUTION — CALIBRATED/RECONSTRUCTED layer under v0a-era assumptions; FLUX calibration may differ from final paper
+    source: planetaryhablab/Ohio-SETI @ 28624a1eaf955ced940db347684cee61c8e4fd61
+    used_by_arecibo: yes (superset of these arrays underlies paper tables)
+    needed_by_us: yes (Phase C reproduction of coordinate/frequency/SNR/flux chains)
+    downloaded: yes
+    sha256: 122cca196f7bf89a056fe7f9ed0bf7292ee89edb4c8e0c551d0cc4295bcd4bed
+
+  - file: "Wow! Signal.csv"
+    path: research/sources/mendez_arecibo/repositories/The-Wow-Signal/Wow! Signal.csv
+    type: manual_transcription_csv
+    date: "2022-07-20 (commit 0b491d4)"
+    observation: "82 rows x 50 channels; row-1 values verified identical to Ohio-SETI TXT/CSV"
+    relevance: USEFUL — upstream TRANSCRIBED_ARCHIVAL witness (transcription-chain check)
+    source: MichaelHotaling/The-Wow-Signal @ 0b491d40d03337722254f70eb5f945ad8e181e1c
+    used_by_arecibo: indirectly (acknowledged transcription source in Ohio-SETI README)
+    needed_by_us: yes (independent transcription diff, Phase C)
+    downloaded: yes
+    sha256: 1942418f4284bbdf7ef25c24bb80aabde5723911626bd61b347f09a07948ce36
+
+  - file: ehman_30th.htm
+    path: data/sources_cache/ehman_30th.htm
+    type: historical_web_report_html
+    date: "authored ~2007; cached 2026-08-18"
+    observation: "discoverer's 30th-anniversary account incl. printout interpretation and coordinate conventions"
+    relevance: USEFUL — historical baseline for comparison layer
+    source: https://www.bigear.org/Wow30th/wow30th.htm (http now 301 to https)
+    used_by_arecibo: partially (historical context; corrections noted by PHL /wow/data)
+    needed_by_us: yes (historical-vs-modern comparison, Phase B)
+    downloaded: yes (pre-existing cache)
+    sha256: 4d7cb7678b7808073f5d61c2161f59def5b56a1e6ae92b376db8220c283195be
+
+  - file: naapo_rebuttal.htm
+    path: data/sources_cache/naapo_rebuttal.htm
+    type: institutional_web_page_html
+    date: "cached 2026-08-18"
+    observation: "NAAPO rebuttal of the comet hypothesis (H2 context only)"
+    relevance: OPTIONAL — secondary/institutional, not sole likelihood support (per source_ledger policy)
+    source: http://naapo.org/WOWCometRebuttal.html (site unreachable at 2026-08-22 check; retry before Phase C)
+    used_by_arecibo: no
+    needed_by_us: no (H2 context only)
+    downloaded: yes (pre-existing cache)
+    sha256: 09ad5d4f440576becdb24ebe88b0f7a1683af6f55d657063a3aad8905c5d52a1
+
+not_yet_available:
+  - file: "Big Ear Archive full collection (Kraus/Dixon/Ehman papers, observing logs, engineering reports, printouts 1963-1998)"
+    path: null
+    type: physical_and_digital_archive
+    date: "public release scheduled August 2027 (PHL)"
+    observation: "August 13-17, 1977 directories referenced by the directive are expected here post-release"
+    relevance: "REQUIRED_LATER for independent inspection of surrounding Aug 1977 records; blocked externally"
+    source: https://phl.upr.edu/wow/bigear
+    used_by_arecibo: "paper used 'records not examined in earlier analyses' — full extent to be established in Phase A"
+    needed_by_us: yes_after_release
+    downloaded: no
+    sha256: null
+
+  - file: "August 13-17, 1977 Big Ear printout scans (beyond the Wow! row block)"
+    path: null
+    type: scanned_computer_printouts
+    date: n/a
+    observation: "not publicly hosted anywhere identified (bigear.org hosts none; Ohio-SETI has only the Wow! block)"
+    relevance: "would enable null-distribution/noise characterization around the event"
+    source: null
+    used_by_arecibo: "unknown — to determine in Phase A (paper's §Data describes archive extent)"
+    needed_by_us: yes_when_available
+    downloaded: no
+    sha256: null
+
+site_maps:
+  bigear.org:
+    checked: 2026-08-22
+    status: "live (https); site content frozen ~2008"
+    relevant_paths: ["/Wow30th/wow30th.htm", "/wow.htm", "/wowmenu.htm", "/surveys-menu.htm", "/design&build-menu.htm", "/CSMO/HTML/CSIntro.htm (13-issue Cosmic Search archive)"]
+    printout_scan_archive_hosted: false
+  naapo.org:
+    checked: 2026-08-22
+    status: "UNREACHABLE (http and https timeouts at check time; earlier fetch of WOWCometRebuttal.html succeeded 2026-08-18)"
+    relevant_paths: ["/WOWCometRebuttal.html (cached)"]
+  phl.upr.edu/wow_pages:
+    checked: 2026-08-22
+    relevant_paths: ["/wow", "/wow/data", "/wow/bigear", "/wow/gray", "/wow/classic", "/wow/summary"]
+
+decision_log:
+  - "No bulk archive download attempted: the only public archive objects are the six small Ohio-SETI files (already frozen) and the Hotaling CSV (frozen). Nothing else to download today (§0.10 satisfied trivially — enforced anyway)."
+  - "bigear.org HTML pages beyond Wow30th not fetched yet: optional context; fetch on demand in Phase A/B with per-page hash recording."
+
+# =============================================================================
+# AMENDMENT 2026-08-22 (pre-authorization review, docs/acquisition/SOURCE_EXTRACTION_MAP.md §12)
+# =============================================================================
+# VISIBLE CORRECTION (no silent overwrite of the original entries above):
+# Arecibo Wow! II v1 (arXiv:2508.10657), §2 "The Ohio SETI Data" (frozen TeX l.113-121),
+# states the FULL N50CH printout archive IS publicly available on the NAAPO website:
+#   - 75,000+ pages photographed by Marc W. Abel (2006-2017), PNG/CR2 originals (1.24 TB),
+#     JPG reduction 69 GB, 167 directories (001-167) plus a 'wow' directory (wow-001..wow-074)
+#   - includes scans of the IBM 1030 Assembler/FORTRAN IV N50CH code
+#   - the 'wow' directory belongs between frames 013-411 and 013-412; directory 001 after
+#     frame 001-525 is 1978 data, not 1977
+# This CORRECTS the original entry above claiming surrounding August 1977 scans were "not
+# publicly hosted anywhere identified". Availability could not be re-verified at check time
+# because www.naapo.org was unreachable (http/https timeouts, 2026-08-22). Status of the
+# "August 13-17, 1977 scans" entry therefore changes from "not found publicly hosted" to
+# "paper states hosted on NAAPO site; site unreachable; pending re-verification".
+# The August-2027 release statement applies to the PHL Big Ear Archive (documents, logs,
+# engineering reports, personal papers), a DIFFERENT collection from the N50CH printouts.
+# =============================================================================
+#
+# AMENDMENT 2 (2026-08-23, Phase A authorization Part 1 — scope note):
+# Public availability of the N50CH printout scans was independently re-verified
+# (human, 2026-08-23) against argus.naapo.org/~rchilders/N50CH_data/scans/png/folder.wow/
+# and the continuum strip-chart archive — both reachable and matching the paper's
+# description. Agent-side spot check same day: server reachable (301→https), directory
+# listing returns 404 (indexing disabled), specific filenames not confirmed from the
+# agent environment — status HUMAN_VERIFIED / AGENT_PARTIAL.
+#
+# SCOPE NOTE — do not over-read "the archive is public":
+#   NAAPO public access covers:
+#     - N50CH printout scans (PNG/JPG images)
+#     - continuum strip-chart scans (Aug 16-17, 1977)
+#   NAAPO public access does NOT cover:
+#     - original FITS data (confirmed nonexistent, per Mendez)
+#     - Aug 13-17, 1977 OCR/transcription working files (private)
+#   Do not treat "archive is public" as "reproduction chain is complete."
+# =============================================================================

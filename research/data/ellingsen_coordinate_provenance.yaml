@@ -1,0 +1,100 @@
+# =============================================================================
+# ELLINGSEN/HOBART COORDINATE PROVENANCE TABLE
+# Machine-readable companion to docs/acquisition/hobart_pointing_reconciliation.md
+#
+# Rules encoded here (and enforced by tests):
+#   * no entry may silently change frame/epoch — any transformed value must be
+#     a separate field with an explicit method;
+#   * Hobart commanded positions are NOT approved for beam weighting until
+#     GAP-HOB-002/003/004 intent questions are resolved by the human gate;
+#   * suitable_for_beam_weighting refers to USE AS TARGET REFERENCE, not to
+#     arithmetic validity of the stored value.
+# =============================================================================
+
+schema_version: 1.0
+created_utc: "2026-08-25T00:00:00Z"
+transformation_tool: "astropy 7.2.2 SkyCoord (FK4[B1950] -> ICRS includes E-terms of aberration)"
+
+entries:
+
+  wow_positive_horn_J2000:
+    coordinate: "RA 19:25:02  Dec -26:57:18"
+    frame: ICRS (paper states J2000)
+    epoch: J2000
+    source: "Arecibo Wow! II (arXiv:2508.10657v1) Table 4, via frozen extraction"
+    original_or_derived: original_published
+    provenance_class: modern_reconstructed_coordinate   # paper's own reconstruction from printout + squint corrections
+    uncertainty: "RA +/-3 s (timing; +/-0.2 s statistical, pointing dominant); Dec +/-20 arcmin (beam-limited)"
+    intended_use: "project-canonical positive-horn locale; H3/H2 geometry; Hobart reconciliation reference"
+    suitable_for_beam_weighting: true   # as REFERENCE POSITION ONLY
+    locator: research/data/historical_vs_arecibo_parameters.csv (row ra/dec_positive_horn)
+    caution: "galactic-b row for positive horn is a verified typo; irrelevant to equatorial value used here"
+
+  wow_negative_horn_J2000:
+    coordinate: "RA 19:27:55  Dec -26:57:13"
+    frame: ICRS (paper states J2000)
+    epoch: J2000
+    source: "Arecibo Wow! II Table 4"
+    original_or_derived: original_published
+    provenance_class: modern_reconstructed_coordinate
+    uncertainty: "RA +/-3 s; Dec +/-20 arcmin"
+    intended_use: "second horn locale; reconciliation reference"
+    suitable_for_beam_weighting: true
+
+  hobart_field1_commanded:
+    coordinate: "RA 19:25:28.0  Dec -26:57:00"
+    frame: J2000 per RPFITS system card (EPOCH='j2000') and live-pages coord_ra2000 column
+    epoch: J2000
+    source: "dump headers; RPFITS SU tables (ra_rad 0.?? -> 19.424444 h); telescope_pos DB extracts"
+    original_or_derived: original_campaign_value
+    provenance_class: campaign_target_coordinate
+    uncertainty: "commanded value exact; realized pointing offsets from bruce logs typically <~2 arcmin after correction suggestions"
+    intended_use: "Hobart 2013/14 field1 sessions (= East Big Ear beam locale per donor plan workbook)"
+    suitable_for_beam_weighting: false     # BLOCKED: selection-function gates (thresholds/beam model); intent RESOLVED by plan doc
+    blocking_gap: "GAP-HOB-002 (RESOLVED as intent) ; weighting now gated by R5-R10/R13 readiness items"
+    locators:
+      - "original/...-001/2013obs (tarball headers; see spectrum_header_index.csv)"
+      - "analysis/rpfits_source_table_index.json"
+
+  hobart_field2_commanded:
+    coordinate: "RA 19:28:17.0  Dec -26:57:00"
+    frame: J2000 (same basis as field1)
+    epoch: J2000
+    source: "as field1; SU example c142050613.rpf 'wow_f2' ra_rad=5.097597691 dec_rad=-0.470366233"
+    original_or_derived: original_campaign_value
+    provenance_class: campaign_target_coordinate
+    uncertainty: as field1
+    intended_use: "Hobart 2013/14 field2 sessions (= West Big Ear beam locale per donor plan workbook)"
+    suitable_for_beam_weighting: false    # BLOCKED: selection-function gates; intent RESOLVED by plan doc
+    blocking_gap: "GAP-HOB-003 (RESOLVED as intent) ; weighting gated by R5-R10/R13 readiness items"
+
+  hobart_2010_on:
+    coordinate: "RA 19:23:03.0  Dec -26:43:24"
+    frame: J2000 (header label + rpfits epoch card)
+    epoch: J2000
+    source: "2010 dump headers + SU tables c10228093x.rpf"
+    provenance_class: campaign_target_coordinate
+    intended_use: "2010-08-16 session"
+    suitable_for_beam_weighting: false    # BLOCKED: GAP-HOB-004
+    blocking_gap: GAP-HOB-004
+    off_positions:
+      wow_off1: "19:23:03 -25:43:24 (+1 deg Dec)"
+      wow_off2: "19:23:03 -27:43:24 (-1 deg Dec)"
+
+  hobart_1999_grid_A: {b1950: "19:22:22 -27:18:00", j2000_derived: "19:25:27.9 -27:12:01", frame: "B1950 original; J2000 derived", epoch: B1950.0, method: "FK4(B1950)->ICRS (astropy)", provenance_class: campaign_target_coordinate, source: "top-level README (DOCUMENTED)", suitable_for_beam_weighting: false}
+  hobart_1999_grid_B: {b1950: "19:25:12 -27:18:00", j2000_derived: "19:28:17.8 -27:11:50", frame: "B1950 original; J2000 derived", epoch: B1950.0, method: "FK4(B1950)->ICRS (astropy)", provenance_class: campaign_target_coordinate, source: "top-level README", suitable_for_beam_weighting: false}
+  hobart_1999_grid_C: {b1950: "19:22:22 -26:48:00", j2000_derived: "19:25:27.2 -26:42:01", frame: "B1950 original; J2000 derived", epoch: B1950.0, method: "FK4(B1950)->ICRS (astropy)", provenance_class: campaign_target_coordinate, source: "top-level README", suitable_for_beam_weighting: false}
+  hobart_1999_grid_D: {b1950: "19:25:12 -26:48:00", j2000_derived: "19:28:17.1 -26:41:50", frame: "B1950 original; J2000 derived", epoch: B1950.0, method: "FK4(B1950)->ICRS (astropy)", provenance_class: campaign_target_coordinate, source: "top-level README", suitable_for_beam_weighting: false}
+
+  wow_historical_error_box:
+    definition: UNKNOWN
+    frame: NOT_APPLICABLE
+    epoch: NOT_APPLICABLE
+    provenance_class: error_box_definition
+    status: "campaign-era definition not recoverable locally (GAP-HOB-016)"
+    suitable_for_beam_weighting: false
+
+derived_relationships:   # computed facts; no interpretation of intent
+  - "hobart_field1_commanded.ra == precessed image of hobart_1999_grid_A.ra to <2 s of time"
+  - "hobart_field2_commanded.ra == precessed image of hobart_1999_grid_B.ra to <2 s of time"
+  - "separations table: analysis/pointing_geometry.json"

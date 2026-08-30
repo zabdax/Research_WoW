@@ -1,0 +1,356 @@
+# =============================================================================
+# ELLINGSEN 1998/99 PROCESSING-SOFTWARE INVENTORY (machine-readable provenance)
+# Produced by scripts/ellingsen_fortran_inventory.py (deterministic; re-runnable).
+# Directive: MASTER DIRECTIVE 2026-08-29 sections 11, 12, 28.
+# Static analysis ONLY. No missing routine reconstructed. No inference emitted.
+# =============================================================================
+inventory_version: "1.0"
+created_utc: "2026-08-29"
+donor: "Simon Ellingsen (relayed via project owner; original email not locally archived)"
+frozen_sources:
+  fortran:
+    path: research/sources/ellingsen_hobart/software/mpslpp.f
+    sha256: 3274fe719b465825dc9258c60059ffbf2e09102a1ee1f48813f4862484d2080a
+    bytes: 209602
+  documentation:
+    path: research/sources/ellingsen_hobart/documentation/mpslpp.tex
+    sha256: 09cd1e0217088800a369e4ae5038b9008cddd6bd9a4a21f32492d88fc1660d9c
+    bytes: 20311
+program_identity:
+  name: MPSLPP
+  full_name: "Mt Pleasant Spectral Line Processing Package"
+  author: "S P Ellingsen"
+  version: "1.8"
+  release_date: "19-Jul-1995"
+  rcs_id: "$Id: mpslpp.f,v 1.8 1995/03/24 10:33:51 sellings Exp sellings $"
+  platforms: [VMS, "PC (Lahey Fortran + Phar Lap 386)"]
+structure:
+  total_lines: 5403
+  program_units: [{"line": 18, "kind": "program", "name": "mpslpp"}, {"line": 4745, "kind": "subroutine", "name": "extrtn"}]
+  includes: ["mpslpp.inc", "headkey.inc", "histkey.inc", "mpslpp.inc", "mpslpp.def"]
+  common_blocks: 0
+  external_declarations: ["extrtn"]
+  key_parameters: {"cmax": "34", "maxifs": "2", "maxlag": "1024", "maxspc": "40", "maxcmp": "10"}
+dependency_map:
+  note: >-
+    Classifications per directive section 12: FOUND / FOUND_PARTIAL /
+    REFERENCED_BUT_MISSING / NOT_REFERENCED / UNKNOWN. No dependency was
+    reconstructed or guessed.
+  counts: {"FOUND": 0, "FOUND_PARTIAL": 0, "REFERENCED_BUT_MISSING": 73, "NOT_REFERENCED": 0, "UNKNOWN": 0}
+  entries:
+      analytical_fit:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [2888]
+      clear_string:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [2640, 2641, 2655, 2656, 2657, 2658, 2659, 2660, 2661, 2666, 2679, 4898]
+      closefit:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [1029]
+      cls:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [371, 1113, 1176, 1289, 1480, 1635, 2434, 2580, 2586, 2687, 2708, 2970, 3268, 4207, 4385, 4716]
+      copy_head:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [1264, 1439, 1572, 1820, 2357, 3743]
+      create_det:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [2706]
+      daynodate:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [679, 4432]
+      delete_file:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [908, 910, 1032, 1033, 2085, 2098, 4525, 4580]
+      display:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [2014, 2321, 2330, 3711, 3720, 3772]
+      dofft:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [808, 1256]
+      fitpos:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [2893]
+      fitserr:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [912, 915, 918, 921, 924, 927, 930, 933, 940, 947, 950, 958, 965, 968]
+      ftbdef:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [949, 967]
+      ftchke:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [408, 412, 1058, 1062]
+      ftclos:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [457, 873, 1030, 1031, 1168]
+      ftcrhd:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [920, 932]
+      ftgcvd:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [1126, 1132, 1135]
+      ftgcve:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [1139, 1148]
+      ftgcvj:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [1123, 1129, 1142, 1145]
+      ftgcvs:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [440, 1120]
+      ftghbn:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [410, 1060]
+      ftinit:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [911, 923]
+      ftmahd:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [405, 460, 1055]
+      ftmkyj:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [953, 971]
+      ftpbnh:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [938, 956]
+      ftpdat:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [942, 960]
+      ftpdef:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [917, 929]
+      ftpkys:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [943, 945, 961, 963]
+      ftpprh:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "CFITSIO"
+        call_lines: [914, 926]
+      gaufit:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [3567, 3589]
+      gausmoo:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [2215]
+      getdetails:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [1911]
+      getrms:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [3179]
+      hanning:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [799, 1248]
+      indexx:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [3871]
+      interpret_chan:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [491, 1329, 1501, 1504, 1669, 1672, 2115, 2459, 2809, 3023, 3127, 3226, 3386, 4236, 4996, 5033]
+      interpret_list:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [389, 469, 487, 880, 1178, 1183, 1291, 1296, 1311, 1482, 1487, 1637, 1642, 1868, 2110, 2131, 2453, 2615, 2713, 2972]
+      intflux:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [3084]
+      lib$free_lun:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [458, 874, 1034, 1035, 1036, 1169, 2945, 3102, 3202, 3361, 3925, 4008, 4067, 4360, 4543, 4693]
+      lib$get_lun:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [905, 906, 978, 2796, 2801, 3044, 3049, 3158, 3163, 3256, 3261, 3854, 3859, 3967, 4047, 4266, 4288, 4336, 4583]
+      list_files:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [4894]
+      lowcase:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [4896, 4901, 5069, 5094, 5146, 5159]
+      menu:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [365, 4729]
+      multips:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [2081, 2094]
+      number:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [4163]
+      online_help:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [4705]
+      openread:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [399, 527, 1049]
+      openwrite:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [975]
+      peaks:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [3299, 4410]
+      pgask:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "PGPLOT"
+        call_lines: [1883, 2193, 3679]
+      pgbbuf:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "PGPLOT"
+        call_lines: [1884, 2034, 2047, 2194, 2349, 3680, 3785, 3800]
+      pgebuf:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "PGPLOT"
+        call_lines: [2025, 2343, 3782, 3794]
+      pgend:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "PGPLOT"
+        call_lines: [2029, 2038, 2073, 2346, 3797]
+      pgpage:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "PGPLOT"
+        call_lines: [2033, 2348, 3784, 3799]
+      posplot:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [2962]
+      print_file:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [2078, 2083, 2096]
+      printdetails:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [1944]
+      readfit:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [603]
+      reverse:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [810, 1258, 1951, 2066, 4606]
+      sla_cldj:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "SLALIB"
+        call_lines: [680, 4433]
+      sla_galeq:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "SLALIB"
+        call_lines: [696]
+      sla_preces:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "SLALIB"
+        call_lines: [688]
+      svdfit:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [2264, 2268]
+      the:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [363, 3297, 4408]
+      upcase:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [2443, 2593, 2594, 5090, 5102, 5171]
+      user_wait:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "McConnell menu software"
+        call_lines: [381, 394, 455, 478, 501, 511, 519, 557, 566, 574, 583, 885, 891, 994, 1000, 1006, 1162, 1167, 1191, 1304]
+      vanvleck:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [797, 1246]
+      writefit:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "unidentified external library (not supplied)"
+        call_lines: [1014]
+      extrtn:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "declared EXTERNAL in mpslpp.f; body not supplied"
+        call_lines: []
+      include:mpslpp.inc:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "Fortran INCLUDE file referenced but not supplied"
+        call_lines: []
+      include:headkey.inc:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "Fortran INCLUDE file referenced but not supplied"
+        call_lines: []
+      include:histkey.inc:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "Fortran INCLUDE file referenced but not supplied"
+        call_lines: []
+      include:mpslpp.def:
+        classification: REFERENCED_BUT_MISSING
+        library_family: "Fortran INCLUDE file referenced but not supplied"
+        call_lines: []
+historical_pipeline:
+  documented_path: {
+  "1_readfit": "call readfit(...) line 603 (external, CFITSIO-based)",
+  "2_vanvleck": "call vanvleck(data,nlags) line 797 (external kernel)",
+  "3_optional_hanning": "call hanning(...) line 799, gated by smoothing parameter (external kernel)",
+  "4_dofft": "call dofft(data,nlags) line 808 (external kernel)",
+  "5_quotient": "inline slot arithmetic + adjust_tsys None/Signal/Baseline logic",
+  "6_writefit": "call writefit(...) line 1014 (external, adds history extension)"
+}
+  reproducibility: {
+  "correlator_output_to_fit": "REPRODUCIBLE (files in frozen archive)",
+  "fit_to_acf_read": "DEPENDENCY_MISSING (readfit not supplied)",
+  "acf_to_spectrum": "DEPENDENCY_MISSING (vanvleck/dofft/hanning not supplied; conventions DOCUMENTED_ONLY)",
+  "quotient_calibration": "DOCUMENTED_ONLY (manual QUOTIENT section; executed reference/Tsys choices unknown)",
+  "search_analysis_product": "UNKNOWN (no search/analysis layer survives; attributed to Bob Gray per donor)"
+}
+data_interpretation_1998_99:
+  correlator_files_contain: "1024-lag autocorrelation functions (source: maxlag=1024 parameter + manual 'store the observations as autocorrelation functions' + archived COUNTS units)"
+  spectra_require: "FFT with Van Vleck one-bit correction; Hanning smoothing optional before FFT"
+  unresolved: "bandwidth, lag-to-channel mapping, Doppler/frame conventions, executed calibration choices (GAP-HOB-012 tail)"
+provenance_locators:
+  dependency_map_json: research/sources/ellingsen_hobart/analysis/fortran_dependency_map.json
+  hash_manifest: research/sources/ellingsen_hobart/hashes/SIMON_SOFTWARE_SHA256SUMS.txt
+  forensic_report: docs/acquisition/HOBART_1998_99_FORENSIC_PROCESSING_REPORT.md

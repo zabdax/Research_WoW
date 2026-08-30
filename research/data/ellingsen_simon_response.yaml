@@ -1,0 +1,266 @@
+# =============================================================================
+# SIMON ELLENSEN RESPONSE — DONOR-RESPONSE FREEZE (machine-readable provenance)
+# MASTER DIRECTIVE 2026-08-29 section 2. Created: 2026-08-29.
+#
+# PROVENANCE CHAIN: Simon's answers were relayed verbatim to the executing
+# agent by the project owner (human) on 2026-08-29. The original email is NOT
+# locally archived; email date/headers/address are UNAVAILABLE locally and are
+# recorded as such. Wording is preserved as received; the epistemic strength
+# of every answer is preserved and NEVER silently upgraded (directive
+# sections 1.3, 4-10).
+# =============================================================================
+
+freeze_version: 1.0
+created_utc: "2026-08-29"
+donor: "Simon Ellingsen (University of Tasmania; donor of the Hobart archive)"
+response_relayed_by: "project owner (human)"
+response_relayed_date: "2026-08-29"
+original_email_metadata:
+  locally_archived: false
+  date: UNAVAILABLE
+  headers: UNAVAILABLE
+  recipient: UNAVAILABLE
+  note: >-
+    Relay-based provenance only. If the original email is later archived,
+    append its metadata as a freeze_version bump without altering v1.0 records.
+
+evidence_class_definitions:
+  DONOR_TESTIMONY: >-
+    Statement of fact or recollection by the donor. Reliability depends on
+    donor memory; not an independently measured quantity.
+  DONOR_SPECULATION: >-
+    Explicitly hedged donor statement (suspect / may have / I think).
+    UNVERIFIED; must never be promoted to observational fact.
+  DOCUMENTARY: >-
+    Established from documents/artifacts independent of memory.
+
+# Permitted use: provenance recording, gap-register updates, acquisition
+# planning, contact preparation. Prohibited use: any Bayesian likelihood,
+# prior, posterior, non-detection claim, or evidence-layer promotion
+# (directive sections 1.1-1.2, 24).
+
+answers:
+
+  Q2_2013_14_field_intent:
+    question_id: v3-Q2
+    question_text: >-
+      We find two recurring pointings, approximately 19:25:28, -26:57 (Field 1)
+      and 19:28:17, -26:57 (Field 2). Do you remember whether these were
+      deliberately chosen as different target positions, perhaps corresponding
+      to the two candidate positions associated with the Big Ear observation?
+    verbatim_answer: >-
+      I can't remember. Bob Gray had a couple of other ideas that we tested
+      some of those would have been with a newer and better correlator system
+      than we had in 1998/1999. I don't have access to the emails that we
+      would have exchanged in setting up the experiment.
+    evidence_class: DONOR_TESTIMONY
+    scientific_status: DONOR_CANNOT_RECALL_INTENT
+    interpretation: >-
+      Field intent beyond the observing-plan workbook is NOT independently
+      confirmed by the donor. The 'Bob Gray had a couple of other ideas that
+      we tested' clause is DONOR_SPECULATION-grade context; it must not be
+      read as establishing what was tested or why. Two additional donor
+      recollections recorded: (a) some 2013/14-era work would have used a
+      newer and better correlator system than the 1998/99 one; (b) the
+      setup-phase emails are NOT accessible to the donor.
+    affected_gaps: [GAP-HOB-002, GAP-HOB-003, GAP-HOB-016, GAP-HOB-012]
+    permitted_use: [provenance, acquisition planning]
+    prohibited_use: [inference about target intent or tested ideas]
+
+  Q3_2013_14_coordinate_conversion:
+    question_id: v3-Q3
+    question_text: >-
+      The RPFITS files contain EPOCH='j2000', and the two positions appear to
+      correspond closely to precessed versions of the B1950 positions
+      documented in the older material. Do you recall whether the 2013/14
+      coordinates were deliberately converted from B1950 to J2000 for the
+      observations?
+    verbatim_answer: "Yes that sounds correct"
+    evidence_class: DONOR_TESTIMONY
+    scientific_status: DONOR_SUPPORTED_B1950_TO_J2000_INTERPRETATION
+    interpretation: >-
+      Combined with the observing-plan workbook (the primary documentary
+      evidence of the deliberate East/West beam-locale field definitions and
+      B1950 to J2000 pairs), the epoch-error interpretation is retired as the
+      primary explanation. Do NOT claim Simon independently confirmed the
+      precise scientific motivation of the two fields beyond what the plan
+      workbook establishes.
+    affected_gaps: [GAP-HOB-002, GAP-HOB-003]
+    permitted_use: [provenance, gap closure]
+    prohibited_use: [claiming donor confirmation of scientific motivation]
+
+  Q4_2010_pointing:
+    question_id: v3-Q4
+    question_text: >-
+      The 2010 observation appears to have used approximately 19:23:03,
+      -26:43:24, together with two offset positions. Do you remember what the
+      intended target or pointing strategy was for that observation?
+    verbatim_answer: >-
+      No, I suspect we may have been following up a candidate from an earlier
+      observation.
+    evidence_class: DONOR_SPECULATION
+    scientific_status: UNVERIFIED_DONOR_SPECULATION
+    interpretation: >-
+      MUST NOT be treated as evidence that a previous candidate existed, that
+      the 2010 observation was a repeat detection, that the Wow! Signal was
+      detected again, or that H5 repeatability was demonstrated. The 2010
+      pointing rationale remains UNRESOLVED unless another source establishes
+      it.
+    affected_gaps: [GAP-HOB-004]
+    permitted_use: [provenance only, explicitly labeled speculation]
+    prohibited_use: [any inference of a prior candidate or detection]
+
+
+  Q1_archive_completeness:
+    question_id: v3-Q1
+    question_text: >-
+      Do you know whether the files you uploaded represent essentially all of
+      the surviving Hobart material relevant to the Wow! follow-up
+      observations, or are they simply the files that happened to remain
+      available to you?
+    verbatim_answer: >-
+      This is all there is, if I don't have a copy, no one else will have it.
+    evidence_class: DONOR_TESTIMONY
+    scientific_status: DONOR_SIDE_SURVIVING_ARCHIVE_COMPLETENESS_RESOLVED
+    interpretation: >-
+      This is all surviving material known to / available from Simon. This is
+      NOT established as the complete historical Hobart archive. Use the terms
+      'complete surviving donor-held material' or 'complete material available
+      from the donor'.
+    affected_gaps: [GAP-HOB-001]
+    permitted_use: [acquisition planning, provenance]
+    prohibited_use: [completeness claims about the historical archive]
+
+  Q5_search_procedure:
+    question_id: v3-Q5
+    question_text: >-
+      Were any explicit detection thresholds or minimum S/N criteria used in
+      the 2010, 2013, or 2014 searches? Were candidate events manually
+      inspected or filtered according to criteria such as RFI, baseline
+      structure, persistence, or repeat detection?
+    verbatim_answer: >-
+      Bob Gray did all the processing and analysis of the data, I simply
+      collected it.
+    evidence_class: DONOR_TESTIMONY
+    scientific_status: SEARCH_LAYER_ATTRIBUTED_TO_BOB_GRAY
+    interpretation: >-
+      Simon is the observational/data-collection donor; Bob Gray was
+      responsible for processing and analysis (donor attribution); Simon does
+      not hold the search criteria/results. The missing search-layer evidence
+      likely belongs to Bob Gray or other surviving project records. This is
+      NOT evidence of a null result.
+    affected_gaps: [GAP-HOB-005, GAP-HOB-006, GAP-HOB-007, GAP-HOB-008]
+    permitted_use: [provenance, contact preparation (Bob Gray)]
+    prohibited_use: [inferring a null result, constructing selection functions]
+
+  Q6_candidate_records:
+    question_id: v3-Q6
+    question_text: >-
+      Do you know whether any lists, tables, notes, plots, or reports
+      containing candidate events - including rejected candidates - survived
+      anywhere? If Bob Gray retained analysis outputs for the later campaigns,
+      an introduction or contact information would also be extremely helpful,
+      if you are comfortable providing it.
+    verbatim_answer: >-
+      I don't have ready access to anything other than what I provided
+      yesterday
+    evidence_class: DONOR_TESTIMONY
+    scientific_status: HISTORICAL_CANDIDATE_RECORD_NOT_LOCATED_IN_DONOR_HELD_MATERIAL
+    interpretation: >-
+      This is NOT a statement that no candidates existed. The following remain
+      unknown unless independently recovered: whether candidates existed; how
+      many; whether rejected and why; whether any event passed the historical
+      criteria; whether a formal null result was issued; whether the search
+      was complete. No Bob Gray contact information was provided by the donor.
+    affected_gaps: [GAP-HOB-009, GAP-HOB-001]
+    permitted_use: [provenance, contact preparation]
+    prohibited_use: [no-candidates inference, non-detection inference]
+
+  Q7_2013_14_calibration:
+    question_id: v3-Q7
+    question_text: >-
+      The ASCII files contain Flux Unit: Jy, but the processing appears to use
+      a nominal 500 K system temperature. Do you know whether these values
+      were intended to represent absolutely calibrated flux densities, or
+      whether they were an internally normalized quantity? Were calibrator
+      observations or calibration constants recorded for those campaigns?
+    verbatim_answer: >-
+      I don't think we focused on obtaining accurate calibration, so the
+      intensity numbers I wouldn't trust to more than about 50% accuracy.
+    evidence_class: DONOR_TESTIMONY
+    scientific_status: ABSOLUTE_CALIBRATION_PROVISIONAL_DONOR_LIMITED
+    interpretation: >-
+      Explicit donor limitation. The 'approximately 50%' figure is a
+      qualitative calibration limitation stated from memory. It is NOT a
+      Gaussian 1-sigma uncertainty and MUST NOT be encoded as sigma = 50%
+      without independent statistical justification. The 2013/14 'Jy' labels
+      are NOT promoted to class-A absolute flux calibration (the
+      fixtsys/nominal-Tsys=500K code-path finding stands). The Arecibo/Mendez
+      flux evidence vector is untouched.
+    affected_gaps: [GAP-HOB-010, GAP-HOB-011]
+    permitted_use: [provenance, calibration classification]
+    prohibited_use: [Gaussian sigma encoding, absolute-flux promotion]
+
+  Q8_1998_99_software:
+    question_id: v3-Q8
+    question_text: >-
+      Do you happen to know whether any documentation or software for the old
+      autocorrelator survives, particularly information about its bandwidth,
+      lag/channel conversion, or the processing of the .fit.gz files?
+    verbatim_answer: >-
+      I've attached the high-level fortran program and some partial
+      documentation for the software which was used to process data from the
+      1998/99 time. I can't quickly find any of the subroutines/librariries
+      which are where the technical stuff is located.
+    verbatim_note: "Donor typo 'librariries' preserved verbatim."
+    evidence_class: DONOR_TESTIMONY + DOCUMENTARY (supplied artifacts)
+    scientific_status: HIGH_LEVEL_SOFTWARE_SUPPLIED_KERNELS_MISSING
+    interpretation: >-
+      The high-level program (mpslpp.f, MPSLPP v1.8) and partial
+      documentation (mpslpp.tex, MPSLPP User Manual v1.0) were supplied and
+      frozen under research/sources/ellingsen_hobart/. The donor states the
+      subroutines/libraries - which contain the technical content - could not
+      be located. This converts GAP-HOB-012 from OPEN to TECHNICALLY_OPEN
+      (partially recoverable): the pipeline architecture is now documented,
+      but the kernels (FFT, Van Vleck, Hanning, FITS I/O) remain
+      REFERENCED_BUT_MISSING.
+    affected_gaps: [GAP-HOB-012, GAP-HOB-018]
+    permitted_use: [software archaeology, provenance, reconstruction planning]
+    prohibited_use: [claiming the 1998/99 chain is reproducible end-to-end]
+
+  Q9_cadence_integration:
+    question_id: v3-Q9
+    question_text: >-
+      Finally, many of the files show a very regular approximately 5-second
+      spacing between spectral dumps. Do you know whether the actual
+      integration time was also approximately 5 seconds, or whether the data
+      were sampled/read out at a different cadence?
+    verbatim_answer: >-
+      I think that it was a 5 second record for each sample
+    evidence_class: DONOR_TESTIMONY
+    scientific_status: DONOR_SUPPORTED_TIMING_INFORMATION
+    interpretation: >-
+      Distinguish: observed dump cadence = independently measured (5.0 s
+      median, every session); integration time = donor-supported,
+      approximately 5 s ('I think'). Consistent with the plan-workbook
+      Tint=5.0 s specification, but NOT exact independent proof. Unless the
+      supplied software/documentation establishes the actual integration
+      duration, do not claim exact independent proof.
+    affected_gaps: [GAP-HOB-014]
+    permitted_use: [provenance, timing classification]
+    prohibited_use: [claiming measured integration time]
+
+unanswered_from_v2_questionnaire:
+  items:
+    - "v2-Q1 session-date execution confirmation (one line per date)"
+    - "v2-Q9 export decimation (4096 raw channels vs 2048 exported)"
+    - "v2-Q11 publication status of the 2010-2014 efforts"
+  note: >-
+    The 2026-08-29 response round did not address these; they remain OPEN /
+    donor-dependent. GAP-HOB-018 cause and GAP-HOB-017 tail are unaffected.
+
+completeness_rule:
+  archive_completeness_label: "complete surviving donor-held material"
+  forbidden_label: "complete historical Hobart archive"
+
+

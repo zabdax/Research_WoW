@@ -1,0 +1,438 @@
+# =============================================================================
+# ELLINGSEN/HOBART GAP-CLOSURE REGISTER
+# WOW! Signal Bayesian Triage Research Program — Phase: gap closure (no modeling)
+# Created: 2026-08-25. Companion documents:
+#   docs/acquisition/HOBART_GAP_CLOSURE_REPORT.md (summary)
+#   docs/acquisition/ellingsen_gap_closure_questions.md (donor round)
+#
+# Statuses: OPEN / PARTIALLY_RESOLVED / RESOLVED / UNRESOLVABLE
+# information_origin values: donor-provided | archive-derived | literature-derived |
+#                            repository-derived | reconstructed | inferred
+# No gap below may be closed by assumption. "RESOLVED" requires a locator.
+# =============================================================================
+
+register_version: 1.2   # Round-3 amendment 2026-08-29: Simon Ellingsen's donor response frozen (research/data/ellingsen_simon_response.yaml); 1998/99 processing software (MPSLPP) supplied and frozen; statuses updated for GAP-001/004/005/006/007/008/009/010/011/012/014. Full audit trail: 'simon_response_round_2026_08_29' block at end of file. No historical states deleted.
+created_utc: "2026-08-25T00:00:00Z"
+archive_root: research/sources/ellingsen_hobart/original
+
+gaps:
+
+  GAP-HOB-001:
+    title: Archive completeness (is 5.8 GB everything relevant?)
+    status: RESOLVED_DONOR_SIDE   # v1.2 2026-08-29 (see simon_response_round_2026_08_29 audit block)
+    evidence_source:
+      - "research/sources/ellingsen_hobart/metadata/source_manifest.yaml (completeness_assessment: UNKNOWN)"
+    source_type: manifest
+    confidence: n/a (information does not exist locally)
+    locator: metadata/source_manifest.yaml#completeness_assessment
+    information_origin: donor-provided (pending)
+    local_search_performed: "READMEs/logs contain no completeness statement; scan-sequence gap audit not meaningful without donor baseline"
+    notes: "Only Simon can state whether the transfer is complete/selected."
+
+  GAP-HOB-002:
+    title: Field 1 pointing epoch/intent (RA 19:25:28 Dec -26:57)
+    status: RESOLVED
+    resolution_locator: "original/…-001/2013obs/Mt Pleasant 2013 Observing PLAN (draft 2013-07-22).xls -> extracted/HOBART_XLS_PLAN_TEXT.txt sheets 'Wow Details, etc' (East beam row: B1950 19 22 22 -27 03 <-> J2000 19 25 28 -26 57) and 'Observing Plan' (Day 1/3/5 target columns)"
+    resolution_summary: "The donor-supplied planning workbook explicitly documents BOTH locales as deliberate targets: field1 = East Big Ear beam locale given in paired B1950/J2000 coordinates. Interpretation A (deliberate J2000 representation) and B (two distinct locales) are jointly TRUE by design; no inference required."
+    residual_note: "session-to-field date assignment and execution-vs-plan confirmation remain donor-confirmable; spatial weighting remains gated by selection-function gaps (thresholds, beam model), NOT by pointing intent."
+    geometry_resolved:
+      commanded_position: "19:25:28 -26:57 (J2000-labelled)"
+      rpfits_epoch_card: "EPOCH = 'j2000' in every .rpf (instrument-side)"
+      vs_positive_horn_J2000_arcmin: 5.8
+      vs_negative_horn_J2000_arcmin: 32.76
+      coincidence: "commanded RA equals precessed image of documented 1999 grid point A (B1950 19:22:22 -27:18 -> J2000 19:25:27.9) to <2 s of time"
+      locator_analysis: research/sources/ellingsen_hobart/analysis/pointing_geometry.json
+      locator_su_table: research/sources/ellingsen_hobart/analysis/rpfits_source_table_index.json
+    residual_note: "see resolution_summary above; weighting gates are now R5–R10/R13, not pointing intent."
+    source_type: rpfits_system_cards + header_index + geometry + donor_plan_workbook
+    confidence: high (geometry) / unavailable (intent)
+    information_origin: archive-derived
+    notes: "No spatial weighting until intent question answered or explicitly waived by human gate."
+
+  GAP-HOB-003:
+    title: Field 2 pointing epoch/intent (RA 19:28:17 Dec -26:57)
+    status: RESOLVED
+    resolution_locator: "original/…-001/2013obs/Mt Pleasant 2013 Observing PLAN (draft 2013-07-22).xls (text render extracted/HOBART_XLS_PLAN_TEXT.txt): sheets 'Wow Details, etc' West beam row (B1950 19 25 12 -27 03 <-> J2000 19 28 17 -26 57) and 'Observing Plan' Day 2/4/6 columns"
+    resolution_summary: "field2 = West Big Ear beam locale, deliberate, with documented epoch pairing."
+    geometry_resolved:
+      commanded_position: "19:28:17 -26:57"
+      vs_negative_horn_J2000_arcmin: 4.91
+      vs_positive_horn_J2000_arcmin: 43.46
+      coincidence: "commanded RA equals precessed image of 1999 grid point B (B1950 19:25:12 -27:18 -> J2000 19:28:17.8) to <2 s"
+      locators: "as GAP-HOB-002"
+    residual_note: "execution vs plan and date assignments remain donor-confirmable."
+    source_type: rpfits_system_cards + header_index + geometry + donor_plan_workbook
+    confidence: high (geometry) / unavailable (intent)
+    information_origin: archive-derived
+
+  GAP-HOB-004:
+    title: 2010 pointing intent (RA 19:23:03 Dec -26:43:24)
+    status: PARTIALLY_RESOLVED
+    round3_amendment:   # v1.2 2026-08-29
+      evidence: "Donor response Q4 (verbatim freeze: research/data/ellingsen_simon_response.yaml)"
+      donor_statement_class: UNVERIFIED_DONOR_SPECULATION
+      donor_statement: >-
+        'No, I suspect we may have been following up a candidate from an
+        earlier observation.'
+      ruling: >-
+        Speculation, NOT evidence of a prior candidate, repeat detection, or
+        H5 repeatability. The 2010 pointing rationale remains UNRESOLVED
+        unless another source establishes it.
+    geometry_resolved:
+      commanded_position: "19:23:03 -26:43:24 (+ named off-pairs wow_off1/-off2 at +/-1 deg Dec)"
+      vs_positive_horn_J2000_arcmin: 29.96
+      vs_negative_horn_J2000_arcmin: 66.59
+      beam_context: "~0.85 x measured FWHM from positive horn; sub-beam-center but off-peak response if a centered circular Gaussian applied (2-D beam UNKNOWN)"
+      locator_su: "c102280930/c102281100/c102281325.rpf SU tables (wow / wow_off1 / wow_off2)"
+    still_open: "why 19:23:03 -26:43:24 was chosen remains unrecorded; the plan workbook 'Observations' sheet documents the Jaekle dataset's targets/bandwidth (4 MHz, 4096 ch/pol) but not the position rationale; the workbook's 'Ehmans RA err and adj' sheet may be related (unread beyond headings)."
+    source_type: rpfits_su_tables + geometry
+    confidence: high (geometry) / unavailable (intent)
+    information_origin: archive-derived
+
+  GAP-HOB-005:
+    title: Detection threshold(s)
+    status: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR   # v1.2 2026-08-29: redirected to Bob Gray (search-layer owner per donor)
+    round3_amendment:
+      previous_state: OPEN
+      new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      evidence: "Donor response Q5: 'Bob Gray did all the processing and analysis of the data, I simply collected it.'"
+      remaining_route: "Bob Gray information requirements (docs/acquisition/bob_gray_information_requirements.md P1)"
+    evidence_source: ["all three READMEs", "ricky_10228.log", "wow.py scripts", "gsf_text_tokens.json"]
+    source_type: documentation_exhaustion
+    confidence: high that it is absent locally
+    locator: docs/acquisition/ELLINGSEN_README_EXTRACTION.md section 4
+    information_origin: donor-provided (required)
+    notes: "SAS plots show sigma-space diagnostics existed in 1998 but encode no decision rule. Round-2: the Jaekle plan workbook ('Data Analysis', 'Confirmation Options' sheets) documents INTENDED procedures (RFI excision, HI-profile subtraction, big-spike search with summary statistics/histograms, on/off + Doppler-drift + independent-confirmation criteria) — plan-stage only; EXECUTED thresholds remain unknown."
+
+  GAP-HOB-006:
+    title: Candidate-selection rules
+    status: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR   # v1.2 2026-08-29: redirected to Bob Gray
+    round3_amendment:
+      previous_state: OPEN
+      new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      evidence: "Donor response Q5 (search layer attributed to Bob Gray; donor holds nothing)"
+      remaining_route: "docs/acquisition/bob_gray_information_requirements.md P1"
+    source_type: documentation_exhaustion
+    confidence: high absent locally
+    information_origin: donor-provided (required)
+
+  GAP-HOB-007:
+    title: RFI/flagging semantics (incl. Row_Flagged header field)
+    status: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR   # v1.2 2026-08-29: redirected to Bob Gray
+    round3_amendment:
+      previous_state: OPEN
+      new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      evidence: "Donor response Q5/Q6 (donor holds no search-processing records)"
+      remaining_route: "docs/acquisition/bob_gray_information_requirements.md P1 (Q6)"
+    evidence_source: ["spectrum_header_index.csv (Row_Flagged: Pol0:False present in newer exports)"]
+    source_type: header_inventory
+    confidence: medium that nothing further exists locally
+    information_origin: donor-provided (required)
+
+  GAP-HOB-008:
+    title: Repeat-detection criteria
+    status: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR   # v1.2 2026-08-29: redirected to Bob Gray
+    round3_amendment:
+      previous_state: OPEN
+      new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      evidence: "Donor response Q5/Q6 (donor holds no search-processing records)"
+      remaining_route: "docs/acquisition/bob_gray_information_requirements.md P1 (Q8)"
+    source_type: documentation_exhaustion
+    confidence: high absent locally
+    information_origin: donor-provided (required)
+
+  GAP-HOB-009:
+    title: Explicit search outcomes / non-detection statements
+    status: OPEN   # v1.2 2026-08-29: narrowed — historical candidate/search-result record NOT LOCATED in surviving donor-held material (Q6); NOT a no-candidates finding. Route: Bob Gray + G&E2002 OCR.
+    round3_amendment:
+      previous_state: OPEN
+      new_state: OPEN (narrowed; donor route exhausted)
+      evidence: "Donor response Q6: 'I don't have ready access to anything other than what I provided yesterday'; Q5 (analysis layer was Bob Gray's)"
+      explicit_non_evidence: >-
+        The absence of surviving candidate/search-result records in donor-held
+        material does NOT establish that no candidates existed, that no event
+        passed the criteria, or that a null result was issued.
+      remaining_routes: "Bob Gray (docs/acquisition/bob_gray_information_requirements.md P0); G&E 2002 content (OCR authorization pending)"
+    evidence_source:
+      - "archive contains no candidate lists, outcome reports, or correspondence"
+      - "Gray & Ellingsen 2002 PDF present (wow_published.pdf) may state the 1998-99 era outcome; text extraction blocked by vectorized PDF (see hobart_literature_reconciliation.md)"
+    source_type: mixed
+    confidence: high absent locally for 2010-2014
+    information_origin: donor-provided + literature-derived (pending verification)
+    notes: "Non-detection statements remain forbidden from data files alone."
+
+  GAP-HOB-010:
+    title: 2013 absolute flux-calibration chain
+    status: PROVISIONAL_DONOR_LIMITED   # v1.2 2026-08-29: donor confirms calibration was not a focus; ~50% donor-stated accuracy = qualitative limitation, NOT a Gaussian sigma
+    round3_amendment:
+      previous_state: OPEN
+      new_state: PROVISIONAL_DONOR_LIMITED (class C-leaning CONFIRMED as donor-limited)
+      evidence: "Donor response Q7 (verbatim freeze): 'I don't think we focused on obtaining accurate calibration, so the intensity numbers I wouldn't trust to more than about 50% accuracy.'"
+      classification: "ABSOLUTE_CALIBRATION: PROVISIONAL / DONOR-LIMITED; DONOR_STATED_ACCURACY: approximately 50% (qualitative)"
+      forbidden_encoding: "sigma = 50% (no independent statistical justification exists)"
+      promotion_status: "2013/14 'Jy' labels remain NON-class-A; Arecibo/Mendez flux evidence vector untouched"
+    evidence_source:
+      - "2013obs/wow.py adds wow_extract_fixtsys(nomtsys=500): normalization to nominal Tsys=500 K, no Jy chain"
+      - "bruce logs document Hydra A checks on doy189/192 -> calibrator scans likely INSIDE the .rpf archives"
+      - "ROUND-2 NEGATIVE RESULT: analysis/rpfits_su_widescan.json — NO calibrator SU entries (Hydra A / 3C348 / planet) exist in ANY .rpf archive; only wow/field/zenith targets"
+      - "plan workbook 'Sensitivity' sheet: worst-case Tsys ~920 Jy (single pol), ~680 Jy other orthogonal linear feed; notes 'Simon (2012)/(2013) gave…', 'I need Tsys in K'"
+    source_type: code_inspection + logs + binary_probe + donor_plan_workbook
+    confidence: high that no completed chain is archived (calibrator possibility now excluded for supplied .rpf)
+    locator: docs/acquisition/hobart_calibration_reconciliation.md section 3
+    information_origin: donor-provided (required)
+    verdict_class: "C-leaning provisional (relative/instrumental despite Jy label); classes A and D not supported; class-B-via-rpf-calibrators now EXCLUDED for supplied files"
+
+  GAP-HOB-011:
+    title: 2014 absolute flux-calibration chain
+    status: PROVISIONAL_DONOR_LIMITED   # v1.2 2026-08-29: same donor limitation as GAP-HOB-010 (Q7)
+    round3_amendment:
+      previous_state: OPEN
+      new_state: PROVISIONAL_DONOR_LIMITED
+      evidence: "Donor response Q7 (applies to the 2013/14 campaigns collectively)"
+      forbidden_encoding: "sigma = 50%"
+    evidence_source: ["same fixtsys pathway as GAP-HOB-010", "ROUND-2 NEGATIVE RESULT: no calibrator entries in any 2014-era .rpf (rpfits_su_widescan.json)", "plan-workbook Tsys notes apply (920/680 Jy worst-case, K-conversion unavailable)"]
+    source_type: code_inspection + binary_probe
+    confidence: high absent locally
+    information_origin: donor-provided (required)
+    verdict_class: C-leaning provisional
+
+  GAP-HOB-012:
+    title: 1998-1999 UTAS correlator configuration (lags->spectra conversion)
+    status: TECHNICALLY_OPEN   # v1.2 2026-08-29: donor supplied high-level Fortran (MPSLPP v1.8) + partial manual; kernels (subroutines/libraries) MISSING per donor
+    round3_amendment:
+      previous_state: OPEN
+      new_state: TECHNICALLY_OPEN (partially recoverable)
+      evidence: >-
+        Donor response Q8 (verbatim freeze) + frozen artifacts
+        research/sources/ellingsen_hobart/software/mpslpp.f and
+        documentation/mpslpp.tex (hashes: hashes/SIMON_SOFTWARE_SHA256SUMS.txt)
+      established: >-
+        Pipeline architecture DOCUMENTED_ONLY: readfit -> vanvleck (one-bit
+        correction) -> optional hanning -> dofft -> quotient -> writefit;
+        correlator files store 1024-lag ACFs (maxlag=1024; COUNTS units).
+      missing: >-
+        All technical kernels + INCLUDE files (mpslpp.inc, headkey.inc,
+        histkey.inc, mpslpp.def) + CFITSIO/SLALIB/PGPLOT/menu libraries:
+        73 of 73 mapped dependencies REFERENCED_BUT_MISSING (see
+        analysis/fortran_dependency_map.json). Donor: cannot locate
+        subroutines/libraries.
+      remaining_route: "Bob Gray (P2: software version / missing routines); lag-to-channel mapping and bandwidth remain UNRESOLVED"
+    evidence_source:
+      - "data/*.fit.gz carry only DATE/ORIGIN/INSTRUME cards; 1024-lag ACF dumps, COUNTS"
+      - "no frequency/bandwidth/windowing metadata anywhere in files"
+    source_type: fits_header_audit
+    confidence: high absent locally
+    locator: analysis/data_fit_index.json
+    information_origin: donor-provided or historical-documentation required
+    notes: "Decoding requires UTAS correlator configuration documents and lag/window convention; do NOT substitute modern FITS assumptions."
+
+  GAP-HOB-013:
+    title: RPFITS-to-session mapping
+    status: RESOLVED
+    evidence_source:
+      - "analysis/rpfits_source_table_index.json — SU-table entries recovered for ALL 27 .rpf via read-only keyword-window scan"
+      - "naming convention c<YY><DDD><HHMM>.rpf consistent with bruce-log JD day numbers"
+      - "ROUND-2: RPFITS primary-header cards recovered per file (analysis/rpfits_card_inventory.json): OBS=<date> card gives the session date directly; OBJECT/EPOCH/BUNIT/CRVAL4/CDELT4/NAXIS4 give target, epoch, units, and spectral setup"
+    mapping_summary:
+      "c102280930": "wow 19:23:03 -26:43:24 (2010 ON)"
+      "c102281100": "+ wow_off1 (-25:43:24)"
+      "c102281325": "+ wow_off2 (-27:43:24)"
+      "c13189*": "tests at 2010 position; zenith"
+      "c13192..c13199*": "tests at field1-position 19:25:28 -26:57; zenith"
+      "field1 rpfs": "c132180521/080832/081244, c132181552, c132560252/040429/060601, c132580245, c142830108/0624"
+      "field2 rpfs": "c132190518/0742/080804/152315/121215, c132182003(z), c132191831(z), c142050613/121210/133324"
+    source_type: binary_probe (read-only)
+    confidence: high
+    information_origin: archive-derived
+
+  GAP-HOB-014:
+    title: Dump integration times
+    status: PARTIALLY_RESOLVED   # v1.2 2026-08-29: integration time now DONOR-SUPPORTED (~5 s, 'I think'); still not independently measured
+    round3_amendment:
+      previous_state: PARTIALLY_RESOLVED (plan-stage only)
+      new_state: PARTIALLY_RESOLVED (plan + donor recollection)
+      evidence: "Donor response Q9 (verbatim freeze): 'I think that it was a 5 second record for each sample'"
+      classification: >-
+        observed dump cadence = independently measured (5.0 s median);
+        integration time = donor-supported, approximately 5 s. Consistent
+        with plan Tint=5.0 s; NOT exact independent proof.
+    evidence_source:
+      - "analysis/dump_spacing_stats.json — median inter-dump spacing 5.0 s in EVERY session (range 5 s cadence with gaps between blocks)"
+      - "calibrator scans: scan length 1.995 s / step 0.015 s (ricky_10228.log) — calibrator mode only"
+    still_open: "true integration/dump duration vs spacing: the Jaekle plan 'Sensitivity' sheet specifies Tint = 5.0 s per configuration and the measured cadence is 5.0 s — consistent, but executed-vs-planned remains donor-confirmable. Do NOT convert cadence into integration time without this plan citation."
+    source_type: header_statistics + donor_plan_workbook
+    confidence: high (spacing) / missing (integration)
+    information_origin: archive-derived + donor-required
+
+  GAP-HOB-015:
+    title: Beam model / 2-D response
+    status: PARTIALLY_RESOLVED
+    evidence_source:
+      - "measured 1-D FWHM 33.8'-36.8' (8x 3C348 cross-scans, 2010, both IFs) — DOCUMENTED"
+      - "no 2-D beam map or feed illumination data anywhere in archive"
+    rule: "Do NOT manufacture a 2-D model from the 1-D FWHM; any use must label 2-D response UNKNOWN."
+    source_type: reduction_log
+    confidence: high
+    information_origin: archive-derived (1-D) ; MISSING (2-D)
+
+  GAP-HOB-016:
+    title: Canonical Wow! error-box definition used by the follow-up campaigns
+    status: OPEN
+    evidence_source:
+      - "project-canonical horn locales now fixed (Arecibo II Table 4, J2000; see ellingsen_coordinate_provenance.yaml)"
+      - "what error box SIMON's campaigns targeted in 2010-2014 is not recorded"
+    source_type: mixed
+    confidence: n/a
+    information_origin: donor-provided (required)
+    notes: "1999 grid points precess exactly onto the two field positions, suggesting the campaigns tracked an evolving canonical definition; confirmation needed."
+
+  GAP-HOB-017:
+    title: Campaign-to-publication relationship
+    status: PARTIALLY_RESOLVED
+    evidence_source:
+      - "wow_published.pdf metadata matches ApJ 578:967-971 (Gray & Ellingsen 2002) -> covers the 1997-1999 era (verification of content pending: vectorized PDF)"
+      - "2010 campaign made 'for Michael Jaekle' (2010obs/README) — publication relationship UNKNOWN"
+      - "2013/14 campaigns: no publication reference found in archive"
+    source_type: document_metadata + readme
+    confidence: medium
+    information_origin: archive-derived + literature-derived (pending)
+
+  GAP-HOB-018:
+    title: Channel-count discrepancy (rpf/XLS say 4096 per pol; ASAP ASCII export headers say 2048)
+    status: OPEN
+    evidence_source:
+      - "rpf primary headers NAXIS4=4097 (4096 channels + reference) with CDELT4=976.5625 kHz or 1953.125 kHz"
+      - "plan workbook 'Observations' sheet: Channels Pol1=4096, both pol=8192"
+      - "ASAP ASCII dump headers: 'WCS: TOPO 1.42e+09 2048 <same kHz>' (spectrum_header_index.csv)"
+    interpretation: "bandwidths are therefore 4/8/16 MHz per XLS rows, NOT the 2/4 MHz implied by naive 2048xspacing; the exported ASCII products appear to contain half the correlation channels (decimation or per-half selection) by an UNDOCUMENTED step in wow.py/ASAP"
+    source_type: cross_artifact_consistency
+    confidence: high that the discrepancy is real; cause UNKNOWN
+    locator: extracted/HOBART_SESSION_MASTER_TABLE.csv (channel_count_pol1 vs dump WCS)
+    information_origin: archive-derived
+
+# =============================================================================
+# ROUND-3 AUDIT TRAIL — SIMON ELLENSEN DONOR RESPONSE (2026-08-29)
+# Register v1.1 -> v1.2. Evidence: research/data/ellingsen_simon_response.yaml
+# (verbatim freeze). No historical gap states deleted; each change records
+# previous state, new state, evidence, reason, remaining uncertainty,
+# donor-dependence, and technical-reconstruction possibility (directive s26).
+# =============================================================================
+
+simon_response_round_2026_08_29:
+  freeze: research/data/ellingsen_simon_response.yaml
+  human_readable: docs/acquisition/ellingsen_simon_response.md
+  donor_completeness_statement: >-
+    'This is all there is, if I don't have a copy, no one else will have it.'
+    = complete surviving DONOR-HELD material; NOT the complete historical
+    Hobart archive.
+  changes:
+    - gap: GAP-HOB-001
+      previous_state: OPEN
+      new_state: RESOLVED_DONOR_SIDE
+      reason: "Donor confirms the transferred material is all he holds (Q1)."
+      remaining_uncertainty: "Historical-archive completeness beyond donor-held material remains unknowable from this source."
+      donor_dependent: false
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-002
+      previous_state: "RESOLVED (plan workbook) + residual intent question"
+      new_state: "RESOLVED + donor-supported B1950->J2000 conversion (Q3 'Yes that sounds correct'); intent beyond plan NOT independently confirmed (Q2 'I can't remember')"
+      reason: "Donor supported the coordinate-conversion interpretation; could not recall field-selection intent."
+      remaining_uncertainty: "Scientific motivation of the two fields beyond the plan workbook."
+      donor_dependent: false
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-003
+      previous_state: "RESOLVED (plan workbook) + residual intent question"
+      new_state: "RESOLVED + donor-supported conversion (same as GAP-002)"
+      reason: "See GAP-002."
+      remaining_uncertainty: "As GAP-002."
+      donor_dependent: false
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-004
+      previous_state: "PARTIALLY_RESOLVED (geometry)"
+      new_state: "PARTIALLY_RESOLVED (geometry) + intent UNRESOLVED; donor statement recorded as UNVERIFIED_DONOR_SPECULATION"
+      reason: "Donor speculation only (Q4)."
+      remaining_uncertainty: "Why 19:23:03 -26:43:24 was chosen."
+      donor_dependent: true
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-005
+      previous_state: OPEN
+      new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      reason: "Search layer attributed to Bob Gray (Q5); donor holds nothing."
+      remaining_uncertainty: "Thresholds may exist in Bob Gray's records."
+      donor_dependent: true
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-006
+      previous_state: OPEN
+      new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      reason: "As GAP-005."
+      remaining_uncertainty: "Candidate rules may exist in Bob Gray's records."
+      donor_dependent: true
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-007
+      previous_state: OPEN
+      new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      reason: "As GAP-005 (RFI semantics were part of processing/analysis)."
+      remaining_uncertainty: "Row_Flagged semantics may be recoverable from Bob Gray."
+      donor_dependent: true
+      technical_reconstruction_possible: "partial (header field exists; semantics unknown)"
+    - gap: GAP-HOB-008
+      previous_state: OPEN
+      new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      reason: "As GAP-005."
+      remaining_uncertainty: "Repeat criteria may exist in Bob Gray's records."
+      donor_dependent: true
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-009
+      previous_state: OPEN
+      new_state: "OPEN (narrowed: donor route exhausted; candidate/search-result record NOT LOCATED in donor-held material)"
+      reason: "Q6; explicitly NOT a no-candidates finding."
+      remaining_uncertainty: "All search-outcome facts remain unknown (existence, number, rejection, criteria passage, null-result issuance, completeness)."
+      donor_dependent: true
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-010
+      previous_state: OPEN
+      new_state: PROVISIONAL_DONOR_LIMITED
+      reason: "Q7 donor limitation (~50% qualitative accuracy; calibration not a focus)."
+      remaining_uncertainty: "No independent calibration chain; sigma encoding forbidden."
+      donor_dependent: false
+      technical_reconstruction_possible: "partial (relative/instrumental scale only)"
+    - gap: GAP-HOB-011
+      previous_state: OPEN
+      new_state: PROVISIONAL_DONOR_LIMITED
+      reason: "Q7 (2014 same pathway)."
+      remaining_uncertainty: "As GAP-010."
+      donor_dependent: false
+      technical_reconstruction_possible: "partial (relative/instrumental scale only)"
+    - gap: GAP-HOB-012
+      previous_state: OPEN
+      new_state: TECHNICALLY_OPEN (partially recoverable)
+      reason: "Q8: high-level Fortran + partial documentation supplied and frozen; kernels missing per donor."
+      remaining_uncertainty: "Bandwidth, lag-to-channel mapping, frame conventions; kernels unrecovered."
+      donor_dependent: true
+      technical_reconstruction_possible: "partial; kernels must be recovered, never guessed"
+    - gap: GAP-HOB-014
+      previous_state: "PARTIALLY_RESOLVED (plan-stage)"
+      new_state: "PARTIALLY_RESOLVED (plan + donor-supported ~5 s integration)"
+      reason: "Q9 donor recollection ('I think that it was a 5 second record for each sample')."
+      remaining_uncertainty: "Executed integration still not independently measured."
+      donor_dependent: false
+      technical_reconstruction_possible: "partial (software/documentation may establish duration)"
+  new_artifacts_this_round:
+    - "research/sources/ellingsen_hobart/software/mpslpp.f (frozen copy)"
+    - "research/sources/ellingsen_hobart/documentation/mpslpp.tex (frozen copy)"
+    - "research/sources/ellingsen_hobart/hashes/SIMON_SOFTWARE_SHA256SUMS.txt"
+    - "research/sources/ellingsen_hobart/analysis/fortran_dependency_map.json"
+    - "research/data/ellingsen_simon_response.yaml"
+    - "research/data/ellingsen_fortran_inventory.yaml"
+    - "scripts/ellingsen_fortran_inventory.py"
+    - "docs/acquisition/ellingsen_simon_response.md"
+    - "docs/acquisition/HOBART_1998_99_FORENSIC_PROCESSING_REPORT.md"
+    - "docs/acquisition/HOBART_POST_SIMON_STATUS.md"
+    - "docs/acquisition/bob_gray_information_requirements.md"
+    - "docs/acquisition/bob_gray_email_draft.md (DO NOT SEND)"
+    - "docs/acquisition/bob_gray_contact_status.md"
+    - "tests/research/test_simon_response_and_fortran.py"
+
+
+
+
