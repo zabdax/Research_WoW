@@ -1,0 +1,33 @@
+{
+ "drive-download-20260825T053211Z-1-002/2010obs/c102280930.rpf": {
+  "size": 16122880,
+  "hits": {
+   "OBSTYPE": "                    OBSTYPE = '        '  / Observation type                                        TABLE IF                                          ",
+   "SOURCE": "         PTYPE9  = 'SOURCENO'            / SRC no (index to SU table)                    PTYPE10 = 'INTBAS'              / Integration time (secs)    ",
+   "SCAN": "                    SCANS   =                    0  / No. of scans in file                          BITPIX  =                  -32  / Values are real ",
+   "EPOCH": " / Right Ascension (EPOCH)                       NAXIS6  =                    1  / Declination (EPOCH)                           RPFITS  = '2.2       "
+  }
+ },
+ "drive-download-20260825T053211Z-1-001/2013obs/c131891236.rpf": {
+  "size": 128650240,
+  "hits": {
+   "OBSTYPE": "                    OBSTYPE = '        '  / Observation type                                        TABLE IF                                          ",
+   "SOURCE": "         PTYPE9  = 'SOURCENO'            / SRC no (index to SU table)                    PTYPE10 = 'INTBAS'              / Integration time (secs)    ",
+   "SCAN": "                    SCANS   =                    0  / No. of scans in file                          BITPIX  =                  -32  / Values are real ",
+   "EPOCH": " / Right Ascension (EPOCH)                       NAXIS6  =                    1  / Declination (EPOCH)                           RPFITS  = '2.2       ",
+   "NGC": ".}VB\u00b6\u0014=:\u0088X\u0014A\u0099\u0015\u00fa8\u00cf\u00f4aBNGC:\u00eb\u00bf\nA\u00acM\u00ef8\u0004\u008dMB\u00b0\u00a45:\u00d9k\u0010Ael\u00e78\u00cf\u0010\\B\u00f8\b5:1\u00dc\u0006A(\u00eb\u00e38h\u00a0LB \u00bb1:\u00c7G\u000eA\u00cd\u00da\u00f58\u00cf\\_Bj\u001c<:\n\u00de\u0007A\u0014\u00ec\u00e28\u00cdrFByo0:H\u0002\u000fA U\u00ee8\u00d8\u00df]B\u009b\u00b55:-K\nAJ\u0007\u00069\u00d6\u009dMBc\u00c7;:H<\u0011AR\u0094\u00f18\u00a4ZZB\u00a8\u009d",
+   "WOW": "\u00ed\u00bbOB\u0017\u00bd\b\u00b79q\u00d7A&\u009d4\u00b6\u0095\u0004nBWOW\u00b7\u00a8T\u00d0AHZZ\u00b6\u00b0\u00ddCBQ\u00d0\u0018\u00b7\u00e7m\u00d7A\u00cf\u00a0r\u00b6\u0084\u00ec5Bz\u00e8\u00bb\u00b7\u00c5\u00c6\u00ccA\u00c9\u00c1D\u00b6\u00ae\u00176B \u00d5\u00bf\u00b7\u000e\u0099\u00e4AH\u000f\u00e9\u00b6\u00869-B\u0015\u00b1\u00c5\u00b7\u00ab\u00fc\u00dfA/Pv\u00b6\u00e7\u008dCB11\u00ab\u00b7\u0093\u00b6\u00d4A\u001c[\u00d2\u00b6\u0019\u00ce`B\u00eeP\u00a6\u00b7v\u00cc\u00cdA\u00de\u00cd\u00bc\u00b6\u00d1\u00feWB\r\u00f57\u00b7\u0006\u00d2\u00d3A\u000b\u0098M\u00b64`]BW\u00fd"
+  }
+ },
+ "drive-download-20260825T053211Z-1-001/2013obs/c142050613.rpf": {
+  "size": 48168960,
+  "hits": {
+   "OBSTYPE": "                    OBSTYPE = '        '  / Observation type                                        TABLE IF                                          ",
+   "SOURCE": "         PTYPE9  = 'SOURCENO'            / SRC no (index to SU table)                    PTYPE10 = 'INTBAS'              / Integration time (secs)    ",
+   "SCAN": "                    SCANS   =                    0  / No. of scans in file                          BITPIX  =                  -32  / Values are real ",
+   "EPOCH": " / Right Ascension (EPOCH)                       NAXIS6  =                    1  / Declination (EPOCH)                           RPFITS  = '2.2       ",
+   "wow_f2": "EC_DATE            1wow_f2            5.097597691  -.470366233       .000000000  .000000000      ENDTABLE                                             ",
+   "NGC": "\n\u009a5\u00fa\rEC+eZ9\u00a5\u00ff\u0093Ax\u00b9\u00e94\u00feNGC\u00dbe\u008b9\u00cf\u008f\u0095A\f\u0000x6YeCC:sx9a\u007f\u0096A\u00e2g\u00a2\u00b3M\u0012BC%s\u00819:\u0011\u0094A\u0017G\u00b05>.BC&p\u001a9(\u0015\u0093A\u0091\u00ed06\u00e9wFC-\u00de\r9\u00f5O\u0092A6f\u00c3\u00b4\u00cas>C\u00b4?.9\u000e_\u0091A\u00e5\u00fbd5\u00e5\u00beDC\u008a2\u009f9\u00f85\u0093A\u0010\r-6\u0083\u00fd@C\u009b\u00f6~9Hf\u0090A\u00ea\u0000\u00986M\u0013E"
+  }
+ }
+}

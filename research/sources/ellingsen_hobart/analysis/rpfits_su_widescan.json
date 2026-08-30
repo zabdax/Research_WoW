@@ -1,0 +1,302 @@
+{
+ "c131891236.rpf": {
+  "size_MB": 128.7,
+  "entries": [
+   {
+    "name": "wow",
+    "ra_h": 19.38417,
+    "dec_deg": -26.723
+   },
+   {
+    "name": "zenith",
+    "ra_h": 19.38417,
+    "dec_deg": -27.723
+   }
+  ]
+ },
+ "c131921224.rpf": {
+  "size_MB": 128.5,
+  "entries": [
+   {
+    "name": "wow",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   },
+   {
+    "name": "zenith",
+    "ra_h": 19.42444,
+    "dec_deg": -27.95
+   }
+  ]
+ },
+ "c131981200.rpf": {
+  "size_MB": 144.4,
+  "entries": [
+   {
+    "name": "wow",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   },
+   {
+    "name": "zenith",
+    "ra_h": 19.42444,
+    "dec_deg": -36.95
+   }
+  ]
+ },
+ "c131991156.rpf": {
+  "size_MB": 144.4,
+  "entries": [
+   {
+    "name": "wow",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   },
+   {
+    "name": "zenith",
+    "ra_h": 19.42444,
+    "dec_deg": -36.95
+   }
+  ]
+ },
+ "c132180521.rpf": {
+  "size_MB": 144.4,
+  "entries": [
+   {
+    "name": "wow_f1",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132180832.rpf": {
+  "size_MB": 192.5,
+  "entries": [
+   {
+    "name": "wow_f1",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132181244.rpf": {
+  "size_MB": 144.2,
+  "entries": [
+   {
+    "name": "wow_f1",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132182003.rpf": {
+  "size_MB": 48.2,
+  "entries": [
+   {
+    "name": "zenith",
+    "ra_h": 19.42444,
+    "dec_deg": -28.95
+   }
+  ]
+ },
+ "c132190518.rpf": {
+  "size_MB": 16.1,
+  "entries": [
+   {
+    "name": "wow_f2",
+    "ra_h": 19.47139,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132190742.rpf": {
+  "size_MB": 16.1,
+  "entries": [
+   {
+    "name": "wow_f2",
+    "ra_h": 19.47139,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132190804.rpf": {
+  "size_MB": 192.5,
+  "entries": [
+   {
+    "name": "wow_f2",
+    "ra_h": 19.47139,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132191523.rpf": {
+  "size_MB": 144.4,
+  "entries": [
+   {
+    "name": "wow_f2",
+    "ra_h": 19.47139,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132191831.rpf": {
+  "size_MB": 48.0,
+  "entries": [
+   {
+    "name": "zenith",
+    "ra_h": 19.47139,
+    "dec_deg": -28.95
+   }
+  ]
+ },
+ "c132560252.rpf": {
+  "size_MB": 32.0,
+  "entries": [
+   {
+    "name": "wow_f1",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132560429.rpf": {
+  "size_MB": 46.4,
+  "entries": [
+   {
+    "name": "wow_f1",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132560601.rpf": {
+  "size_MB": 3.2,
+  "entries": [
+   {
+    "name": "wow_f1",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132580245.rpf": {
+  "size_MB": 39.8,
+  "entries": [
+   {
+    "name": "wow_f1",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c142050613.rpf": {
+  "size_MB": 48.2,
+  "entries": [
+   {
+    "name": "wow_f2",
+    "ra_h": 19.47139,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c142051210.rpf": {
+  "size_MB": 56.2,
+  "entries": [
+   {
+    "name": "wow_f2",
+    "ra_h": 19.47139,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c142051324.rpf": {
+  "size_MB": 88.2,
+  "entries": [
+   {
+    "name": "wow_f2",
+    "ra_h": 19.47139,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c142830108.rpf": {
+  "size_MB": 104.9,
+  "entries": [
+   {
+    "name": "wow_f1",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c142830624.rpf": {
+  "size_MB": 47.9,
+  "entries": [
+   {
+    "name": "wow_f1",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c102280930.rpf": {
+  "size_MB": 16.1,
+  "entries": [
+   {
+    "name": "wow",
+    "ra_h": 19.38417,
+    "dec_deg": -26.723
+   }
+  ]
+ },
+ "c102281100.rpf": {
+  "size_MB": 96.3,
+  "entries": [
+   {
+    "name": "wow_off1",
+    "ra_h": 19.38417,
+    "dec_deg": -25.723
+   },
+   {
+    "name": "wow",
+    "ra_h": 19.38417,
+    "dec_deg": -26.723
+   }
+  ]
+ },
+ "c102281325.rpf": {
+  "size_MB": 104.1,
+  "entries": [
+   {
+    "name": "wow",
+    "ra_h": 19.38417,
+    "dec_deg": -26.723
+   },
+   {
+    "name": "wow_off2",
+    "ra_h": 19.38417,
+    "dec_deg": -27.723
+   }
+  ]
+ },
+ "c132181552.rpf": {
+  "size_MB": 192.5,
+  "entries": [
+   {
+    "name": "wow_f1",
+    "ra_h": 19.42444,
+    "dec_deg": -26.95
+   }
+  ]
+ },
+ "c132191215.rpf": {
+  "size_MB": 144.4,
+  "entries": [
+   {
+    "name": "wow_f2",
+    "ra_h": 19.47139,
+    "dec_deg": -26.95
+   }
+  ]
+ }
+}

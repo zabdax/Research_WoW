@@ -1,0 +1,503 @@
+{
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c131891236.rpf": {
+  "size_bytes": 128650240,
+  "su_entries": [
+   {
+    "name": "wow",
+    "ra_rad": 5.074762966,
+    "dec_rad": -0.466410154,
+    "ra_hms": "19.384167h",
+    "dec_deg": -26.72333
+   },
+   {
+    "name": "zenith",
+    "ra_rad": 5.074762966,
+    "dec_rad": -0.483863446,
+    "ra_hms": "19.384167h",
+    "dec_deg": -27.72333
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c131921224.rpf": {
+  "size_bytes": 128517120,
+  "su_entries": [
+   {
+    "name": "wow",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   },
+   {
+    "name": "zenith",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.487819526,
+    "ra_hms": "19.424444h",
+    "dec_deg": -27.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c131981200.rpf": {
+  "size_bytes": 144373760,
+  "su_entries": [
+   {
+    "name": "wow",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   },
+   {
+    "name": "zenith",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.644899159,
+    "ra_hms": "19.424444h",
+    "dec_deg": -36.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c131991156.rpf": {
+  "size_bytes": 144373760,
+  "su_entries": [
+   {
+    "name": "wow",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   },
+   {
+    "name": "zenith",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.644899159,
+    "ra_hms": "19.424444h",
+    "dec_deg": -36.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132180521.rpf": {
+  "size_bytes": 144373760,
+  "su_entries": [
+   {
+    "name": "wow_f1",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132180832.rpf": {
+  "size_bytes": 192476160,
+  "su_entries": [
+   {
+    "name": "wow_f1",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132181244.rpf": {
+  "size_bytes": 144240640,
+  "su_entries": [
+   {
+    "name": "wow_f1",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132182003.rpf": {
+  "size_bytes": 48168960,
+  "su_entries": [
+   {
+    "name": "zenith",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.505272818,
+    "ra_hms": "19.424444h",
+    "dec_deg": -28.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132190518.rpf": {
+  "size_bytes": 16122880,
+  "su_entries": [
+   {
+    "name": "wow_f2",
+    "ra_rad": 5.097597691,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.471389h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132190742.rpf": {
+  "size_bytes": 16056320,
+  "su_entries": [
+   {
+    "name": "wow_f2",
+    "ra_rad": 5.097597691,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.471389h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132190804.rpf": {
+  "size_bytes": 192476160,
+  "su_entries": [
+   {
+    "name": "wow_f2",
+    "ra_rad": 5.097597691,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.471389h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132191523.rpf": {
+  "size_bytes": 144373760,
+  "su_entries": [
+   {
+    "name": "wow_f2",
+    "ra_rad": 5.097597691,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.471389h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132191831.rpf": {
+  "size_bytes": 47969280,
+  "su_entries": [
+   {
+    "name": "zenith",
+    "ra_rad": 5.097597691,
+    "dec_rad": -0.505272818,
+    "ra_hms": "19.471389h",
+    "dec_deg": -28.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132560252.rpf": {
+  "size_bytes": 31979520,
+  "su_entries": [
+   {
+    "name": "wow_f1",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132560429.rpf": {
+  "size_bytes": 46394880,
+  "su_entries": [
+   {
+    "name": "wow_f1",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132560601.rpf": {
+  "size_bytes": 3179520,
+  "su_entries": [
+   {
+    "name": "wow_f1",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c132580245.rpf": {
+  "size_bytes": 39790080,
+  "su_entries": [
+   {
+    "name": "wow_f1",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c142050613.rpf": {
+  "size_bytes": 48168960,
+  "su_entries": [
+   {
+    "name": "wow_f2",
+    "ra_rad": 5.097597691,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.471389h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c142051210.rpf": {
+  "size_bytes": 56163840,
+  "su_entries": [
+   {
+    "name": "wow_f2",
+    "ra_rad": 5.097597691,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.471389h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c142051324.rpf": {
+  "size_bytes": 88209920,
+  "su_entries": [
+   {
+    "name": "wow_f2",
+    "ra_rad": 5.097597691,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.471389h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c142830108.rpf": {
+  "size_bytes": 104872960,
+  "su_entries": [
+   {
+    "name": "wow_f1",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/c142830624.rpf": {
+  "size_bytes": 47851520,
+  "su_entries": [
+   {
+    "name": "wow_f1",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-002/2010obs/c102280930.rpf": {
+  "size_bytes": 16122880,
+  "su_entries": [
+   {
+    "name": "wow",
+    "ra_rad": 5.074762966,
+    "dec_rad": -0.466410154,
+    "ra_hms": "19.384167h",
+    "dec_deg": -26.72333
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-002/2010obs/c102281100.rpf": {
+  "size_bytes": 96271360,
+  "su_entries": [
+   {
+    "name": "wow_off1",
+    "ra_rad": 5.074762966,
+    "dec_rad": -0.448956861,
+    "ra_hms": "19.384167h",
+    "dec_deg": -25.72333
+   },
+   {
+    "name": "wow",
+    "ra_rad": 5.074762966,
+    "dec_rad": -0.466410154,
+    "ra_hms": "19.384167h",
+    "dec_deg": -26.72333
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-002/2010obs/c102281325.rpf": {
+  "size_bytes": 104133120,
+  "su_entries": [
+   {
+    "name": "wow",
+    "ra_rad": 5.074762966,
+    "dec_rad": -0.466410154,
+    "ra_hms": "19.384167h",
+    "dec_deg": -26.72333
+   },
+   {
+    "name": "wow_off2",
+    "ra_rad": 5.074762966,
+    "dec_rad": -0.483863446,
+    "ra_hms": "19.384167h",
+    "dec_deg": -27.72333
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-002/2013obs/c132181552.rpf": {
+  "size_bytes": 192476160,
+  "su_entries": [
+   {
+    "name": "wow_f1",
+    "ra_rad": 5.085307664,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.424444h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ },
+ "original/drive-download-20260825T053211Z-1-002/2013obs/c132191215.rpf": {
+  "size_bytes": 144440320,
+  "su_entries": [
+   {
+    "name": "wow_f2",
+    "ra_rad": 5.097597691,
+    "dec_rad": -0.470366233,
+    "ra_hms": "19.471389h",
+    "dec_deg": -26.95
+   }
+  ],
+  "system_cards": {
+   "SCANS": "0",
+   "EPOCH": "j2000",
+   "OBSTYPE": ""
+  }
+ }
+}
