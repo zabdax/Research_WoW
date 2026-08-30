@@ -1,0 +1,181 @@
+# =============================================================================
+# SOURCE LOCK MANIFEST — Arecibo Wow! evidence reconstruction (Phase 0)
+# =============================================================================
+# Frozen external source artifacts for the Méndez/Arecibo evidence audit.
+# This manifest is the authoritative record of WHICH exact artifacts were used.
+# Upstream changes after 2026-08-22 must NOT be silently adopted; create a new
+# source version instead (see docs/acquisition/SOURCE_LOCK_REPORT.md).
+#
+# Bulk artifacts under papers/, repositories/, archives/, extracted/ are local
+# provenance copies (gitignored, like data/sources_cache/); this manifest and
+# hashes/SHA256SUMS.txt are git-tracked and authoritative.
+# =============================================================================
+
+manifest_version: 0.1.0
+created_utc: "2026-08-22T06:52:37Z"
+workspace_root: research/sources/mendez_arecibo
+prepared_by: "ZCode agent session (Phase 0 source lock), per MASTER DIRECTIVE"
+gate_status: "PREVIOUSLY BLOCKED — Phase A explicitly AUTHORIZED 2026-08-23 (scope: extraction + evidence vector + comparison + Phase C frequency/flux reproduction only; see SOURCE_LOCK_REPORT.md authorization record)"
+
+papers:
+  awow2_2508.10657:
+    source_id: awow2_2508.10657
+    title: "Arecibo Wow! II: Revised Properties of the Wow! Signal from Archival Ohio SETI Data"
+    authors: "Abel Méndez, Kevin N. Ortiz Ceballos, Jorge I. Zuluaga, Kelby D. Palencia-Torres, Allison J. Smith, Alondra Cardona Rodríguez, Héctor Socas-Navarro, David Kipping, Hodari-Sadiki Hubbard-James, Mai Le, Alejandro Rincón-Torres"
+    type: journal_paper_preprint
+    arxiv_id: "2508.10657"
+    frozen_version: v1
+    version_date_utc: "2025-08-14T13:58:48Z"
+    doi: "10.48550/arXiv.2508.10657"
+    journal_status: "Preprint. arXiv Comments field (verbatim): 'To be submitted to ApJ after incorporating feedback'. No journal-ref on arXiv as of 2026-08-22."
+    license: "CC BY 4.0"
+    classification: REQUIRED
+    artifacts:
+      pdf:
+        url: "https://arxiv.org/pdf/2508.10657v1"
+        local_path: research/sources/mendez_arecibo/papers/awow2_2508.10657v1.pdf
+        acquired_utc: "2026-08-22T06:35:00Z"
+        sha256: ba87bc0b985181641b28e6dc2e492115f907823ed536ebfe5b3afc6e55ca5be9
+        notes: "10 pages (per `file`). Byte-identical to data/sources_cache/mendez_2025.pdf (cached 2026-08-18), confirming the earlier cache was also v1."
+      latex_source:
+        url: "https://arxiv.org/e-print/2508.10657v1"
+        local_path: research/sources/mendez_arecibo/papers/awow2_2508.10657v1_eprint.tar.gz
+        acquired_utc: "2026-08-22T06:36:00Z"
+        sha256: d15a9d3dd5d4e4a359f839b69f35ea50d18ce25c872ec37bd63bfd629fc02072
+        notes: "Top-level TeX file awowii-v1.tex; unpacked read-only copy in extracted/awow2_2508.10657v1_eprint/."
+      html_fulltext:
+        url: "https://arxiv.org/html/2508.10657v1"
+        local_path: research/sources/mendez_arecibo/papers/awow2_2508.10657v1.html
+        acquired_utc: "2026-08-22T06:36:00Z"
+        sha256: 2313853ec0e8fd639c8c926e74dd7cdc968fd3c944788bea34044c55bec888ad
+        notes: "arXiv experimental HTML rendering; page title verified to match paper title."
+    supplementary_material: "None listed on arXiv abs page (no ancillary files). Associated data repository: planetaryhablab/Ohio-SETI (see repositories below)."
+    version_check:
+      checked_utc: "2026-08-22T06:20:00Z"
+      method: "arXiv abs page (https://arxiv.org/abs/2508.10657) + arXiv API record (metadata/arxiv_api_2508.10657.xml)"
+      versions_beyond_v1_found: false
+      result: "v1 (2025-08-14) is the only version. No v2 or later exists as of the check date."
+    apj_status_check:
+      checked_utc: "2026-08-22T06:20:00Z"
+      method: "arXiv journal-ref/Comments fields; PHL project page (https://phl.upr.edu/wow, states 'will be submitted to the Astrophysical Journal'); web search for published ApJ version"
+      result: "No evidence of ApJ acceptance or publication as of 2026-08-22. arXiv Comments still reads 'To be submitted to ApJ after incorporating feedback'; no journal-ref assigned."
+      incomplete_route: "Semantic Scholar API cross-check attempted but rate-limited (HTTP 429) at check time; arXiv+PHL+search triangulation stands without it."
+
+  awow1_2408.08513:
+    source_id: awow1_2408.08513
+    title: "Arecibo Wow! I: An Astrophysical Explanation for the Wow! Signal"
+    authors: "Abel Méndez, Kevin Ortiz Ceballos, Jorge I. Zuluaga"
+    type: journal_paper_preprint
+    arxiv_id: "2408.08513"
+    frozen_version: v2
+    version_date_utc: "2024-09-11T00:23:20Z"
+    doi: "10.48550/arXiv.2408.08513"
+    journal_status: "Preprint. arXiv Comments field (verbatim): '22 pages, 8 figures, submitted to ApJ'. No journal-ref on arXiv as of 2026-08-22."
+    classification: USEFUL  # companion paper: instrument/SNR/mini-Wow context; cited by current project files
+    artifacts:
+      pdf:
+        url: "https://arxiv.org/pdf/2408.08513v2"
+        local_path: research/sources/mendez_arecibo/papers/awow1_2408.08513v2.pdf
+        acquired_utc: "2026-08-22T06:45:00Z"
+        sha256: 6c8cbc60c432359406e9819818460f69ac09e6f0332742cc388ba72ba4af6522
+        notes: "Byte-identical to data/sources_cache/mendez_2024.pdf (cached 2026-08-18), confirming the earlier cache was v2."
+      latex_source:
+        url: "https://arxiv.org/e-print/2408.08513v2"
+        local_path: research/sources/mendez_arecibo/papers/awow1_2408.08513v2_eprint.tar.gz
+        acquired_utc: "2026-08-22T06:49:00Z"
+        sha256: 37c92e7f8b6d51fcd54377cd5990afc527b065276bace9b6d6dd7024ce8a2e3d
+        notes: "Inner TeX file is named awowi-v1.tex even inside the v2 tarball (author naming); do not confuse this with the tarball's arXiv version. Unpacked in extracted/awow1_2408.08513v2_eprint/."
+    version_check:
+      checked_utc: "2026-08-22T06:20:00Z"
+      versions_found: "v1 (2024-08-16), v2 (2024-09-11). Latest = v2; v2 frozen."
+    apj_status_check:
+      checked_utc: "2026-08-22T06:20:00Z"
+      result: "No journal-ref on arXiv as of 2026-08-22; no evidence of ApJ acceptance found."
+
+  ohio_seti_last_decades_2606.11102:
+    source_id: ohio_seti_last_decades_2606.11102
+    title: "The Ohio SETI Program — The Last Decades"
+    authors: "Abel Méndez, Robert S. Dixon, Russell K. Childers"
+    type: conference_proceedings_preprint
+    arxiv_id: "2606.11102"
+    frozen_version: v1
+    version_date_utc: "2026-06-09T17:01:55Z"
+    journal_status: "Submitted to 'Advancing the Search for Technosignatures', Proceedings IAU Symposium No. 404 (per arXiv Comments)."
+    classification: OPTIONAL  # historical program documentation supporting the archive/provenance map
+    artifacts:
+      pdf:
+        url: "https://arxiv.org/pdf/2606.11102v1"
+        local_path: research/sources/mendez_arecibo/papers/ohio_seti_last_decades_2606.11102v1.pdf
+        acquired_utc: "2026-08-22T06:50:00Z"
+        sha256: 4a8bd27a2876f0548fbdcd46d946fb33964a009e80de72ba21f7554af7186af5
+
+repositories:
+  ohio_seti:
+    source_id: ohio_seti_repo
+    type: git_repository
+    name: planetaryhablab/Ohio-SETI
+    url: https://github.com/planetaryhablab/Ohio-SETI
+    remote: https://github.com/planetaryhablab/Ohio-SETI.git
+    clone_date_utc: "2026-08-22T06:11:17Z"
+    commit: 28624a1eaf955ced940db347684cee61c8e4fd61
+    branch: main
+    tags: []
+    releases: []
+    working_tree_status: clean
+    license: "CC BY 4.0 (per README)"
+    dataset_version: "v0a (October 14, 2024) per README footer"
+    classification: REQUIRED
+    required_for:
+      - "Transcribed Wow! printout data (TXT/CSV, 82 rows x 50 channels)"
+      - "Scan of original printout (oseti_19770815_220410.jpg)"
+      - "Reanalysis arrays in IDL SAV format (corrected coordinates, SNR numeric, FLUX estimates)"
+    generation_history:
+      - "2024-10-08 initial upload: oseti.sav + wow.jpg (commits 70312cd, 4497401) — SUPERSEDED generation, deleted 2024-10-14 (commits 7980840, e7cbd9c); still recoverable from git history if needed."
+      - "2024-10-14 'New data format.' (commit db5c6e2): current five oseti_19770815_220410.* files; README version v0a."
+      - "2024-10-14..2025-07-30: README-only edits (last: commit 28624a1, 2025-07-30). No data-file changes since 2024-10-14; dataset therefore predates Arecibo Wow! II paper (2025-08-14) by ~10 months."
+    caution:
+      - "README defines FLUX as 'estimated flux density (Jy) [assuming max signal was 54 Jy]' — an older calibration assumption that may differ from the final paper flux treatment (paper value to be extracted in Phase A; directive quotes >=256 +/- 63 Jy). Do not substitute repository FLUX for paper flux."
+      - "README citation block labels the Wow! II paper as '(2024)... (in preparation)' — outdated relative to arXiv:2508.10657 v1 (2025-08-14). Treat README text as v0a-era metadata."
+    files:
+      README.md: {sha256: 0bc93c2e3c21ebcbb72f8a90075c82efdc48b7cad4951e785d20cee6772254f4}
+      oseti_19770815_220410.csv: {sha256: 84d623a489159ffc7ae7ac216f010db8e469974ff274af6ff89ca86291df355e}
+      oseti_19770815_220410.extended.pdf: {sha256: 50a6cc8a876fd87e983c32c3c3a5e277fb1e192ad8ed8db12f953f5689fd0333}
+      oseti_19770815_220410.jpg: {sha256: 3ca862b4cca91ce7f86ff86e0db624deea198bdcc3ff4f348de3372e929c906a}
+      oseti_19770815_220410.sav: {sha256: 122cca196f7bf89a056fe7f9ed0bf7292ee89edb4c8e0c551d0cc4295bcd4bed}
+      oseti_19770815_220410.txt: {sha256: 52d0ec66dd6c5d96db4175642edf380030751e364ff8c46de4e794c94f3fb1ed}
+
+  hotaling_transcription:
+    source_id: hotaling_wow_transcription_repo
+    type: git_repository
+    name: MichaelHotaling/The-Wow-Signal
+    url: https://github.com/MichaelHotaling/The-Wow-Signal
+    remote: https://github.com/MichaelHotaling/The-Wow-Signal.git
+    clone_date_utc: "2026-08-22T06:47:00Z"
+    commit: 0b491d40d03337722254f70eb5f945ad8e181e1c
+    branch: main
+    tags: []
+    working_tree_status: clean
+    classification: USEFUL  # upstream transcription acknowledged by Ohio-SETI README; enables independent transcription checking
+    required_for:
+      - "Transcription-chain provenance: Hotaling CSV (2022-07-20) -> Ohio-SETI TXT/CSV (2024-10-14); row 1 values verified identical between the two"
+    files:
+      README.md: {sha256: 2916069aed53eef404d3c4afe8b5b91b5283acfd89aacc68b29ca083e4a77657}
+      "Wow! Signal.csv": {sha256: 1942418f4284bbdf7ef25c24bb80aabde5723911626bd61b347f09a07948ce36}
+
+web_metadata_provenance:
+  github_api_repo: {local_path: research/sources/mendez_arecibo/metadata/github_api_repo.json, fetched_utc: "2026-08-22T06:10:00Z", sha256: 2159c565bd43182e01d8c8d7ba46bb2d4cdbfa339fa3c0ea86b341c6e69b82b2}
+  github_api_releases: {local_path: research/sources/mendez_arecibo/metadata/github_api_releases.json, fetched_utc: "2026-08-22T06:10:00Z", sha256: 2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d, notes: "empty list '[]' — no releases"}
+  github_api_tags: {local_path: research/sources/mendez_arecibo/metadata/github_api_tags.json, fetched_utc: "2026-08-22T06:10:00Z", sha256: 2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d, notes: "empty list '[]' — no tags"}
+  arxiv_api_awow2: {local_path: research/sources/mendez_arecibo/metadata/arxiv_api_2508.10657.xml, fetched_utc: "2026-08-22T06:49:00Z", sha256: 5ba0784a02296435eef79af7569b5c2a57b5abc59c0dacadd71bc8ed552d910c}
+  arxiv_api_awow1: {local_path: research/sources/mendez_arecibo/metadata/arxiv_api_2408.08513.xml, fetched_utc: "2026-08-22T06:49:00Z", sha256: ab5517de484da16fecfa6fadf5a0cdfe2ee07f52643b88ae19d81180d5257b79}
+
+preexisting_cache_crosscheck:
+  note: "data/sources_cache/ (project's earlier cache, fetched 2026-08-18) was cross-checked against this freeze:"
+  mendez_2025.pdf: "identical to frozen awow2 v1 PDF (sha256 ba87bc0b...)"
+  mendez_2024.pdf: "identical to frozen awow1 v2 PDF (sha256 6c8cbc60...)"
+  awowi-v1.tex_etc: "data/sources_cache/awowi-v1.{tex,bib,bbl} correspond to the INNER FILENAMES of the arXiv v2 tarball (author naming), not to arXiv version v1 — naming ambiguity noted and resolved."
+
+upstream_change_policy:
+  - "If any upstream source changes (new arXiv version, ApJ acceptance, repo commits), do NOT update in place."
+  - "Record the change as a NEW source version entry with its own check date/hashes; keep this manifest's 2026-08-22 state intact."
+  - "tests/research/test_mendez_source_lock.py verifies local artifacts against this manifest."

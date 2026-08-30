@@ -4,6 +4,14 @@ data/sources_cache/
 # Nested external checkout retained in place; never treat it as a project submodule.
 data/kipping_wow_repo/
 
+# Frozen external source artifacts for the Méndez/Arecibo audit (local provenance
+# copies; tracked via metadata/source_manifest.yaml + hashes/SHA256SUMS.txt,
+# same policy as data/sources_cache/).
+research/sources/mendez_arecibo/papers/*
+research/sources/mendez_arecibo/repositories/*
+research/sources/mendez_arecibo/archives/*
+research/sources/mendez_arecibo/extracted/*
+
 # Python-generated local state.
 __pycache__/
 *.py[cod]
@@ -18,4 +26,34 @@ research/results/
 
 # Raw external retrievals are provenance artifacts; commit only validated records.
 research/data/raw/*.manifest.json
+
+# =============================================================================
+# Ellingsen/Hobart donor archive (received 2026-08-25).
+# Bulk originals stay local-only; the scientific record is carried by the
+# tracked metadata/, hashes/, extracted/, docs, scripts, and tests.
+# Never commit the archive itself; never "clean up" original/ either.
+# =============================================================================
+research/sources/ellingsen_hobart/original/
+
+# Simon-supplied 1998/99 processing software (received 2026-08-29; directive
+# sections 11/30): frozen copies stay local-only; hashes/SIMON_SOFTWARE_SHA256SUMS.txt,
+# the inventories, and the extracted content in the forensic report are tracked.
+research/sources/ellingsen_hobart/software/
+research/sources/ellingsen_hobart/documentation/
+
+# Donor-supplied attachment folder at workspace root (folder name as received);
+# originals mirrored into research/sources/ellingsen_hobart/ under hash manifest.
+/reresearchdatarequestarchivalhobartfollowupobserv/
+
+# Regenerable bulk analysis product (scripts/ellingsen_spectrum_header_index.py);
+# small summary JSONs in analysis/ remain tracked.
+research/sources/ellingsen_hobart/analysis/spectrum_header_index.csv
+
+# Regenerable bulk forensic products (tracked scripts regenerate them on demand;
+# their scientific results are carried by tracked summaries + reports):
+research/sources/ellingsen_hobart/metadata/file_inventory.csv
+research/sources/ellingsen_hobart/analysis/rpfits_card_inventory.json
+
+# Forensic tooling run logs.
+logs/ellingsen_inventory_*.log
 

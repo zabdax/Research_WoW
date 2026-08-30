@@ -1,0 +1,29 @@
+{
+  "generated_utc": "2026-08-25T07:55:18Z",
+  "completed_utc": "2026-08-25T07:56:27Z",
+  "tool": "scripts/ellingsen_inventory.py",
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "root": "research/sources/ellingsen_hobart/original",
+  "file_count": 6681,
+  "total_bytes": 6190451083,
+  "unique_sha256_count": 6681,
+  "duplicate_pair_count": 0,
+  "zero_byte_files": [],
+  "extension_counts": {
+    "txt": 6503,
+    "gz": 137,
+    "rpf": 27,
+    "log": 5,
+    "[noext]": 4,
+    "py": 2,
+    "fit": 1,
+    "xls": 1,
+    "pdf": 1
+  },
+  "duplicates": [],
+  "notes": [
+    "mtimes are 2026 download-time artifacts; acquisition dating relies on embedded headers, logs, and documentation",
+    "provenance_classification values are provisional automated heuristics pending manual review"
+  ]
+}

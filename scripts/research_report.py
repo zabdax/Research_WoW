@@ -70,7 +70,9 @@ def main() -> None:
             name: {"value": item.value, "unit": item.unit, "kind": item.kind, "source": item.provenance.source}
             for name, item in {"frequency": obs.frequency, "bandwidth": obs.bandwidth, "flux_density": obs.flux_density, "snr": obs.snr, "beam_crossing_duration": obs.beam_crossing_duration}.items()
         },
-        "model_readiness": {"H1": MECHANISM_REGISTRY["H1"], "H3": h3_readiness(), "H4": MECHANISM_REGISTRY["H4"], "H5": {"status": "in_progress", "restriction": "asset parsing complete; emulator equivalence unresolved"}, "H2": {"status": "blocked", "restriction": "authoritative ephemeris and beam calibration required"}},
+        # [2026-08-23] H2 partially unlocked per configs/research_status.yaml amendment;
+        # sub-state details live there and in docs/acquisition/SOURCE_LOCK_REPORT.md.
+        "model_readiness": {"H1": MECHANISM_REGISTRY["H1"], "H3": h3_readiness(), "H4": MECHANISM_REGISTRY["H4"], "H5": {"status": "in_progress", "restriction": "asset parsing complete; emulator equivalence unresolved"}, "H2": {"status": "partially_unlocked", "restriction": "Arecibo Wow! II evidence extracted and frozen (frequency chain genuinely reproduced; flux arithmetic-only); still requires Big Ear observation operator, topocentric ephemeris, and physical emission model before any formal use"}},
         "h3_feasibility": feasibility_summary(h3_config),
         "h5_assets": asset_report(),
         "h5_restricted": run_restricted_check(RestrictedH5Config(realisations_per_seed=2_000)),

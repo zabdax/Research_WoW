@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/8kS+m7GYRsx1w9ofuwamrgh8gyY</id>
+  <title>arXiv Query: search_query=&amp;id_list=2508.10657&amp;start=0&amp;max_results=10</title>
+  <updated>2026-08-22T06:49:07Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2508.10657" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2508.10657v1</id>
+    <title>Arecibo Wow! II: Revised Properties of the Wow! Signal from Archival Ohio SETI Data</title>
+    <updated>2025-08-14T13:58:48Z</updated>
+    <link href="https://arxiv.org/abs/2508.10657v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.10657v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Wow! Signal, detected in 1977 by the Ohio State University SETI project, remains one of the most intriguing unexplained radio transients. The most recent significant revision of its properties took place in the late 1990s; however, further advances were limited by readily available data from this event. Here we retrieved and analyzed decades of previously unpublished Ohio SETI observations, enabling the most comprehensive re-evaluation of the properties of the Wow! Signal to date with modern methods. Our results reveal significant revisions to its parameters that may help explain why its source has been so difficult to identify. We refine its potential origin to two adjacent fields centered on the right ascension $α=19^{\mathrm h}25^{\mathrm m}02^{\mathrm s} \pm 3^{\mathrm s}$ or $19^{\mathrm h}27^{\mathrm m}55^{\mathrm s} \pm 3^{\mathrm s}$, and the declination $δ=-26^°57' \pm 20'$ (J2000), a location both narrower and slightly displaced from earlier estimates. We measure a higher peak flux density exceeding 250 Jy and a frequency of $1420.726 \pm 0.005$ MHz, implying a galactic source with a substantially higher radial velocity than previously assumed. Our analysis provides additional support for the hypothesis that the Wow! Signal most likely had an astrophysical origin rather than being attributed to radio interference. In particular, we confirm that small, cold HI clouds can produce narrowband signals similar to its detection, which might suggest a common origin. These findings provide the most precise constraints to date on the location, intensity, and frequency of the Wow! Signal and offer a new path to identify its origin.</summary>
+    <category term="astro-ph.HE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.GA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="astro-ph.SR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-14T13:58:48Z</published>
+    <arxiv:comment>To be submitted to ApJ after incorporating feedback</arxiv:comment>
+    <arxiv:primary_category term="astro-ph.HE"/>
+    <author>
+      <name>Abel Méndez</name>
+    </author>
+    <author>
+      <name>Kevin N. Ortiz Ceballos</name>
+    </author>
+    <author>
+      <name>Jorge I. Zuluaga</name>
+    </author>
+    <author>
+      <name>Kelby D. Palencia-Torres</name>
+    </author>
+    <author>
+      <name>Allison J. Smith</name>
+    </author>
+    <author>
+      <name>Alondra Cardona Rodríguez</name>
+    </author>
+    <author>
+      <name>Héctor Socas-Navarro</name>
+    </author>
+    <author>
+      <name>David Kipping</name>
+    </author>
+    <author>
+      <name>Hodari-Sadiki Hubbard-James</name>
+    </author>
+    <author>
+      <name>Mai Le</name>
+    </author>
+    <author>
+      <name>Alejandro Rincón-Torres</name>
+    </author>
+  </entry>
+</feed>
