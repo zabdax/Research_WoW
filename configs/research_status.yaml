@@ -1,14 +1,41 @@
 analysis_stage: reconstruction
 confirmatory_comparison_enabled: false
 legacy_tag: phase2-prototype-audit
+
+# =============================================================================
+# [2026-08-23 AMENDMENT] H2 moved from 'blocked' to 'partially_unlocked' under
+# explicit human authorization, following Phase A extraction + Phase C partial
+# reproduction of Arecibo Wow! II (arXiv:2508.10657 v1) against the frozen
+# source lock. Per MASTER DIRECTIVE §14 this does NOT make H2 ready for formal
+# Bayesian comparison; the sub-state below records exactly what is and is not
+# available. H1/H4 remain blocked, H5 in progress, and the five-way posterior
+# gate stays closed.
+# =============================================================================
+
 model_readiness:
   H1: blocked
-  H2: blocked
+  H2: partially_unlocked
   H3: blocked
   H4: blocked
   H5: in_progress
+
+h2_partial_unlock_state:
+  modern_observational_evidence: available            # research/data/mendez_evidence_vector.yaml (frozen)
+  archival_provenance: available                      # Ohio-SETI @28624a1 + N50CH archive mapping (with documented scope limits)
+  independent_reproduction: partial                   # frequency chain AGREE (genuine verification); flux ARITHMETIC_ONLY; squint/beam corrections NOT reproducible (private strip chart)
+  big_ear_observation_operator: incomplete            # no published 2-D beam map or horn response
+  topocentric_ephemeris: incomplete                   # geocentric Horizons solutions only; no covariance
+  physical_model: incomplete                          # cometary emission likelihood not built
+  formal_marginal_likelihood: unavailable            # P(D|H2) must not be computed yet
+  still_required_before_confirmatory_use:
+    - calibrated Big Ear observation operator (beam response, horn geometry, scan behavior)
+    - topocentric geometry with covariance-bearing ephemerides
+    - candidate-object physical emission model
+    - campaign-specific follow-up selection functions
+  authorization_record: docs/acquisition/SOURCE_LOCK_REPORT.md (authorization record)
+
 requirements_before_confirmatory_comparison:
-  - Big Ear beam/geometry calibration with tests
+  - Big Ear beam/geometry calibration with tests      # partially informed by Arecibo II §5 (squint 128±3 s, ~27 s offset, 8' RA beam assumption); full beam map still missing
   - Model-specific physical and observational likelihoods
   - Model-specific event-rate priors and campaign detection efficiencies
   - Kipping--Gray restricted-model replication with Monte Carlo uncertainty
