@@ -59,4 +59,4 @@ python -m scripts.legacy_report
 - Do not present preprints as peer-reviewed confirmation.
 - **No result in this repository is a definitive attribution of the Wow! Signal.** The purpose is statistical triage, model validation, and ambiguity admission under strict scientific skepticism.
 
-> *Note: This work is conducted by independent undergraduate researchers (Patali and teammates) as an ongoing comparative technosignature assessment.*
+> *Note: This work is conducted by independent high-school researchers (Zubayer and teammates) as an ongoing comparative technosignature assessment.*
