@@ -1,0 +1,1222 @@
+[
+ {
+  "file": "w9827800.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 16,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827801.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 102,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827802.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827803.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827804.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827805.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827806.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827807.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827808.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827809.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827810.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827811.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827812.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827813.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827814.fit.gz",
+  "date_card": "06/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9827815.fit.gz",
+  "date_card": "09/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828201.fit.gz",
+  "date_card": "12/10/98",
+  "n_hdus": 103,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828202.fit.gz",
+  "date_card": "12/10/98",
+  "n_hdus": 117,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828203.fit.gz",
+  "date_card": "12/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828204.fit.gz",
+  "date_card": "12/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828205.fit.gz",
+  "date_card": "12/10/98",
+  "n_hdus": 117,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828206.fit.gz",
+  "date_card": "12/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828207.fit.gz",
+  "date_card": "12/10/98",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828208.fit.gz",
+  "date_card": "12/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828209.fit.gz",
+  "date_card": "12/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828210.fit.gz",
+  "date_card": "13/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828211.fit.gz",
+  "date_card": "13/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828212.fit.gz",
+  "date_card": "13/10/98",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828213.fit.gz",
+  "date_card": "13/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828214.fit.gz",
+  "date_card": "13/10/98",
+  "n_hdus": 117,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9828215.fit.gz",
+  "date_card": "13/10/98",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907614.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 74,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907615.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907616.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 117,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907617.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907618.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907619.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907620.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907621.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907622.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907623.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907700.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907701.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907702.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907703.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907704.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907705.fit.gz",
+  "date_card": "19/03/99",
+  "n_hdus": 100,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907714.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907715.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 117,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907716.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907717.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907718.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907719.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907720.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907721.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907722.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907723.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 16,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907914.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 97,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907915.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907916.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907917.fit.gz",
+  "date_card": "22/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907918.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907919.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907920.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907921.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907922.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9907923.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908000.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908001.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908003.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908004.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908005.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908114.fit.gz",
+  "date_card": "26/03/99",
+  "n_hdus": 111,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908115.fit.gz",
+  "date_card": "26/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908116.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 117,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908117.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908118.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908119.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908120.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 113,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908121.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908122.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908123.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908200.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908201.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908202.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908203.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908204.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9908205.fit.gz",
+  "date_card": "25/03/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909113.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 72,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909114.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909115.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909116.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909117.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909118.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909119.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909120.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909121.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909122.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909123.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909200.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909201.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909202.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909203.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909204.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909205.fit.gz",
+  "date_card": "08/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909912.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 19,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909913.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909914.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909915.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909916.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909917.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909918.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909919.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909920.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909921.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909922.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9909923.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 116,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9910000.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9910001.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9910002.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 117,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9910003.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 115,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ },
+ {
+  "file": "w9910004.fit.gz",
+  "date_card": "12/04/99",
+  "n_hdus": 114,
+  "ext_shape": [
+   1024,
+   4
+  ],
+  "ttype": "ACF"
+ }
+]

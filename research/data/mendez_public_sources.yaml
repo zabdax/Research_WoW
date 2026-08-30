@@ -1,0 +1,199 @@
+# =============================================================================
+# PUBLIC SOURCE INVENTORY — Méndez/Arecibo Wow evidence route
+# =============================================================================
+# Built during Phase 0 (source mapping BEFORE bulk downloads), per MASTER
+# DIRECTIVE §0.9. Every source actually used for evidence is classified and,
+# where acquired, frozen under research/sources/mendez_arecibo/ with hashes in
+# metadata/source_manifest.yaml. Classification scale:
+#   REQUIRED  = evidence extraction cannot proceed without it
+#   USEFUL    = materially supports provenance/validation
+#   OPTIONAL  = context only; acquire on demand
+#   REDUNDANT / IRRELEVANT = deliberately not acquired (listed for audit trail)
+#
+# Compiled: 2026-08-22 (UTC). Search engines were used ONLY to discover sources,
+# never as evidence (§0.13).
+# =============================================================================
+
+sources:
+  awow2_paper_arxiv:
+    source_id: awow2_2508.10657
+    title: "Arecibo Wow! II: Revised Properties of the Wow! Signal from Archival Ohio SETI Data"
+    type: paper_preprint
+    URL: https://arxiv.org/abs/2508.10657
+    version: v1 (2025-08-14; only version as of 2026-08-22 check)
+    date: 2025-08-14
+    relevance: "The authoritative modern reconstruction of the Wow! observation (coordinates, frequency, velocity, flux lower bound, calibration, provenance)."
+    required_for: [evidence_vector, provenance_classification, reproduction_targets, H3_constraints]
+    local_copy: research/sources/mendez_arecibo/papers/awow2_2508.10657v1.pdf (+ _eprint.tar.gz, .html)
+    hash: sha256:ba87bc0b985181641b28e6dc2e492115f907823ed536ebfe5b3afc6e55ca5be9 (PDF)
+    status: ACQUIRED_AND_FROZEN
+    classification: REQUIRED
+
+  awow1_paper_arxiv:
+    source_id: awow1_2408.08513
+    title: "Arecibo Wow! I: An Astrophysical Explanation for the Wow! Signal"
+    type: paper_preprint
+    URL: https://arxiv.org/abs/2408.08513
+    version: v2 (2024-09-11; latest as of 2026-08-22 check)
+    date: 2024-08-16 (v1), 2024-09-11 (v2)
+    relevance: "Companion paper: 2020 Arecibo 'mini-Wow' analogs, SNR/instrument context, DSR emission model. Currently cited by research/data/wow_observation.yaml (SNR, bandwidth)."
+    required_for: [mini-wow_context, instrument_context, H3_emission_model]
+    local_copy: research/sources/mendez_arecibo/papers/awow1_2408.08513v2.pdf (+ _eprint.tar.gz)
+    hash: sha256:6c8cbc60c432359406e9819818460f69ac09e6f0332742cc388ba72ba4af6522 (PDF)
+    status: ACQUIRED_AND_FROZEN
+    classification: USEFUL
+
+  ohio_seti_repo:
+    source_id: ohio_seti_repo
+    title: "planetaryhablab/Ohio-SETI (Arecibo Wow! Ohio SETI Data)"
+    type: git_repository
+    URL: https://github.com/planetaryhablab/Ohio-SETI
+    version: commit 28624a1eaf955ced940db347684cee61c8e4fd61 (branch main; dataset v0a 2024-10-14)
+    date: cloned 2026-08-22
+    relevance: "Transcribed Wow! printout data (TXT/CSV), printout scan (JPG), and IDL reanalysis arrays (SAV: corrected coordinates, numeric SNR, FLUX estimates). THE data repository associated with the paper."
+    required_for: [transcription_data, reanalysis_arrays, independent_reproduction]
+    local_copy: research/sources/mendez_arecibo/repositories/Ohio-SETI/
+    hash: "per-file SHA-256 in research/sources/mendez_arecibo/metadata/source_manifest.yaml"
+    status: ACQUIRED_AND_FROZEN
+    classification: REQUIRED
+    caution: "SAV FLUX uses README assumption 'max signal was 54 Jy' (v0a-era calibration); NOT automatically the paper's final flux treatment."
+
+  hotaling_transcription_repo:
+    source_id: hotaling_wow_transcription_repo
+    title: "MichaelHotaling/The-Wow-Signal"
+    type: git_repository
+    URL: https://github.com/MichaelHotaling/The-Wow-Signal
+    version: commit 0b491d40d03337722254f70eb5f945ad8e181e1c (2022-07-20)
+    date: cloned 2026-08-22
+    relevance: "Upstream manual transcription of the Wow! printout, acknowledged in Ohio-SETI README. Row content verified identical (row 1) to Ohio-SETI TXT/CSV."
+    required_for: [transcription_chain_verification]
+    local_copy: research/sources/mendez_arecibo/repositories/The-Wow-Signal/
+    hash: "per-file SHA-256 in source_manifest.yaml"
+    status: ACQUIRED_AND_FROZEN
+    classification: USEFUL
+
+  phl_wow_project_pages:
+    source_id: phl_wow_pages
+    title: "PHL @ UPR Arecibo — Arecibo Wow! project pages (/wow, /wow/data, /wow/bigear, /wow/gray)"
+    type: institutional_web_pages
+    URL: https://phl.upr.edu/wow
+    version: "site content 'as of August 2026'; no per-page dates"
+    date: checked 2026-08-22
+    relevance: "Authors' own statements: which data are public (Ohio-SETI repo), Big Ear Archive status (public release scheduled August 2027), ApJ status ('will be submitted'). /wow/data Table 1 is flagged '(This table is outdated)' and Gaussian-fit parameters 'still under refinement' — do not use web values as evidence."
+    required_for: [archive_availability_status, journal_status_corroboration]
+    local_copy: null  # not archived; statements recorded in SOURCE_LOCK_REPORT.md and source_manifest.yaml
+    hash: null
+    status: INSPECTED_NOT_FROZEN
+    classification: USEFUL
+
+  ehman_30th_report:
+    source_id: ehman_30th
+    title: "Ehman, 'The Big Ear Wow! Signal (30th Anniversary Report)'"
+    type: historical_web_report
+    URL: https://www.bigear.org/Wow30th/wow30th.htm  # http now 301-redirects to https
+    version: 2007-era page (site last modified 2008)
+    date: cached 2026-08-18 by earlier project phase
+    relevance: "Primary-adjacent historical account by the signal's discoverer; source of the classic printout interpretation and coordinate conventions."
+    required_for: [historical_comparison, archival_context]
+    local_copy: data/sources_cache/ehman_30th.htm
+    hash: sha256:4d7cb7678b7808073f5d61c2161f59def5b56a1e6ae92b376db8220c283195be (from data/sources_cache/sources_manifest.yaml)
+    status: ALREADY_CACHED (pre-existing, hash-recorded)
+    classification: USEFUL
+
+  ohio_seti_last_decades_paper:
+    source_id: ohio_seti_last_decades_2606.11102
+    title: "The Ohio SETI Program — The Last Decades (Méndez, Dixon, Childers)"
+    type: conference_proceedings_preprint
+    URL: https://arxiv.org/abs/2606.11102
+    version: v1 (2026-06-09)
+    date: 2026-06-09
+    relevance: "Historical documentation of the Ohio SETI program data situation by the Arecibo Wow team; supports archive/provenance map."
+    required_for: [archive_history_context]
+    local_copy: research/sources/mendez_arecibo/papers/ohio_seti_last_decades_2606.11102v1.pdf
+    hash: sha256:4a8bd27a2876f0548fbdcd46d946fb33964a009e80de72ba21f7554af7186af5
+    status: ACQUIRED_AND_FROZEN
+    classification: OPTIONAL
+
+  naapo_site:
+    source_id: naapo_org
+    title: "NAAPO (North American AstroPhysical Observatory) website"
+    type: institutional_web_pages
+    URL: http://www.naapo.org/
+    version: unknown
+    date: checked 2026-08-22 (UNREACHABLE — timeouts on http and https)
+    relevance: "Historical Big Ear archive holder; WOWCometRebuttal page already cached by earlier project phase."
+    required_for: [h2_context_only, archive_history]
+    local_copy: data/sources_cache/naapo_rebuttal.htm (cached 2026-08-18)
+    hash: sha256:09ad5d4f440576becdb24ebe88b0f7a1683af6f55d657063a3aad8905c5d52a1 (cached page, from sources_cache manifest)
+    status: PARTIAL (root unreachable at check time; retry scheduled before Phase C)
+    classification: OPTIONAL
+
+  bigear_org_site:
+    source_id: bigear_org
+    title: "bigear.org — Big Ear memorial/legacy site"
+    type: institutional_web_pages
+    URL: https://www.bigear.org/
+    version: "site frozen ~2008; now served over https"
+    date: checked 2026-08-22
+    relevance: "Wow pages (wow.htm, wowmenu.htm, Wow30th/), Cosmic Search magazine (13 issues), telescope design/survey menus. No large printout-scan archive hosted here (full archive is the PHL initiative, public August 2027)."
+    required_for: [historical_context, instrument_documentation_leads]
+    local_copy: data/sources_cache/ehman_30th.htm (only Wow30th cached so far)
+    hash: see ehman_30th_report
+    status: MAPPED_NOT_BULK_DOWNLOADED
+    classification: OPTIONAL
+
+  # ---- Paper-cited external data/tools (identified from awowii-v1.tex; needed
+  # ---- for Phase C reproduction and Phase A source map; not yet acquired) ----
+  paper_cited_tools_and_data:
+    source_id: awow2_cited_external_resources
+    title: "Resources cited by Arecibo Wow! II (from awowii-v1.tex)"
+    type: mixed_external_resources
+    entries:
+      - {name: "tesseract OCR", URL: "https://github.com/tesseract-ocr/tesseract", relevance: "OCR stage of transcription pipeline", classification: USEFUL}
+      - {name: "OpenCV", URL: "https://github.com/opencv/opencv", relevance: "image processing of printout scans", classification: USEFUL}
+      - {name: "IDLAstro", URL: "https://github.com/wlandsman/IDLAstro", relevance: "IDL astronomy library used in reanalysis", classification: USEFUL}
+      - {name: "C. Markwardt IDL library", URL: "http://cow.physics.wisc.edu/~craigm/idl/idl.html", relevance: "IDL utilities used in reanalysis", classification: USEFUL}
+      - {name: "Astropy", URL: "https://www.astropy.org/", relevance: "coordinate/time transformations", classification: USEFUL}
+      - {name: "Aladin", URL: "https://aladin.cds.unistra.fr/", relevance: "sky atlas / HI4PI access", classification: USEFUL}
+      - {name: "HI4PI survey", URL: "https://www.astro.uni-bonn.de/hisurvey/AllSky/", relevance: "HI column-density/velocity data for candidate clouds; central H3 input (Phase E)", classification: REQUIRED_FOR_H3_LATER}
+      - {name: "ATNF calibrators", URL: "https://www.narrabri.atnf.csiro.au/calibrators/", relevance: "flux calibration cross-reference", classification: OPTIONAL}
+      - {name: "NRAO VLA calibrator list", URL: "https://science.nrao.edu/facilities/vla/observing/callist", relevance: "flux calibration cross-reference", classification: OPTIONAL}
+      - {name: "NOAA NGDC daily sunspot numbers 1977", URL: "https://www.ngdc.noaa.gov/stp/space-weather/solar-data/solar-indices/sunspot-numbers/depricated/international/tables/daily-sunspot-numbers/daily-sunspot-numbers_1977.txt", relevance: "solar-activity alternative-explanation check", classification: OPTIONAL}
+      - {name: "NOAA NGDC H-alpha flare events 1977", URL: "https://www.ngdc.noaa.gov/stp/space-weather/solar-data/solar-features/solar-flares/h-alpha/events/1977/flare-events_1977.txt", relevance: "solar-activity alternative-explanation check", classification: OPTIONAL}
+    status: IDENTIFIED_NOT_ACQUIRED  # acquire selectively in Phase A/C as extraction proves need (§0.9 rule)
+
+  # ---- Deliberately NOT pursued (audit trail) ----
+  excluded:
+    - {source: "PHL Big Ear Archive full collection", reason: "Not publicly available until August 2027 per https://phl.upr.edu/wow/bigear; nothing to download yet.", classification: IRRELEVANT_FOR_NOW}
+    - {source: "Full 1963-1998 Ohio SETI printout archive", reason: "Same August 2027 release; also potentially terabyte-scale (§0.10). Only the Wow! observation rows are needed now and are already frozen via Ohio-SETI repo.", classification: REDUNDANT_FOR_NOW}
+    - {source: "News/blog coverage (Gizmodo, Science News, Space Daily)", reason: "Secondary sources; may not be used as evidence (§0.13). Used only to corroborate absence of ApJ acceptance.", classification: IRRELEVANT}
+    - {source: "Murphy & Kaplan 2025 Dawes Review (PASA)", reason: "Secondary review; optional context, not needed for source lock.", classification: OPTIONAL}
+
+policy_notes:
+  - "Search snippets, Wikipedia, news, and AI summaries were not and will not be used as evidence (§0.13)."
+  - "arXiv version + ApJ status checks recorded in research/sources/mendez_arecibo/metadata/source_manifest.yaml (checks of 2026-08-22; re-check before any Phase A freeze refresh)."
+  - "HI4PI acquisition is deferred to the H3 track (Phase E) where its selection function and slice geometry can be specified scientifically."
+
+# AMENDMENT 2026-08-22 (visible correction, pre-authorization review):
+# Arecibo Wow! II v1 §2 (frozen TeX l.113-121) states the N50CH printout archive
+# (69 GB JPG, 167 dirs + 'wow' dir) is publicly available on the NAAPO website.
+# The naapo_site entry above is therefore upgraded from OPTIONAL/institutional to a
+# PRIMARY archival source (classification: REQUIRED_LATER for OCR-level verification
+# and surrounding-day noise characterization), pending site reachability re-check
+# (unreachable at 2026-08-22). See docs/acquisition/SOURCE_EXTRACTION_MAP.md §2/§12.
+#
+# AMENDMENT 2 (2026-08-23, Phase A authorization Part 1 — scope note):
+# NAAPO public availability re-verified (human, 2026-08-23) at
+# argus.naapo.org/~rchilders/N50CH_data/scans/png/folder.wow/ and the continuum
+# strip-chart archive (both reachable, matching the paper's description).
+# Agent spot check: server reachable; directory index 404 (listing disabled);
+# filenames not confirmed from agent environment (HUMAN_VERIFIED / AGENT_PARTIAL).
+#
+# SCOPE NOTE — do not over-read "the archive is public":
+#   NAAPO public access covers:
+#     - N50CH printout scans (PNG/JPG images)
+#     - continuum strip-chart scans (Aug 16-17, 1977)
+#   NAAPO public access does NOT cover:
+#     - original FITS data (confirmed nonexistent, per Mendez)
+#     - Aug 13-17, 1977 OCR/transcription working files (private)
+#   Do not treat "archive is public" as "reproduction chain is complete."

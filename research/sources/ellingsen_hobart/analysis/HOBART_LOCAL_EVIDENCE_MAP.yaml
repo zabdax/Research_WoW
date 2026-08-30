@@ -1,0 +1,66 @@
+# =============================================================================
+# HOBART LOCAL EVIDENCE MAP — dataset identities and double-counting guards
+# Every analysis dataset has exactly one source identity; duplication edges are
+# declared so nothing can be counted twice. No inference quantities appear here
+# (guard-tested alongside ellingsen_*.yaml).
+# =============================================================================
+
+schema_version: 1.0
+created_utc: "2026-08-25T00:00:00Z"
+
+datasets:
+  hobart_1998_99_acf_fits:
+    identity: "122 gzipped UTAS-correlator ACF products, data/w*.fit.gz"
+    counts: {files: 122, lags_per_extension: 1024}
+    provenance_chain: [donor_drive_part_001, original_data_dir]
+    locators: ["analysis/data_fit_index.json", "metadata/file_inventory.csv"]
+
+  hobart_1998_gray_sas_plots:
+    identity: "4 SAS/GRAPH PostScript statistical plots (.gsf.gz), Sep–Oct 1998"
+    counts: {files: 4}
+    provenance_chain: [donor_drive_part_001]
+    notes: "text vectorized; not data"
+
+  hobart_2010_rpf_archives:
+    identity: "3 RPFITS raw archives c102280{9,10,13}xx.rpf"
+    counts: {files: 3}
+    provenance_chain: [donor_drive_parts_001_002]
+
+  hobart_2010_spectrum_dumps_loose:
+    identity: "6,500 loose ASAP ASCII dumps, 2010obs/fileN-scanM-polP.txt (parts -001/-002)"
+    counts: {files: 6500}
+    provenance_chain: [wow.py, c102280930+c102281100+c102281325_rpf, donor]
+
+  hobart_2010_spectrum_dumps_tarball:
+    identity: "spectra.tar.gz (part -002)"
+    duplicate_of: hobart_2010_spectrum_dumps_loose
+    duplication_evidence: "name sets identical 6500<->6500; sampled SHA-256 identical"
+    counting_rule: "NEVER independent; excluded from exposure tables"
+
+  hobart_2013_2014_rpf_archives:
+    identity: "24 RPFITS raw archives c1318x…c14283xxxx.rpf"
+    counts: {files: 24}
+
+  hobart_2013_2014_spectrum_dumps_tarballed:
+    identity: "75,413 ASCII dumps inside 10 wow_*doy*.tar.gz bundles"
+    counts: {members: 75413}
+    provenance_chain: [wow_extract_fixtsys_or_wow_py, corresponding_rpf_by_date_and_pointing, donor_tar_packaging]
+
+  hobart_pointing_metadata:
+    identity: "positions/*.txt live-pages extracts (3 files) + bruce/ricky logs (5) + SU tables (27)"
+
+  hobart_plan_workbook:
+    identity: "Mt Pleasant 2013 Observing PLAN .xls (Jaekle), 10 sheets"
+    derived_text_render: extracted/HOBART_XLS_PLAN_TEXT.txt
+
+  hobart_publication_pdf:
+    identity: "wow_published.pdf (ApJ 578:967–971 page-range match; DOI 10.1086/342646 Crossref)"
+    constraints: "OCR requires human authorization; content UNVERIFIED"
+
+duplication_edges_declared:
+  - "hobart_2010_spectrum_dumps_tarball == hobart_2010_spectrum_dumps_loose (count once)"
+  - "ASCII dumps are DERIVED FROM their dated+pointed .rpf archives (not independent raw data)"
+  - "SU tables and dump headers both encode commanded pointings (consistent duplicates of one fact, counted once)"
+
+cross_era_distinctness:
+  statement: "1998–99 / 2010 / 2013 / 2014 datasets are observationally distinct sessions; no cross-era file duplication detected by SHA-256 freeze (6681 unique hashes)."

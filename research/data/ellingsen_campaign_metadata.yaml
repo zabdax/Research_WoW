@@ -1,0 +1,113 @@
+# =============================================================================
+# ELLINGSEN/HOBART CAMPAIGN METADATA RECORD
+# Machine-readable companion to extracted/campaign_exposure.csv and
+# docs/acquisition/HOBART_GAP_CLOSURE_REPORT.md.
+# All values are archive-derived unless marked otherwise. No calibration or
+# sensitivity values beyond the documented 2010 chain appear here.
+# =============================================================================
+
+schema_version: 1.0
+created_utc: "2026-08-25T00:00:00Z"
+telescope:
+  name: "Mt Pleasant 26 m"
+  institution: "University of Tasmania"
+  site: {lat_deg: -42.803866, lon_deg: 147.440019, elev_m: 63.67}   # bruce_10228.fit site cards
+  receiver_backend: "UTAS correlator"
+
+spectral_configurations:
+  # ROUND-2 CORRECTION (supersedes earlier 2048-ch inference):
+  # rpf headers NAXIS4=4097 & plan workbook both give 4096 channels/pol.
+  # Bandwidths vary per session (4 / 8 / 16 MHz) = CDELT4 x 4096.
+  authoritative:
+    channels_per_pol: 4096
+    center_frequency_mhz: 1420.000   # CRVAL4 all files
+    channel_spacing_khz_options: [0.9765625, 1.953125, 3.90625]
+    bandwidth_mhz_by_session:
+      "2010-08-16": 4.0
+      "2013-07-08": 16.0
+      "2013-07-11": 4.0
+      "2013-07-17": 4.0
+      "2013-07-18": 8.0
+      "2013-08 onward fields": "see master table (CDELT4-driven)"
+  abcissa: "TOPO frequency MHz; rest frequency 1.42041 GHz"
+  polarization: "linear pol1+pol2 exported per cycle; STOKES axis present in rpf"
+  open_discrepancy: "ASAP ASCII exports declare 2048-channel WCS at the same spacings -> see GAP-HOB-018"
+  historical_labels_note: "'cfg_2MHz/cfg_4MHz' tags used in session lists below are LEGACY round-1 labels kept only for cross-reference; authoritative numbers are above and in HOBART_SESSION_MASTER_TABLE.csv"
+
+dump_cadence:
+  median_inter_dump_spacing_s: 5.0
+  applies_to: "every harvested session (analysis/dump_spacing_stats.json)"
+  caution: "spacing is not integration time; true dump integration UNKNOWN (GAP-HOB-014)"
+
+calibration_status_by_campaign:
+  "1998-99": NOT_ESTABLISHED_IN_ARCHIVE
+  "2010":
+    status: DOCUMENTED_AND_REPRODUCIBLE   # see hobart_calibration_reconciliation.md
+    calibrator: "3C348 (46.52 Jy @1420 MHz, Ott et al., paper-stated constant)"
+    cal_jy: [49.4, 53.7]
+    sefd_jy: [450, 433]
+    beam_fwhm_measured_arcmin: [33.8, 36.8]
+  "2013":
+    status: RELATIVE_NORMALIZATION_PROVISIONAL   # fixtsys nominal Tsys=500K; Jy label unproven
+    verdict_class: C-leaning
+  "2014":
+    status: RELATIVE_NORMALIZATION_PROVISIONAL
+    verdict_class: C-leaning
+
+campaigns:
+
+  era_1998_99_correlator:
+    products: "122 .fit.gz ACF dumps (1024 lags, COUNTS); no in-file observing metadata"
+    coverage_by_filename: ["w98 DOY278-282", "w99 DOY076-100"]
+    documented_sessions_1999:
+      - {doy: "76/77", b1950_position: "19:22:22 -27:18", incident: "Y-drive off 22:12-22:19 UT"}
+      - {doy: "77",    b1950_position: "19:25:12 -27:18", incident: "correlator disk full"}
+      - {doy: "79/80", b1950_position: "19:25:12 -27:18", incident: "02-03UT data lost (concatenation)"}
+      - {doy: "81/82", b1950_position: "19:22:22 -26:48", incident: "correlator position mislabelled -> ~1.5 kHz Doppler error"}
+      - {doy: "91/92", b1950_position: "19:25:12 -26:48", incident: "ACT crash; end uncertain"}
+      - {doy: "99/100",b1950_position: "19:25:12 -26:48", incident: "none noted"}
+    associated_statistical_outputs: "4 SAS/GRAPH PostScript plots dated Sep-Oct 1998 (vector-outlined text; labels unreadable without rasterization)"
+    associated_publication: "wow_published.pdf; metadata page range matches ApJ 578:967-971 (identity inferred)"
+
+  campaign_2010:
+    session_date_utc: "2010-08-16"
+    program_span_utc: ["09:31:38", "15:42:33"]
+    incidents: {drive_freeze_ut: ["12:54", "~13:25"], vlbi_handover_ut: "15:42"}
+    rpf_archives:
+      - {file: c102280930.rpf, su_pointings: ["wow 19:23:03 -26:43:24"]}
+      - {file: c102281100.rpf, su_pointings: ["wow_off1 19:23:03 -25:43:24", "wow 19:23:03 -26:43:24"]}
+      - {file: c102281325.rpf, su_pointings: ["wow 19:23:03 -26:43:24", "wow_off2 19:23:03 -27:43:24"]}
+    calibration_artifacts: ["bruce_10228.fit", "ricky_10228.log", "2010obs/README"]
+    spectra_count_unique: 6500        # loose dumps; spectra.tar.gz is byte-identical packaging (NOT independent)
+    duplication_rule: "count once"
+
+  tests_2013_july:
+    sessions:
+      - {tag: wow_test_2013doy189, date: "2013-07-08", pointings: ["wow @19:23:03 -26:43:24 (2010 position)", "zenith"], config: cfg_2MHz}
+      - {tag: wow_test_2013doy192, date: "2013-07-11", pointings: ["wow @19:25:28 -26:57", "zenith"], config: cfg_2MHz}
+      - {tag: wow_test_2013doy198, date: "2013-07-17", pointings: ["wow @19:25:28 -26:57", "zenith"], config: cfg_2MHz}
+      - {tag: wow_test_2013doy199, date: "2013-07-18", pointings: ["wow @19:25:28 -26:57", "zenith"], config: cfg_4MHz}
+
+  fields_2013:
+    - {tag: wow_field1_2013doy218, date: "2013-08-06", pointing: "field1 19:25:28 -26:57", config: cfg_4MHz}
+    - {tag: wow_field2_2013doy219, date: "2013-08-07", pointing: "field2 19:28:17 -26:57", config: cfg_4MHz}
+    - {tag: wow_field1_2013doy256, date: "2013-09-13", pointing: field1, config: cfg_4MHz}
+    - {tag: wow_field1_2013doy258, date: "2013-09-15", pointing: field1, config: cfg_4MHz}
+
+  fields_2014:
+    - {tag: wow_field2_2014doy205, date: "2014-07-24", pointing: field2, config: cfg_4MHz,
+       positions_file_caveat: "telescope_pos_2014_205.txt shows unrelated program pointings inside this window; day-labeling ambiguous"}
+    - {tag: wow_field1_2014doy283, dates: ["2014-10-10","2014-10-11"], pointing: field1, config: cfg_4MHz}
+
+pointing_epoch_record:
+  rpfits_epoch_card_all_files: j2000
+  live_pages_column: coord_ra2000
+  intent_still_open_gaps: [GAP-HOB-002, GAP-HOB-003, GAP-HOB-004]
+
+evidence_locators:
+  header_index: research/sources/ellingsen_hobart/analysis/spectrum_header_index.csv
+  tarball_census: research/sources/ellingsen_hobart/analysis/tarball_census.json
+  rpf_su_index: research/sources/ellingsen_hobart/analysis/rpfits_source_table_index.json
+  spacing_stats: research/sources/ellingsen_hobart/analysis/dump_spacing_stats.json
+  geometry: research/sources/ellingsen_hobart/analysis/pointing_geometry.json
+  exposure_table: research/sources/ellingsen_hobart/extracted/campaign_exposure.csv

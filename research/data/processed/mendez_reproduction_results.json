@@ -1,0 +1,124 @@
+{
+  "run_date_utc": "2026-08-23",
+  "authorization": "Phase A explicit authorization 2026-08-23 (frequency chain + flux arithmetic only)",
+  "source_of_record": {
+    "arxiv": "2508.10657",
+    "version": "v1",
+    "tex": "research/sources/mendez_arecibo/extracted/awow2_2508.10657v1_eprint/awowii-v1.tex",
+    "repository_commit": "28624a1eaf955ced940db347684cee61c8e4fd61"
+  },
+  "frequency_chain": {
+    "mode": "GENUINE_INDEPENDENT_VERIFICATION",
+    "inputs": {
+      "f_2LO_peak_mhz": 120.185,
+      "f_2LOc_pre_19771213_mhz": 120.1,
+      "HI_reference_mhz": 1420.4056,
+      "channel_mhz": 0.01,
+      "channel_number": 2,
+      "sources": "paper equations + frozen Ohio-SETI CSV 2LO column"
+    },
+    "our": {
+      "f_c_mhz": 1420.4906,
+      "f_channel2_mhz": 1420.7256,
+      "uncertainty_mhz": 0.005
+    },
+    "published": {
+      "f_c_mhz": 1420.491,
+      "f_channel2_mhz": 1420.726,
+      "uncertainty_mhz": 0.005
+    },
+    "absolute_difference": {
+      "f_c_mhz": 0.0004,
+      "f_channel2_mhz": 0.0004
+    },
+    "relative_difference": {
+      "f_channel2_mhz": 2.8e-07
+    },
+    "expected_tolerance": "rounding at the printed precision (1e-3 MHz)",
+    "status": "AGREE"
+  },
+  "frequency_data_level_check": {
+    "mode": "DATA_LEVEL_VERIFICATION",
+    "source": {
+      "repository": "planetaryhablab/Ohio-SETI",
+      "commit": "28624a1eaf955ced940db347684cee61c8e4fd61",
+      "file": "oseti_19770815_220410.csv"
+    },
+    "found_sequence_rows_58_63": "6EQUJ5",
+    "expected_sequence": "6EQUJ5",
+    "sequence_match": true,
+    "second_lo_by_sequence_char_mhz": {
+      "6": 120.184,
+      "E": 120.184,
+      "Q": 120.184,
+      "U": 120.185,
+      "J": 120.185,
+      "5": 120.185
+    },
+    "second_lo_at_central_peak_U_row_mhz": 120.185,
+    "paper_constant_f2lo_mhz": 120.185,
+    "match": true,
+    "note": "Adjacent rows step by 0.001 MHz (GSR tracking drift); the paper's constant refers to the central peak (U row) specifically.",
+    "peak_sample_est": "22 16 10 (U row) vs paper fit time 22:16:06 \u2014 consistent within 12 s sampling"
+  },
+  "flux_arithmetic": {
+    "mode": "ARITHMETIC_REPRODUCTION_ONLY",
+    "caveat": "Underlying constants (9.4 Jy, 8.0+/-1.8) are PAPER-STATED, not independently data-derived; agreement confirms the paper's internal arithmetic consistency only.",
+    "chain_paper_as_printed": {
+      "sigma_cnt": "1.2 +/- 0.3 Jy (paper l.267)",
+      "sigma_channel": "8.5 +/- 2.1 Jy (paper l.271)",
+      "flux_bound": ">= 256.0 +/- 63.0 Jy (Table 4)"
+    },
+    "our_reproduction_of_paper_path": {
+      "sigma_channel_from_1.2": 8.485,
+      "flux_bound": 255.41,
+      "flux_uncertainty": 63.9,
+      "absolute_difference_vs_published": 0.59,
+      "relative_difference_vs_published": 0.00232,
+      "status": "MATCH within printed rounding"
+    },
+    "unrounded_propagation_finding": {
+      "sigma_cnt_unrounded": 1.175,
+      "sigma_channel_unrounded": 8.309,
+      "flux_bound_unrounded": 250.1,
+      "flux_unc_unrounded": 56.4,
+      "finding": "Propagating UNROUNDED intermediates (9.4/8.0 = 1.175, x sqrt(50) = 8.31) gives >= 250.1 +/- 56 Jy, i.e. -2.3% vs the published 256: the published value embeds the upward rounding of sigma_cnt 1.175 -> 1.2. This is a rounding-policy artifact, NOT an arithmetic error. Documented, not tuned. (Observation only: the abstract's 'exceeding 250 Jy' wording coincides with the unrounded value; abstract values remain excluded from the evidence vector.)"
+    },
+    "expected_tolerance": "exact arithmetic modulo printed rounding"
+  },
+  "galactic_consistency_check": {
+    "mode": "INTERNAL_CONSISTENCY_CHECK_REPORT_ONLY",
+    "rows": {
+      "previous_positive": [
+        11.65,
+        -18.89
+      ],
+      "new_positive": [
+        11.62,
+        -17.85
+      ],
+      "previous_negative": [
+        11.9,
+        -19.48
+      ],
+      "new_negative": [
+        11.87,
+        -19.42
+      ]
+    },
+    "positive_horn_delta": {
+      "l_deg": -0.03,
+      "b_deg": 1.04
+    },
+    "negative_horn_delta": {
+      "l_deg": -0.03,
+      "b_deg": 0.06
+    },
+    "finding": "Positive-horn b changes by +1.04 deg while l changes by only -0.03 deg and the J2000 RA/Dec moved by ~29 arcsec (RA) / ~0 arcsec (Dec): a >1 deg latitude shift is impossible for such a small repositioning within the paper's own table. Negative-horn shifts (l -0.03, b +0.06) behave as expected. Suspected typographical error in the new positive-horn b (plausible intent: -18.85). Status AMBIGUOUS; flagged, not resolved."
+  },
+  "not_attempted": [
+    "position/squint corrections (private Aug 16 1977 strip chart dependency)",
+    "velocity transforms (outside authorized scope; convention ambiguities documented in evidence vector)",
+    "Gaussian beam fit, EVT, OCR (outside authorized scope)"
+  ]
+}

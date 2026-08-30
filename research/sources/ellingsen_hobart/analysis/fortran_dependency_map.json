@@ -1,0 +1,1279 @@
+{
+  "inventory_version": "1.0",
+  "created_utc": "2026-08-29",
+  "directive": "MASTER DIRECTIVE 2026-08-29 sections 11/12/28 (static analysis only)",
+  "donor": "Simon Ellingsen (supplied via project owner; original email not locally archived)",
+  "donor_supplied_location": "reresearchdatarequestarchivalhobartfollowupobserv/ (workspace root; folder name as received)",
+  "hash_verification": {
+    "software/mpslpp.f": {
+      "status": "HASH_VERIFIED",
+      "pinned_sha256": "3274fe719b465825dc9258c60059ffbf2e09102a1ee1f48813f4862484d2080a",
+      "actual_sha256": "3274fe719b465825dc9258c60059ffbf2e09102a1ee1f48813f4862484d2080a",
+      "bytes": 209602
+    },
+    "documentation/mpslpp.tex": {
+      "status": "HASH_VERIFIED",
+      "pinned_sha256": "09cd1e0217088800a369e4ae5038b9008cddd6bd9a4a21f32492d88fc1660d9c",
+      "actual_sha256": "09cd1e0217088800a369e4ae5038b9008cddd6bd9a4a21f32492d88fc1660d9c",
+      "bytes": 20311
+    }
+  },
+  "fortran": {
+    "file": "research/sources/ellingsen_hobart/software/mpslpp.f",
+    "program_name": "MPSLPP",
+    "full_name": "Mt Pleasant Spectral Line Processing Package",
+    "author": "S P Ellingsen",
+    "version": "1.8",
+    "release_date": "19-Jul-1995",
+    "rcs_id": "$Id: mpslpp.f,v 1.8 1995/03/24 10:33:51 sellings Exp sellings $",
+    "platforms": [
+      "VMS",
+      "PC (Lahey Fortran + Phar Lap 386)"
+    ],
+    "total_lines": 5403,
+    "program_units": [
+      {
+        "line": 18,
+        "kind": "program",
+        "name": "mpslpp"
+      },
+      {
+        "line": 4745,
+        "kind": "subroutine",
+        "name": "extrtn"
+      }
+    ],
+    "includes": [
+      {
+        "line": 262,
+        "file": "mpslpp.inc"
+      },
+      {
+        "line": 263,
+        "file": "headkey.inc"
+      },
+      {
+        "line": 264,
+        "file": "histkey.inc"
+      },
+      {
+        "line": 4780,
+        "file": "mpslpp.inc"
+      },
+      {
+        "line": 4781,
+        "file": "mpslpp.def"
+      }
+    ],
+    "common_blocks": [],
+    "open_statements": [
+      {
+        "line": 2797,
+        "text": "open(unit=plun,file=output_file,status='old',"
+      },
+      {
+        "line": 2802,
+        "text": "open(unit=plun,file=output_file,status='new')"
+      },
+      {
+        "line": 3045,
+        "text": "open(unit=plun,file=output_file,status='old',"
+      },
+      {
+        "line": 3050,
+        "text": "open(unit=plun,file=output_file,status='new')"
+      },
+      {
+        "line": 3159,
+        "text": "open(unit=plun,file=output_file,status='old',"
+      },
+      {
+        "line": 3164,
+        "text": "open(unit=plun,file=output_file,status='new')"
+      },
+      {
+        "line": 3257,
+        "text": "open(unit=plun,file=output_file,status='old',"
+      },
+      {
+        "line": 3262,
+        "text": "open(unit=plun,file=output_file,status='new')"
+      },
+      {
+        "line": 3855,
+        "text": "open(unit=plun,file=output_file,status='old',"
+      },
+      {
+        "line": 3860,
+        "text": "open(unit=plun,file=output_file,status='new')"
+      },
+      {
+        "line": 3968,
+        "text": "open(unit=plun,file=input_file,status='old')"
+      },
+      {
+        "line": 4048,
+        "text": "open(unit=plun,file=output_file,status='new')"
+      },
+      {
+        "line": 4267,
+        "text": "open(unit=plun,file=output_file,status='new')"
+      },
+      {
+        "line": 4289,
+        "text": "open(unit=plun,file=output_file,status='old')"
+      },
+      {
+        "line": 4337,
+        "text": "open(unit=ilun,file=input_file,status='old')"
+      },
+      {
+        "line": 4527,
+        "text": "open(unit=plun,file=output_file,status='new')"
+      },
+      {
+        "line": 4584,
+        "text": "open(unit=plun,file=output_file,status='new')"
+      }
+    ],
+    "inquire_statements": [
+      {
+        "line": 907,
+        "text": "inquire(file='header.tmp',exist=file_found)"
+      },
+      {
+        "line": 909,
+        "text": "inquire(file='history.tmp',exist=file_found)"
+      }
+    ],
+    "external_declarations": [
+      {
+        "line": 258,
+        "name": "extrtn"
+      }
+    ],
+    "parameters_extracted": {
+      "cmax": "34",
+      "maxifs": "2",
+      "maxlag": "1024",
+      "maxspc": "40",
+      "maxcmp": "10"
+    },
+    "keyword_scan": {
+      "vanvleck": {
+        "count": 2,
+        "lines_sample": [
+          797,
+          1246
+        ]
+      },
+      "van vleck": {
+        "count": 3,
+        "lines_sample": [
+          790,
+          1229,
+          1233
+        ]
+      },
+      "one-bit": {
+        "count": 0,
+        "lines_sample": []
+      },
+      "one bit": {
+        "count": 0,
+        "lines_sample": []
+      },
+      "hanning": {
+        "count": 9,
+        "lines_sample": [
+          792,
+          795,
+          798,
+          799,
+          1235,
+          1237,
+          1247,
+          1248,
+          5096
+        ]
+      },
+      "fourier": {
+        "count": 17,
+        "lines_sample": [
+          305,
+          740,
+          790,
+          1171,
+          1195,
+          1233,
+          1239,
+          2207,
+          2382,
+          2404,
+          4858,
+          5204
+        ]
+      },
+      "autocorrel": {
+        "count": 3,
+        "lines_sample": [
+          7,
+          1214,
+          1230
+        ]
+      },
+      "lag": {
+        "count": 210,
+        "lines_sample": [
+          50,
+          64,
+          103,
+          136,
+          150,
+          151,
+          152,
+          153,
+          165,
+          166,
+          167,
+          168
+        ]
+      },
+      "quotient": {
+        "count": 25,
+        "lines_sample": [
+          272,
+          306,
+          485,
+          506,
+          537,
+          576,
+          589,
+          742,
+          743,
+          813,
+          849,
+          865
+        ]
+      },
+      "baseline": {
+        "count": 24,
+        "lines_sample": [
+          74,
+          313,
+          489,
+          497,
+          823,
+          852,
+          855,
+          859,
+          1327,
+          1335,
+          1413,
+          1455
+        ]
+      },
+      "history": {
+        "count": 75,
+        "lines_sample": [
+          14,
+          75,
+          90,
+          250,
+          284,
+          320,
+          613,
+          740,
+          742,
+          749,
+          768,
+          774
+        ]
+      },
+      "bandwidth": {
+        "count": 46,
+        "lines_sample": [
+          155,
+          606,
+          702,
+          706,
+          710,
+          1016,
+          1140,
+          1156,
+          1266,
+          1394,
+          1397,
+          1441
+        ]
+      },
+      "system temperature": {
+        "count": 3,
+        "lines_sample": [
+          494,
+          1332,
+          5080
+        ]
+      },
+      "tsys": {
+        "count": 119,
+        "lines_sample": [
+          52,
+          94,
+          159,
+          189,
+          190,
+          348,
+          489,
+          609,
+          800,
+          801,
+          802,
+          805
+        ]
+      },
+      "calibrat": {
+        "count": 0,
+        "lines_sample": []
+      }
+    },
+    "dependencies": {
+      "analytical_fit": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          2888
+        ]
+      },
+      "clear_string": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          2640,
+          2641,
+          2655,
+          2656,
+          2657,
+          2658,
+          2659,
+          2660,
+          2661,
+          2666,
+          2679,
+          4898
+        ]
+      },
+      "closefit": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          1029
+        ]
+      },
+      "cls": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          371,
+          1113,
+          1176,
+          1289,
+          1480,
+          1635,
+          2434,
+          2580,
+          2586,
+          2687,
+          2708,
+          2970,
+          3268,
+          4207,
+          4385,
+          4716
+        ]
+      },
+      "copy_head": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          1264,
+          1439,
+          1572,
+          1820,
+          2357,
+          3743
+        ]
+      },
+      "create_det": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          2706
+        ]
+      },
+      "daynodate": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          679,
+          4432
+        ]
+      },
+      "delete_file": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          908,
+          910,
+          1032,
+          1033,
+          2085,
+          2098,
+          4525,
+          4580
+        ]
+      },
+      "display": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          2014,
+          2321,
+          2330,
+          3711,
+          3720,
+          3772
+        ]
+      },
+      "dofft": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          808,
+          1256
+        ]
+      },
+      "fitpos": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          2893
+        ]
+      },
+      "fitserr": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          912,
+          915,
+          918,
+          921,
+          924,
+          927,
+          930,
+          933,
+          940,
+          947,
+          950,
+          958,
+          965,
+          968
+        ]
+      },
+      "ftbdef": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          949,
+          967
+        ]
+      },
+      "ftchke": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          408,
+          412,
+          1058,
+          1062
+        ]
+      },
+      "ftclos": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          457,
+          873,
+          1030,
+          1031,
+          1168
+        ]
+      },
+      "ftcrhd": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          920,
+          932
+        ]
+      },
+      "ftgcvd": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          1126,
+          1132,
+          1135
+        ]
+      },
+      "ftgcve": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          1139,
+          1148
+        ]
+      },
+      "ftgcvj": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          1123,
+          1129,
+          1142,
+          1145
+        ]
+      },
+      "ftgcvs": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          440,
+          1120
+        ]
+      },
+      "ftghbn": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          410,
+          1060
+        ]
+      },
+      "ftinit": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          911,
+          923
+        ]
+      },
+      "ftmahd": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          405,
+          460,
+          1055
+        ]
+      },
+      "ftmkyj": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          953,
+          971
+        ]
+      },
+      "ftpbnh": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          938,
+          956
+        ]
+      },
+      "ftpdat": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          942,
+          960
+        ]
+      },
+      "ftpdef": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          917,
+          929
+        ]
+      },
+      "ftpkys": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          943,
+          945,
+          961,
+          963
+        ]
+      },
+      "ftpprh": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "CFITSIO",
+        "call_lines": [
+          914,
+          926
+        ]
+      },
+      "gaufit": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          3567,
+          3589
+        ]
+      },
+      "gausmoo": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          2215
+        ]
+      },
+      "getdetails": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          1911
+        ]
+      },
+      "getrms": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          3179
+        ]
+      },
+      "hanning": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          799,
+          1248
+        ]
+      },
+      "indexx": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          3871
+        ]
+      },
+      "interpret_chan": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          491,
+          1329,
+          1501,
+          1504,
+          1669,
+          1672,
+          2115,
+          2459,
+          2809,
+          3023,
+          3127,
+          3226,
+          3386,
+          4236,
+          4996,
+          5033
+        ]
+      },
+      "interpret_list": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          389,
+          469,
+          487,
+          880,
+          1178,
+          1183,
+          1291,
+          1296,
+          1311,
+          1482,
+          1487,
+          1637,
+          1642,
+          1868,
+          2110,
+          2131,
+          2453,
+          2615,
+          2713,
+          2972,
+          3011,
+          3112,
+          3211,
+          3371,
+          3418,
+          4075,
+          4221,
+          4551,
+          4905,
+          4940,
+          4968
+        ]
+      },
+      "intflux": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          3084
+        ]
+      },
+      "lib$free_lun": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          458,
+          874,
+          1034,
+          1035,
+          1036,
+          1169,
+          2945,
+          3102,
+          3202,
+          3361,
+          3925,
+          4008,
+          4067,
+          4360,
+          4543,
+          4693
+        ]
+      },
+      "lib$get_lun": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          905,
+          906,
+          978,
+          2796,
+          2801,
+          3044,
+          3049,
+          3158,
+          3163,
+          3256,
+          3261,
+          3854,
+          3859,
+          3967,
+          4047,
+          4266,
+          4288,
+          4336,
+          4583
+        ]
+      },
+      "list_files": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          4894
+        ]
+      },
+      "lowcase": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          4896,
+          4901,
+          5069,
+          5094,
+          5146,
+          5159
+        ]
+      },
+      "menu": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          365,
+          4729
+        ]
+      },
+      "multips": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          2081,
+          2094
+        ]
+      },
+      "number": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          4163
+        ]
+      },
+      "online_help": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          4705
+        ]
+      },
+      "openread": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          399,
+          527,
+          1049
+        ]
+      },
+      "openwrite": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          975
+        ]
+      },
+      "peaks": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          3299,
+          4410
+        ]
+      },
+      "pgask": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "PGPLOT",
+        "call_lines": [
+          1883,
+          2193,
+          3679
+        ]
+      },
+      "pgbbuf": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "PGPLOT",
+        "call_lines": [
+          1884,
+          2034,
+          2047,
+          2194,
+          2349,
+          3680,
+          3785,
+          3800
+        ]
+      },
+      "pgebuf": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "PGPLOT",
+        "call_lines": [
+          2025,
+          2343,
+          3782,
+          3794
+        ]
+      },
+      "pgend": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "PGPLOT",
+        "call_lines": [
+          2029,
+          2038,
+          2073,
+          2346,
+          3797
+        ]
+      },
+      "pgpage": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "PGPLOT",
+        "call_lines": [
+          2033,
+          2348,
+          3784,
+          3799
+        ]
+      },
+      "posplot": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          2962
+        ]
+      },
+      "print_file": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          2078,
+          2083,
+          2096
+        ]
+      },
+      "printdetails": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          1944
+        ]
+      },
+      "readfit": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          603
+        ]
+      },
+      "reverse": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          810,
+          1258,
+          1951,
+          2066,
+          4606
+        ]
+      },
+      "sla_cldj": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "SLALIB",
+        "call_lines": [
+          680,
+          4433
+        ]
+      },
+      "sla_galeq": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "SLALIB",
+        "call_lines": [
+          696
+        ]
+      },
+      "sla_preces": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "SLALIB",
+        "call_lines": [
+          688
+        ]
+      },
+      "svdfit": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          2264,
+          2268
+        ]
+      },
+      "the": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          363,
+          3297,
+          4408
+        ]
+      },
+      "upcase": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          2443,
+          2593,
+          2594,
+          5090,
+          5102,
+          5171
+        ]
+      },
+      "user_wait": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "McConnell menu software",
+        "call_lines": [
+          381,
+          394,
+          455,
+          478,
+          501,
+          511,
+          519,
+          557,
+          566,
+          574,
+          583,
+          885,
+          891,
+          994,
+          1000,
+          1006,
+          1162,
+          1167,
+          1191,
+          1304,
+          1320,
+          1339,
+          1494,
+          1514,
+          1520,
+          1540,
+          1649,
+          1659,
+          1678,
+          1719,
+          1768,
+          1773,
+          1895,
+          1901,
+          2028,
+          2032,
+          2122,
+          2138,
+          2162,
+          2171,
+          2178,
+          2184,
+          2344,
+          2473,
+          2480,
+          2487,
+          2608,
+          2620,
+          2636,
+          2703,
+          2726,
+          2736,
+          2745,
+          2762,
+          2772,
+          2787,
+          2815,
+          2942,
+          2982,
+          2988,
+          3001,
+          3016,
+          3035,
+          3094,
+          3117,
+          3133,
+          3149,
+          3194,
+          3216,
+          3232,
+          3247,
+          3276,
+          3351,
+          3376,
+          3393,
+          3409,
+          3427,
+          3439,
+          3451,
+          3482,
+          3500,
+          3509,
+          3669,
+          3783,
+          3795,
+          3833,
+          3845,
+          3919,
+          3951,
+          3959,
+          4019,
+          4031,
+          4039,
+          4080,
+          4094,
+          4106,
+          4186,
+          4212,
+          4226,
+          4242,
+          4257,
+          4320,
+          4330,
+          4374,
+          4560,
+          4572,
+          4594,
+          4600,
+          4714,
+          4722,
+          4908,
+          4915,
+          4927,
+          4944,
+          4962,
+          4972,
+          4990,
+          5007,
+          5013,
+          5044,
+          5050,
+          5088,
+          5100,
+          5110,
+          5115,
+          5127,
+          5132,
+          5141,
+          5154,
+          5168,
+          5180,
+          5186,
+          5196,
+          5202,
+          5220,
+          5226,
+          5237,
+          5250,
+          5255,
+          5264,
+          5272,
+          5300,
+          5308,
+          5318,
+          5328,
+          5334,
+          5341,
+          5348,
+          5356,
+          5365,
+          5373,
+          5380,
+          5392
+        ]
+      },
+      "vanvleck": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          797,
+          1246
+        ]
+      },
+      "writefit": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "unidentified external library (not supplied)",
+        "call_lines": [
+          1014
+        ]
+      },
+      "extrtn": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "declared EXTERNAL in mpslpp.f; body not supplied",
+        "call_lines": [],
+        "declared_external_line": 258
+      },
+      "include:mpslpp.inc": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "Fortran INCLUDE file referenced but not supplied",
+        "call_lines": [],
+        "referenced_line": 262
+      },
+      "include:headkey.inc": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "Fortran INCLUDE file referenced but not supplied",
+        "call_lines": [],
+        "referenced_line": 263
+      },
+      "include:histkey.inc": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "Fortran INCLUDE file referenced but not supplied",
+        "call_lines": [],
+        "referenced_line": 264
+      },
+      "include:mpslpp.def": {
+        "classification": "REFERENCED_BUT_MISSING",
+        "library_family": "Fortran INCLUDE file referenced but not supplied",
+        "call_lines": [],
+        "referenced_line": 4781
+      }
+    },
+    "dependency_counts": {
+      "FOUND": 0,
+      "FOUND_PARTIAL": 0,
+      "REFERENCED_BUT_MISSING": 73,
+      "NOT_REFERENCED": 0,
+      "UNKNOWN": 0
+    }
+  },
+  "documentation": {
+    "file": "research/sources/ellingsen_hobart/documentation/mpslpp.tex",
+    "title": "MPSLPP User Manual version 1.0",
+    "author_line": "Simon Ellingsen",
+    "documentclass": "article (\\documentstyle, LaTeX 2.09 era)",
+    "commands_documented": [
+      "LOAD",
+      "SPECSAVE",
+      "FLIST",
+      "FT",
+      "QUOTIENT",
+      "COPY",
+      "ADD",
+      "PLOT",
+      "PRINT",
+      "FIT",
+      "EDIT",
+      "SPAWN",
+      "SLIST",
+      "CLEAR",
+      "SETINFO",
+      "FITPOS",
+      "HISTORY",
+      "MPSLHELP",
+      "EXIT",
+      "QUIT"
+    ],
+    "n_commands_documented": 20,
+    "key_statements": {
+      "data_form_in_correlator_files": "autocorrelation functions",
+      "load_pipeline": "FFT + Van Vleck correction (one-bit sampling) during load; optional Hanning smoothing before FFT",
+      "quotient": "signal/reference quotient with optional Tsys adjustment (None/Signal/Baseline)",
+      "slots": "20 in manual v1.0; source v1.8 raised maxspc to 40",
+      "external_ui": "Dave McConnell's menu software",
+      "platforms": "VMS (physvax), PC (Lahey Fortran + Phar Lap 386); SunOS port considered"
+    }
+  },
+  "historical_pipeline": {
+    "load_path_per_source_lines": {
+      "1_readfit": "call readfit(...) line 603 (external, CFITSIO-based)",
+      "2_vanvleck": "call vanvleck(data,nlags) line 797 (external kernel)",
+      "3_optional_hanning": "call hanning(...) line 799, gated by smoothing parameter (external kernel)",
+      "4_dofft": "call dofft(data,nlags) line 808 (external kernel)",
+      "5_quotient": "inline slot arithmetic + adjust_tsys None/Signal/Baseline logic",
+      "6_writefit": "call writefit(...) line 1014 (external, adds history extension)"
+    },
+    "reproducibility_status_per_arrow": {
+      "correlator_output_to_fit": "REPRODUCIBLE (files in frozen archive)",
+      "fit_to_acf_read": "DEPENDENCY_MISSING (readfit not supplied)",
+      "acf_to_spectrum": "DEPENDENCY_MISSING (vanvleck/dofft/hanning not supplied; conventions DOCUMENTED_ONLY)",
+      "quotient_calibration": "DOCUMENTED_ONLY (manual QUOTIENT section; executed reference/Tsys choices unknown)",
+      "search_analysis_product": "UNKNOWN (no search/analysis layer survives; attributed to Bob Gray per donor)"
+    }
+  },
+  "prohibitions_respected": {
+    "no_missing_routine_reconstructed": true,
+    "no_search_rule_inferred": true,
+    "no_calibration_uncertainty_invented": true,
+    "no_forbidden_quantity_emitted": true
+  }
+}

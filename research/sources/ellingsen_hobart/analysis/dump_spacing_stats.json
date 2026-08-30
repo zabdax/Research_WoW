@@ -1,0 +1,68 @@
+{
+ "original/drive-download-20260825T053211Z-1-001/2013obs/wow_test_2013doy192.tar.gz": {
+  "n_dumps_timed": 3858,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 80.0
+ },
+ "original/drive-download-20260825T053211Z-1-001/2013obs/wow_test_2013doy199.tar.gz": {
+  "n_dumps_timed": 4334,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 80.0
+ },
+ "original/drive-download-20260825T053211Z-1-002/2010obs/spectra.tar.gz": {
+  "n_dumps_timed": 6500,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 4200.0
+ },
+ "original/drive-download-20260825T053211Z-1-002/2013obs/wow_field1_2013doy256.tar.gz": {
+  "n_dumps_timed": 2442,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 82490.0
+ },
+ "original/drive-download-20260825T053211Z-1-002/2013obs/wow_field1_2013doy258.tar.gz": {
+  "n_dumps_timed": 1194,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 95.0
+ },
+ "original/drive-download-20260825T053211Z-1-002/2013obs/wow_field1_2014doy283.tar.gz": {
+  "n_dumps_timed": 4584,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 86405.0
+ },
+ "original/drive-download-20260825T053211Z-1-002/2013obs/wow_field2_2014doy205.tar.gz": {
+  "n_dumps_timed": 5780,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 17480.0
+ },
+ "original/drive-download-20260825T053211Z-1-002/2013obs/wow_test_2013doy189.tar.gz": {
+  "n_dumps_timed": 3862,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 80.0
+ },
+ "original/drive-download-20260825T053211Z-1-002/2013obs/wow_test_2013doy198.tar.gz": {
+  "n_dumps_timed": 4334,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 70.0
+ },
+ "original/drive-download-20260825T053211Z-1-003/2013obs/wow_field1_2013doy218.tar.gz": {
+  "n_dumps_timed": 21666,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 130.0
+ },
+ "original/drive-download-20260825T053211Z-1-003/2013obs/wow_field2_2013doy219.tar.gz": {
+  "n_dumps_timed": 16854,
+  "median_dt_s": 5.0,
+  "min_dt_s": 5.0,
+  "max_dt_s": 7330.0
+ }
+}

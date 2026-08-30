@@ -1,0 +1,126 @@
+{
+ "reference": {
+  "positive_horn_J2000": "19:25:02 -26:57:18 (+/-3s RA, +/-20arcmin Dec; Arecibo II Table 4)",
+  "negative_horn_J2000": "19:27:55 -26:57:13 (+/-3s RA, +/-20arcmin Dec)",
+  "note": "separations use great-circle total and RA-component (cos(dec)-corrected) offsets"
+ },
+ "commanded_j2000_as_labelled": {
+  "hobart_2010_on": {
+   "coord_j2000_as_labelled": "19:23:03 -26:43:24",
+   "sep_arcmin": 29.96,
+   "dra_arcmin": -26.57,
+   "ddec_arcmin": 13.9,
+   "neg_sep_arcmin": 66.59,
+   "neg_dra_arcmin": -65.2,
+   "neg_ddec_arcmin": 13.82
+  },
+  "hobart_2010_off_north": {
+   "coord_j2000_as_labelled": "19:23:03 -25:43:24",
+   "sep_arcmin": 78.56,
+   "dra_arcmin": -26.8,
+   "ddec_arcmin": 73.9,
+   "neg_sep_arcmin": 98.63,
+   "neg_dra_arcmin": -65.77,
+   "neg_ddec_arcmin": 73.82
+  },
+  "hobart_2010_off_south": {
+   "coord_j2000_as_labelled": "19:23:03 -27:43:24",
+   "sep_arcmin": 53.14,
+   "dra_arcmin": -26.33,
+   "ddec_arcmin": -46.1,
+   "neg_sep_arcmin": 79.61,
+   "neg_dra_arcmin": -64.62,
+   "neg_ddec_arcmin": -46.18
+  },
+  "hobart_field1_cmd": {
+   "coord_j2000_as_labelled": "19:25:28 -26:57:00",
+   "sep_arcmin": 5.8,
+   "dra_arcmin": 5.79,
+   "ddec_arcmin": 0.3,
+   "neg_sep_arcmin": 32.76,
+   "neg_dra_arcmin": -32.76,
+   "neg_ddec_arcmin": 0.22
+  },
+  "hobart_field2_cmd": {
+   "coord_j2000_as_labelled": "19:28:17 -26:57:00",
+   "sep_arcmin": 43.46,
+   "dra_arcmin": 43.46,
+   "ddec_arcmin": 0.3,
+   "neg_sep_arcmin": 4.91,
+   "neg_dra_arcmin": 4.9,
+   "neg_ddec_arcmin": 0.22
+  }
+ },
+ "readme_b1950_points": {
+  "hobart_1999_A": {
+   "b1950": "19:22:22 -27:18:00",
+   "j2000_derived": "19:25:27.9 -27:12:01.1",
+   "sep_arcmin": 15.81,
+   "dra_arcmin": 5.76,
+   "ddec_arcmin": -14.72,
+   "neg_sep_arcmin": 35.93,
+   "neg_dra_arcmin": -32.7,
+   "neg_ddec_arcmin": -14.8
+  },
+  "hobart_1999_B": {
+   "b1950": "19:25:12 -27:18:00",
+   "j2000_derived": "19:28:17.8 -27:11:49.6",
+   "sep_arcmin": 45.93,
+   "dra_arcmin": 43.53,
+   "ddec_arcmin": -14.53,
+   "neg_sep_arcmin": 15.46,
+   "neg_dra_arcmin": 5.06,
+   "neg_ddec_arcmin": -14.61
+  },
+  "hobart_1999_C": {
+   "b1950": "19:22:22 -26:48:00",
+   "j2000_derived": "19:25:27.2 -26:42:01.2",
+   "sep_arcmin": 16.28,
+   "dra_arcmin": 5.64,
+   "ddec_arcmin": 15.28,
+   "neg_sep_arcmin": 36.3,
+   "neg_dra_arcmin": -33.0,
+   "neg_ddec_arcmin": 15.2
+  },
+  "hobart_1999_D": {
+   "b1950": "19:25:12 -26:48:00",
+   "j2000_derived": "19:28:17.1 -26:41:49.6",
+   "sep_arcmin": 46.19,
+   "dra_arcmin": 43.57,
+   "ddec_arcmin": 15.47,
+   "neg_sep_arcmin": 16.16,
+   "neg_dra_arcmin": 4.93,
+   "neg_ddec_arcmin": 15.39
+  }
+ },
+ "hypothetical_intent_transforms": [
+  {
+   "label": "hyp_field1_string_as_B1950",
+   "j2000_if_precessed": "19:28:33.3 -26:50:48.5",
+   "vs_poshorn_arcmin": 47.55,
+   "vs_neghorn_arcmin": 10.67,
+   "disclaimer": "INTENT HYPOTHESIS ONLY - not evidence of what was intended"
+  },
+  {
+   "label": "hyp_field2_string_as_B1950",
+   "j2000_if_precessed": "19:31:22.1 -26:50:37.1",
+   "vs_poshorn_arcmin": 85.01,
+   "vs_neghorn_arcmin": 46.64,
+   "disclaimer": "INTENT HYPOTHESIS ONLY - not evidence of what was intended"
+  },
+  {
+   "label": "hyp_2010_string_as_B1950",
+   "j2000_if_precessed": "19:26:08.1 -26:37:22.4",
+   "vs_poshorn_arcmin": 24.79,
+   "vs_neghorn_arcmin": 31.03,
+   "disclaimer": "INTENT HYPOTHESIS ONLY - not evidence of what was intended"
+  }
+ ],
+ "beam_context": {
+  "fwhm_measured_2010_arcmin": [
+   33.8,
+   36.8
+  ],
+  "two_d_beam_model": "UNKNOWN"
+ }
+}

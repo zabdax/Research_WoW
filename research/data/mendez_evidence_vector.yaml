@@ -1,0 +1,458 @@
+# =============================================================================
+# MODERN EVIDENCE VECTOR — Arecibo Wow! II extraction (Phase A)
+# =============================================================================
+# Built 2026-08-23 under explicit Phase A authorization (see
+# docs/acquisition/SOURCE_LOCK_REPORT.md authorization record).
+# Source of record: arXiv:2508.10657 v1 (2025-08-14), frozen PDF/TeX/HTML under
+# research/sources/mendez_arecibo/papers/; TeX line references point to
+# extracted/awow2_2508.10657v1_eprint/awowii-v1.tex (487 lines, SHA-256 pinned
+# in metadata/source_manifest.yaml). Repository data: planetaryhablab/Ohio-SETI
+# @ 28624a1eaf955ced940db347684cee61c8e4fd61 (dataset v0a, 2024-10-14).
+#
+# STANDING RULES ENFORCED HERE:
+#   - flux is CENSORED (lower bound), never a point estimate;
+#   - Table 4 + equations are authoritative; ABSTRACT VALUES ARE EXCLUDED;
+#   - commented-out TeX draft values are PERMANENTLY EXCLUDED (see excluded_values);
+#   - §9 HI/Wow2/Wow3 entries are tagged SOURCE_VERIFICATION = PAPER_ONLY,
+#     NOT_INDEPENDENTLY_REPRODUCIBLE (authorization Part 2 item 8 + signer
+#     condition: paper-sourced-only pending the 2027 archive release);
+#   - no orphan numbers: every value carries paper/version/section/TeX-line and,
+#     where applicable, repository file+commit.
+# =============================================================================
+
+schema_version: 0.1.0
+frozen:
+  status: FROZEN
+  date_utc: "2026-08-23"
+  freeze_manifest: research/data/mendez_evidence_freeze_manifest.yaml
+  authorization: "docs/acquisition/SOURCE_LOCK_REPORT.md (signed block 2026-08-22 + Phase A explicit authorization 2026-08-23)"
+  modification_policy: "No value may change after freeze without a new dated amendment and human re-authorization."
+
+source_of_record:
+  paper: "Arecibo Wow! II: Revised Properties of the Wow! Signal from Archival Ohio SETI Data"
+  arxiv: "2508.10657"
+  version: v1
+  version_date: "2025-08-14"
+  tex_ref: "research/sources/mendez_arecibo/extracted/awow2_2508.10657v1_eprint/awowii-v1.tex"
+  repository: "planetaryhablab/Ohio-SETI"
+  repository_commit: "28624a1eaf955ced940db347684cee61c8e4fd61"
+  repository_version_note: "dataset v0a (2024-10-14); predates paper by ~10 months; FLUX array carries legacy 54 Jy calibration"
+
+excluded_values:
+  - value: "abstract 'peak flux density exceeding 250 Jy' (TeX l.86)"
+    reason: "authorization Part 3 — abstract is not a source value; Table 4 + §6 equation are authoritative"
+  - value: ">=249 +77/-48 Jy (commented TeX l.429)"
+    reason: "authorization Part 3 — commented-out draft row inside v1; permanently excluded; discarded intermediate"
+  - value: "distance 1.5 +/- 1.4 kpc (commented TeX l.433)"
+    reason: "authorization Part 3 — commented-out draft row inside v1; permanently excluded; discarded intermediate"
+
+parameters:
+
+  # --------------------------------------------------------------------------
+  # TEMPORAL
+  # --------------------------------------------------------------------------
+  observation_datetime:
+    value_est: "1977-08-15 22:16:06"
+    value_utc: "1977-08-16 03:16:06"
+    previous_value_est: "1977-08-15 22:16:01"
+    unit: "datetime (printout in EST; Ohio local time was EDT — 22:16 EST = 23:16 EDT)"
+    kind: point
+    provenance_class: [TRANSCRIBED_ARCHIVAL, RECONSTRUCTED]
+    layer: L2
+    source:
+      table: "Table 4 (tab:wow), TeX l.423"
+      section: "§4 Time, TeX l.175-179"
+      figure: "fig:wowfit (fit-based time correction, l.179)"
+    underlying_data:
+      repository: "planetaryhablab/Ohio-SETI"
+      commit: 28624a1eaf955ced940db347684cee61c8e4fd61
+      file: "oseti_19770815_220410.csv (EST column)"
+      data_check: "channel-2 'U' peak at row 61, EST 22:16:10, 2LO 120.185 (12 s sampling brackets the fit value)"
+    derivation_method: "printout EST (12 s cadence = 10 s integration + 2 s processing) + sidereal-clock correction from Gaussian fit; printed times otherwise unadjusted (l.179)"
+    reproduction:
+      status: PENDING
+      mode: "not in authorized Phase C scope (frequency + flux only)"
+    notes: "Ehman estimated ~+/-2 sidereal seconds clock error (l.179); N50CH time resolution +/-6 s (l.196)."
+    scientific_importance: "HIGH — geometry, velocity frames, ephemeris queries"
+
+  signal_apparent_duration:
+    value: 73.4
+    uncertainty: 0.5
+    unit: s
+    kind: lower_bound   # paper: ">= 73.4 +/- 0.5 s"
+    provenance_class: [DERIVED, CENSORED_OR_BOUNDED]
+    layer: L2
+    source:
+      table: "Table 4, TeX l.427"
+      section: "§5 Location, TeX l.196 (duration from Gaussian fit ASSUMING 8 arcmin RA beamwidth)"
+    previous_value: ">= 72 s (Ehman 1998)"
+    derivation_method: "beam-transit geometry fit — OBSERVED beam-integrated duration, NOT intrinsic source duration"
+    reproduction:
+      status: PENDING
+      mode: "derivable from fit width x beamwidth; outside authorized Phase C scope"
+    directive_guard: "72-second quarantine rule (authorization Part 3 / extraction map §16 risk 8): this value must never be used as t_intrinsic; beam-geometry quantity only."
+    scientific_importance: "MEDIUM — observation-operator input (H2)"
+
+  # --------------------------------------------------------------------------
+  # FREQUENCY
+  # --------------------------------------------------------------------------
+  observed_frequency:
+    value_mhz: 1420.726
+    uncertainty_mhz: 0.005
+    uncertainty_basis: "half of the 10 kHz channel bandwidth (TeX l.322)"
+    unit: MHz
+    kind: point
+    reference_frame: "GSR-tracked 2nd-LO chain (printout 2LO continuously adjusted for Earth+Sun motion relative to Galactic Standard of Rest, TeX l.315)"
+    provenance_class: [TRANSCRIBED_ARCHIVAL, RECONSTRUCTED]
+    layer: L2
+    source:
+      table: "Table 4, TeX l.424"
+      section: "§7 Frequency, TeX l.281-322"
+      equation: "f_c = (f_2LO - f_2LOc) + 1420.4056 MHz ; f_n = f_c + (25.5 - n) * 0.010 MHz (TeX l.316-321)"
+    underlying_data:
+      repository: "planetaryhablab/Ohio-SETI"
+      commit: 28624a1eaf955ced940db347684cee61c8e4fd61
+      file: "oseti_19770815_220410.csv '2ND LO FREQ' column"
+      data_check: "f_2LO = 120.185 at channel-2 U/J/5 rows (rows 61-63) — VERIFIED against frozen CSV"
+    channel: 2
+    key_constants:
+      f_2LO_at_peak_mhz: 120.185
+      f_2LOc_pre_19771213_mhz: 120.1
+      f_2LOc_post_19771213_mhz: 119.9
+      LO1_mhz: 1450.5056
+      HI_rest_reference_mhz: 1420.4056
+    frequency_reconstruction_corrections:
+      - "channel-order inversion: frequency DEcreases with channel number (TeX l.313) — reverses Ehman 2010 assumption"
+      - "2nd-LO software change 1977-12-13 (120.0 -> 119.9 MHz regime change, TeX l.313)"
+      - "historical LO1 +0.1 MHz error corrected by Ehman 1997 (TeX l.283)"
+    previous_values: "Kraus 1994: 1420.3556 MHz; Ehman 1997: 1420.4556 +/- 0.005 MHz (TeX l.283)"
+    reproduction:
+      status: AUTHORIZED_AND_COMPLETED
+      mode: GENUINE_INDEPENDENT_VERIFICATION
+      result_ref: research/data/processed/mendez_reproduction_results.json
+    scientific_importance: "CRITICAL — drives velocity, HI candidate population (H3), RFI/harmonic arguments (H1)"
+
+  channel_bandwidth:
+    value_khz: 10
+    unit: kHz
+    kind: point
+    provenance_class: [ORIGINAL_ARCHIVAL, TRANSCRIBED_ARCHIVAL]
+    layer: L1
+    source: {section: "§7 TeX l.322 (channel spacing 0.010 MHz); receiver described §2 TeX l.113 (50-channel 500 kHz)"}
+    notes: "project's legacy 'bandwidth <= 10 kHz upper bound (Wow I abstract)' is consistent; locator now upgraded to Wow II §7"
+
+  # --------------------------------------------------------------------------
+  # POSITION
+  # --------------------------------------------------------------------------
+  position_J2000:
+    positive_east_horn:
+      ra: "19:25:02"
+      ra_uncertainty_s: 3
+      ra_statistical_uncertainty_s: 0.2
+      dec: "-26:57:18"
+      dec_uncertainty_arcmin: 20
+    negative_west_horn:
+      ra: "19:27:55"
+      ra_uncertainty_s: 3
+      dec: "-26:57:13"
+      dec_uncertainty_arcmin: 20
+    epoch: J2000
+    kind: point_with_uncertainty
+    provenance_class: [TRANSCRIBED_ARCHIVAL, RECONSTRUCTED]
+    layer: L2
+    source:
+      table: "Table 4, TeX l.436-437"
+      figure: "fig:wowmap (field comparison); fig:wowfit (positive-horn RA + statistical error)"
+      section: "§5 Location, TeX l.181-196"
+    corrections_chain:
+      positional_offset_s: "~27 (clock-related, TeX l.187)"
+      horn_squint_empirical_s: {value: 128, uncertainty: 3, note: "empirical, from Aug 16 1977 strip chart (TeX l.187)"}
+      horn_squint_ehman_s: {value: 154.95, note: "superseded by empirical value (TeX l.187)"}
+      pointing_error_s: 3
+      n50ch_time_resolution_s: 6
+      method_note: "coordinates recomputed from printout time; printout coordinate values NOT overwritten (TeX l.187)"
+    previous_values_ehman1998:
+      positive_horn: {ra: "19:25:31 +/- 10 s", dec: "-26:57 +/- 20'"}
+      negative_horn: {ra: "19:28:22 +/- 10 s", dec: "-26:57 +/- 20'"}
+    position_shift_from_previous: "7.25 arcminutes (TeX l.413)"
+    underlying_data:
+      repository: "planetaryhablab/Ohio-SETI"
+      commit: 28624a1eaf955ced940db347684cee61c8e4fd61
+      file: "oseti_19770815_220410.csv (RA/EST columns); .sav RA_2000/DC_2000 are v0a-era cross-check only"
+    reproduction:
+      status: PARTIAL_UNVERIFIABLE
+      mode: "empirical squint and ~27 s offset derive from the private Aug 16 1977 strip chart (authorization: do not attempt)"
+    notes: "declination uncertainty unchanged at +/-20 arcmin (large dec beam); raw printout RA at peak row reads 19h17m24s (uncorrected); corrected RA comes from the recomputation chain."
+    scientific_importance: "CRITICAL — defines H3 search fields; H2 geometry tests"
+
+  position_galactic:
+    positive_east_horn: {l_deg: 11.62, l_unc_deg: 0.02, b_deg: -17.85, b_unc_deg: 0.04}
+    negative_west_horn: {l_deg: 11.87, l_unc_deg: 0.02, b_deg: -19.42, b_unc_deg: 0.04}
+    previous_values_ehman1998:
+      positive_horn: {l_deg: 11.65, b_deg: -18.89}
+      negative_horn: {l_deg: 11.90, b_deg: -19.48}
+    unit: deg
+    kind: point_with_uncertainty
+    provenance_class: [DERIVED]
+    layer: L2
+    source: {table: "Table 4, TeX l.439-440"}
+    status: CONFIRMED_TYPO_INDEPENDENTLY_VERIFIED
+    ambiguity_note: "HISTORY (Phase A extraction): positive-horn b jumps from -18.89 (previous) to -17.85 (new) = +1.04 deg although the J2000 position moved by only ~29 arcsec in RA; flagged AMBIGUOUS at extraction, then independently verified as a typographical error on 2026-08-23 (see independent_verification below and the dated amendment at file end)."
+    independent_verification_2026_08_23:
+      method: "astropy 7.2.2 SkyCoord ICRS->Galactic (IAU transformation); inputs = Table 4 J2000 rows ONLY; no printed galactic value used"
+      computed_positive_horn_b_deg: -18.8181
+      computed_l_agreement_deg: "l computed 11.6175 vs printed 11.62 (delta 0.0025)"
+      other_rows_validation: "previous-positive b -18.9165 vs printed -18.89 (delta 0.027); new-negative -19.4158 vs -19.42 (0.004); previous-negative -19.5079 vs -19.48 (0.028) — every other row validates to <=0.03 deg"
+      printed_value_disagreement_deg: 0.9681
+      suspected_intended_value_minus_18p85_vs_computed_delta_deg: -0.0319
+      inversion_check: "b = -17.85 at RA 19:25:02 would require dec ~= -28.00 deg — a 63 arcmin shift from this same row's tabulated dec (-26:57:18)"
+      confidence: "very high that the printed -17.85 is a typographical error; the exact intended digits (-18.85 plausible) remain subject to author confirmation"
+      results_ref: research/data/processed/galactic_verification_results.json
+    usage_rule: "downstream field framing must use the independently computed value (~-18.82) or an author-confirmed correction — NEVER the printed -17.85"
+    scientific_importance: "MEDIUM — H3 field framing; do not use positive-horn b until resolved"
+
+  # --------------------------------------------------------------------------
+  # VELOCITY
+  # --------------------------------------------------------------------------
+  radial_velocity_heliocentric:
+    value_km_s: -84
+    uncertainty_km_s: 1
+    unit: km/s
+    kind: point
+    provenance_class: [DERIVED]
+    layer: L2
+    source: {table: "Table 4, TeX l.431", section: "§9 TeX l.448"}
+    derivation_method: "derived from reconstructed frequency + standard heliocentric correction; explicit transformation equations NOT written in the paper (method prose only, TeX l.299 for the Wow2/Wow3 validation case)"
+    reproduction:
+      status: PENDING
+      mode: "outside authorized Phase C scope (frequency + flux only); requires astropy-class transform + convention decisions (GSR-tracking of the 2LO chain must be undone to recover heliocentric frame)"
+    notes: "naive c*(f0-f)/f0 with f0=1420.4056 gives ~ -67.6 km/s; the difference (~16 km/s ~ Earth orbital projection) confirms the GSR-tracking subtlety — transformation details must be established before any independent use"
+    scientific_importance: "CRITICAL for H3 (IVC kinematic regime)"
+
+  radial_velocity_lsr:
+    value_km_s: -74
+    uncertainty_km_s: 2
+    unit: km/s
+    kind: point
+    provenance_class: [DERIVED]
+    layer: L2
+    source: {table: "Table 4, TeX l.432", section: "§9 TeX l.448"}
+    reproduction:
+      status: PENDING
+      mode: "outside authorized Phase C scope; solar peculiar-motion convention not stated in paper — document before reproducing"
+    notes: "paper interprets as compatible with intermediate-velocity clouds (IVC, 25-90 km/s LSR regime, TeX l.450) — INTERPRETIVE layer, not a measurement of cloud membership"
+    scientific_importance: "CRITICAL for HI4PI cloud matching (H3)"
+
+  # --------------------------------------------------------------------------
+  # SIGNAL STRENGTH — flux is the signer's priority-1 conflict; resolved here
+  # --------------------------------------------------------------------------
+  flux_density:
+    bound_value_jy: 256
+    uncertainty_jy: 63
+    unit: Jy
+    kind: lower_bound_censored
+    censoring_semantics:
+      paper_equation: "S_Wow = SNR_Wow x sigma_channel >= 256 +/- 63 Jy (TeX l.274-276)"
+      description: >
+        The published constraint is a ONE-SIDED LOWER BOUND that carries a symmetric-looking
+        error bar, and the paper gives no formal statistical definition of how ">=" combines
+        with "+/-". Its own justification is verbal: the value "represents a lower limit
+        value due not only to the uncertainty in declination but also to uncertainties in
+        the noise levels" (l.279). It is a beam-centered-equivalent flux: because "the
+        source was not necessarily perfectly centered in the telescope's beam, its actual
+        intensity was likely greater" (l.446). Calibration-choice sensitivity is likewise
+        stated explicitly: "Had the previous noise tube signal been utilized as a
+        calibrator, the resulting measurement would have been approximately double" (l.279).
+        The quantity therefore enters any model as CENSORED data — a one-sided bound plus
+        calibration uncertainty — never as a Gaussian point estimate and never encoded as
+        'flux: 256'.
+      ambiguity_preserved: "per authorization Part 3 the absence of a formal statistical definition for '>=' paired with '+/-'' is DOCUMENTED, not resolved by this project"
+    rounding_sensitivity_note: >
+      The published bound depends on the rounding policy applied to intermediate quantities.
+      Paper path as printed: sigma_cnt = 9.4/8.0 -> '1.2+/-0.3 Jy' (l.267); sigma_channel =
+      1.2*sqrt(50) -> '8.5+/-2.1 Jy' (l.271); S_Wow = 30.1*8.5 = 255.85 -> '>=256+/-63 Jy'
+      (Table 4 l.430). Propagating UNROUNDED intermediates instead (sigma_cnt = 1.175 Jy;
+      sigma_channel = 8.31 Jy) yields >=250.1+/-56 Jy, i.e. -2.3% relative to the printed
+      bound. The divergence is caused ENTIRELY by the upward rounding of sigma_cnt
+      (1.175 -> 1.2) before multiplication by sqrt(50). This is a ROUNDING-POLICY
+      SENSITIVITY in the published value, not a disagreement with the paper's method and
+      not an error on either side; neither value is privileged by this project. See
+      docs/referee_attack_map.md appendix (flux censoring) and
+      research/data/processed/mendez_reproduction_results.json (flux_arithmetic).
+    provenance_class: [TRANSCRIBED_ARCHIVAL, CALIBRATED, CENSORED_OR_BOUNDED]
+    layer: L2
+    source:
+      table: "Table 4, TeX l.430"
+      section: "§6 Flux Density, TeX l.205-279"
+      equation: "sigma_cnt = S_ntube/SNR_ntube = 9.4/(8.0+/-1.8) = 1.2+/-0.3 Jy (l.266-268); sigma_channel = sigma_cnt*sqrt(n) = 8.5+/-2.1 Jy (l.270-272); S_Wow = SNR_Wow*sigma_channel (l.274-276)"
+      figure: "fig:continuum (noise-tube SNR); fig:wowfit (SNR input)"
+    calibration_constants_paper_stated:
+      S_ntube_jy: 9.4
+      SNR_ntube: "8.0 +/- 1.8"
+      sigma_cnt_jy: "1.2 +/- 0.3"
+      n_channels: 50
+      sigma_channel_jy: "8.5 +/- 2.1"
+      public_data_derivation: "NO — constants are paper-stated; strip-chart + noise-tube data are private (authorization Part 2)"
+    minor_internal_tension: "TeX l.256 text says the noise-tube signal had 'a peak SNR of 7-sigma' while the equation uses SNR_ntube = 8.0+/-1.8 ('average SNR ... in the continuum', l.269) — recorded, not resolved"
+    previous_values: "Ehman ~54 Jy; Childers ~212 Jy (TeX l.239; derivations not documented in literature)"
+    conflict_1_resolution:
+      rule: "Ohio-SETI v0a FLUX array ('assuming max signal was 54 Jy', README) = LEGACY_SUPERSEDED Ehman-era calibration; it is NOT the Arecibo II flux evidence and must never be substituted for it; repo FLUX preserved and labelled, not overwritten; repo SNR arrays remain valid (SNR is what N50CH recorded)"
+    reproduction:
+      status: AUTHORIZED_AND_COMPLETED
+      mode: ARITHMETIC_REPRODUCTION_ONLY
+      result_ref: research/data/processed/mendez_reproduction_results.json
+    scientific_importance: "CRITICAL — H3 energetics/feasibility, H4 engineering inputs, censored-data handling project-wide"
+
+  snr_peak:
+    value: 30.1
+    uncertainty: 0.4
+    unit: sigma
+    kind: point
+    provenance_class: [TRANSCRIBED_ARCHIVAL, RECONSTRUCTED]
+    layer: L2
+    source:
+      table: "Table 4, TeX l.428"
+      figure: "fig:wowfit caption, TeX l.192"
+      section: "§6 TeX l.277"
+    derivation_method: "Gaussian beam-profile fit to transcribed channel-2 SNR sequence"
+    previous_value: "30.5 +/- 0.5 (Table 4 note a: Ehman 1998) — resolves legacy project conflict: research/data/wow_observation.yaml's '30.5 +/- 0.5 (Mendez 2024 §II)' carried the HISTORICAL Ehman value, not a 2024 measurement"
+    underlying_data:
+      repository: "planetaryhablab/Ohio-SETI"
+      commit: 28624a1eaf955ced940db347684cee61c8e4fd61
+      file: "oseti_19770815_220410.csv channel-2 rows 58-63 (sequence 6,E,Q,U,J,5 — data-located)"
+    reproduction:
+      status: PENDING
+      mode: "Gaussian fit reproducible from frozen data; outside authorized Phase C scope (frequency + flux only)"
+    scientific_importance: "HIGH — flux chain input; detection significance"
+
+  noise_level_channel:
+    sigma_channel_jy: "8.5 +/- 2.1"
+    sigma_cnt_jy: "1.2 +/- 0.3"
+    unit: Jy
+    kind: point
+    provenance_class: [CALIBRATED]
+    layer: L2
+    source: {section: "§6 equations, TeX l.265-272"}
+    scientific_importance: "HIGH — dominates flux bound uncertainty"
+
+  # --------------------------------------------------------------------------
+  # MORPHOLOGY
+  # --------------------------------------------------------------------------
+  source_angular_extent:
+    value_arcmin: 1.9
+    uncertainty_arcmin: 0.1
+    unit: arcmin
+    kind: upper_bound   # paper: "<= 1.9 +/- 0.1 arcmin"
+    provenance_class: [DERIVED, CENSORED_OR_BOUNDED]
+    layer: L2
+    source:
+      table: "Table 4, TeX l.434"
+      figure: "fig:wowfit caption, TeX l.192"
+      section: "§5 TeX l.196 (ASSUMES 8 arcmin RA beamwidth)"
+    reproduction: {status: PENDING, mode: "derivable from fit; outside authorized scope"}
+    scientific_importance: "HIGH — H3 cloud angular-size prior"
+
+  # --------------------------------------------------------------------------
+  # INSTRUMENT / OBSERVATION OPERATOR INPUTS
+  # --------------------------------------------------------------------------
+  instrument_constants:
+    beamwidth_ra_arcmin: {value: 8, source: "§5 TeX l.196 (assumption used for duration/size)", provenance_class: SECONDARY, layer: L1}
+    declination_uncertainty_arcmin: {value: 20, source: "§5 TeX l.196; Table 4", note: "large dec beam; unchanged from Ehman"}
+    horn_interval: {value: "~3 minutes", source: "§1 TeX l.101", note: "negative (West) horn first, positive (East) ~3 min later (§6 TeX l.207); distinct from 128±3 s squint and from legacy project 'horn_turnon_window 180 s'"}
+    on_off_scheme: {source: "§6 TeX l.207-209", note: "positive horn = ON, negative = OFF; difference recorded at positive-horn position; before 1977-10-22 |S| was computed -> single positive peak (Wow ambiguity, TeX l.237)"}
+    n50ch_time_resolution_s: 6
+    cadence_s: 12
+    integration_s: 10
+    channels: 50
+    channel_width_khz: 10
+    receiver_description: "50-channel 500 kHz SETI receiver + concurrent 8 MHz continuum receiver at 1415 MHz (TeX l.113, l.209)"
+    lo1_mhz: 1450.5056
+    f_2loc_regimes_mhz: {pre_19771213: 120.1, post_19771213: 119.9}
+    noise_tube: {signal_k: 5, duration_min: 5, period_solar_hours: 2, source: "§6 TeX l.256 citing cole1976search"}
+    snr_algorithm: {source: "Eq. 1 (eq:snr), TeX l.212-227, after Ehman 2010", note: "iterative adaptive baseline/deviation filter, 5-sigma exclusion threshold, 1 s cadence averaged to 12 s"}
+    repo_metadata_crosscheck_pending: {file: "README SAV schema", fields: "TSYS=100 K, OFREQ=1420.4056 MHz, REFSYS='LSR', OBS_COORD", status: "repo metadata; verify against paper in a later phase (REFSYS 'LSR' vs paper's GSR tracking statement needs reconciliation)"}
+    provenance_note: "full 2-D beam map / horn response NEVER published — Big Ear observation operator remains incomplete; H2 at most partially unlocked"
+
+  # --------------------------------------------------------------------------
+  # ARCHIVE / TRANSCRIPTION PROVENANCE (Layer 1 documentation)
+  # --------------------------------------------------------------------------
+  archive_provenance:
+    n50ch_record:
+      preserved_by: "Marc W. Abel (Wright State University), volunteer since 1983"
+      photography: "2006-2017, 75,000+ printout pages"
+      formats: "PNG 2557x1754 / CR2 4416x3312 -> JPG 2216x1663; full set 1.24 TB, JPG 69 GB"
+      structure: "167 directories (001-167) + 'wow' directory (wow-001..wow-074); wow dir belongs between frames 013-411 and 013-412; dir 001 after frame 001-525 is 1978 data"
+      public_hosting: "NAAPO website (argus.naapo.org/~rchilders/N50CH_data/...) — human-verified reachable 2026-08-23; scope note in research/data/big_ear_archive_inventory.yaml (scans public; OCR working files private; FITS nonexistent)"
+      includes: "scans of IBM 1030 Assembler + FORTRAN IV N50CH code (c. 1984); authors run it in an IBM 1030 emulator"
+      data_epochs: "SMP50 from 1977-02-05 (frame 001-001, voltages+LST+freq); N50CH from 1977-03-11 (frame 004-001, SNR); negatives from 1977-10-22 (frame 022-198); last data 1984-04-25 (frame 164-311)"
+      snr_encoding: "1-9 numeric, A=10 .. Z=35; zero omitted; negatives struck through"
+    transcription:
+      method: "OCR: Tesseract 4.0 neural net trained on frame wow-053; OpenCV pipeline; human verification; CSV per page -> per day; continuum computed (printouts lacked continuum column until 1977-09-20, frame 018-300); OSS object column added"
+      scope_for_paper: "August 13-17, 1977 transcribed (two days either side of Wow)"
+      transcription_chain_public: "Hotaling (2022, manual) -> Ohio-SETI TXT/CSV (2024, v0a); paper's own Aug 13-17 transcription NOT public"
+    august_1977_runs_table1:
+      wow_run: {date: "1977-08-15", declination: "-27 00", pages: 74, start: "1977-08-15 13:20:05", end: "1977-08-16 09:13:24"}
+      printout_page_capacity: "up to 82 lines/page, ~12 s/line, ~16 min/page (Table 1 caption)"
+
+  # --------------------------------------------------------------------------
+  # H1-RELEVANT PAPER ANALYSIS (§8) — paper statements, not independently
+  # reproduced unless trivially checked; tagged per authorization spirit
+  # --------------------------------------------------------------------------
+  h1_alternative_explanations:
+    SOURCE_VERIFICATION: PAPER_ONLY_NOT_INDEPENDENTLY_REPRODUCED
+    local_rfi:
+      claim: "random-RFI 3-sigma probability (1/32)^6 = 1/1,073,741,824 ~ 1e-9; persistent RFI would need ~6 millennia; dual-horn cancellation; New Moon; beam pattern implies source beyond Earth orbit (TeX l.332-338)"
+      arithmetic_check: "(1/32)^6 = 2^-30 = 1/1,073,741,824 — verified trivially"
+      caution: "probability argument assumes uniform RFI likelihood across signal strengths/durations — model-dependent; usable as H1 source-backed component, NOT as our P(D|H1)"
+    second_harmonic: "no Ohio UHF stations on channels 53/54 (710 MHz 2nd harmonic) or 14 (473 MHz 3rd harmonic) in Aug 1977 — Table 3 (TeX l.340-372)"
+    satellites: "1977 geostationary inclinations <15-20 deg (need >=27 deg for dec -27); Molniya crossings sub-second vs full 72-s window sidereal-drift profile (TeX l.374-386)"
+    solar_activity: "sunspot number ~40-42 (Aug 14), upper 30s (Aug 15); only subflares Aug 12-15; no radio-burst type matches (Type III too broad/drifting) (TeX l.388-396)"
+    internal_artifacts: "gain changes produce wider flat-top all-channel patterns; EVT Eq. 2 gives SNR_max~4 (n=7200/day) and ~5.5 (5 yr daily); channel 2 unremarkable (ch 6 poor, ch 7 sensitive); no channel >7-sigma that day; Wow unique in all data (TeX l.398-409)"
+
+  # --------------------------------------------------------------------------
+  # HI / WOW2 / WOW3 (§9 + §7) — PAPER_ONLY per authorization + signer condition
+  # --------------------------------------------------------------------------
+  hi_wow23:
+    SOURCE_VERIFICATION: PAPER_ONLY__NOT_INDEPENDENTLY_REPRODUCIBLE
+    signer_condition: "flagged paper-sourced-only pending the August 2027 Big Ear archive release (SOURCE_LOCK_REPORT signed block)"
+    wow2_wow3: "two narrowband signals, January 1978, much weaker, different locations, circled by the Ohio SETI team; beam-pattern-consistent (point-like); confirmed against HI4PI as compact HI clouds; after channel-inversion correction their VLSR aligns (~0 km/s) with cloud maximum emission (TeX l.285-313; figs wows/wowsprofile)"
+    hi_cloud_signals_properties: "10 kHz narrowband matching beam pattern; repetition expected for HI clouds with intermittency depending on noise levels; first noticed by Ohio SETI team before Wow (Dixon 1977) (TeX l.452)"
+    ivc_context: "Wow velocity compatible with intermediate-velocity clouds (IVC, |VLSR| ~25-90 km/s) vs disk (~0) vs HVC (>90) — INTERPRETIVE (TeX l.450)"
+    gaia_stars: "at least three stars with comparable velocities identified in Gaia data in the proposed regions (TeX l.448) — paper statement only, no identifiers published"
+    dsr_hypothesis: "astrophysical origin via maser flare / superradiance burst from small cold HI clouds, per Wow! I (mendez2024arecibo) — INTERPRETIVE; feasibility != P(D|H3) (TeX l.460)"
+
+  # --------------------------------------------------------------------------
+  # FOLLOW-UP CONSTRAINT (from Table 1) — paper statement
+  # --------------------------------------------------------------------------
+  followup_48h_scan:
+    SOURCE_VERIFICATION: PAPER_ONLY
+    claim: "only three scans at the Wow declination in Aug 1977; only the final scan, conducted ~48 hours later (1977-08-17 run, 07:27:21-10:27:23, 69 pages, dec -27 00), covered the Wow right ascension again — a non-detection (Table 1 caption + row, TeX l.124, l.139)"
+    scientific_importance: "HIGH for future campaign-specific follow-up modeling (directive §20); must be reconstructed from the NAAPO archive before formal use"
+
+# =============================================================================
+# CONFLICT-REGISTER RESOLUTIONS RECORDED DURING THIS EXTRACTION
+# =============================================================================
+conflict_resolutions:
+  conflict_1_flux_calibration: "RESOLVED as labelling, not value choice: repo v0a FLUX = LEGACY_SUPERSEDED (Ehman 54 Jy era); modern flux evidence = paper >=256+/-63 Jy (censored); both preserved; repo SNR arrays unaffected."
+  conflict_5_project_values: "provenance determined — legacy 30.5+/-0.5 was Ehman-1998 historical value (Table 4 col. 'Previous'); legacy '>=250 Jy' was abstract wording (excluded by rule); both superseded via historical_vs_arecibo_parameters.csv, no silent overwrite."
+  new_conflict_9_galactic_b_anomaly: "NEW — Table 4 positive-horn galactic latitude -17.85 deg vs previous -18.89 deg (+1.04 deg jump) with near-unchanged J2000 position; internally inconsistent; AMBIGUOUS, reported, not resolved."
+  new_conflict_10_noisetube_7sigma_vs_8p0: "NEW (minor) — text 'peak SNR of 7-sigma' vs equation constant SNR_ntube = 8.0+/-1.8 (average); recorded as minor internal tension."
+  new_conflict_11_repo_refs_lsr_vs_paper_gsr: "NEW (minor) — repo README REFSYS 'LSR' vs paper's statement that the printed 2LO tracks GSR; flagged in instrument_constants.repo_metadata_crosscheck_pending."
+
+# =============================================================================
+# AMENDMENT 1 (2026-08-23, post-Phase-A review follow-up directive) — VISIBLE
+# =============================================================================
+# Three bounded changes, authorized by the follow-up directive (NOT a new phase):
+#   1. position_galactic.status: AMBIGUOUS -> CONFIRMED_TYPO_INDEPENDENTLY_VERIFIED.
+#      Basis: independent astropy 7.2.2 ICRS->Galactic computation from the paper's
+#      own J2000 inputs: computed positive-horn b = -18.8181 deg (printed -17.85,
+#      disagreement 0.97 deg; suspected intended -18.85 agrees to 0.03 deg; all
+#      other Table 4 rows validate to <=0.03 deg; inversion shows -17.85 would
+#      need dec ~ -28.00 deg). Exact intended digits remain subject to author
+#      confirmation. Results: research/data/processed/galactic_verification_results.json
+#   2. flux_density.rounding_sensitivity_note ADDED (documents the >=256 vs
+#      >=250.1 rounding-policy sensitivity; neither value privileged).
+#   3. flux_density.censoring_semantics EXPANDED into full referee-readable prose
+#      (verbatim paper quotes with locators) — semantics unchanged.
+# Original freeze hash of this file (pre-amendment): b2daa0dd2c3205df4ecd21713bbf4c989d1380800ad2477e05c2eda054764c25
+# =============================================================================
