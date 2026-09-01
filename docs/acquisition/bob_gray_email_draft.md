@@ -1,47 +1,52 @@
-# Bob Gray Email Draft
+# Bob Gray Email Draft (v2 — post-GE2002 consolidation)
 
-Status: **DRAFT — DO NOT SEND** · Prepared 2026-08-29 per MASTER DIRECTIVE
-§18 · Requires explicit human authorization before any external contact.
-Recipient line intentionally left unresolved — see
-`bob_gray_contact_status.md`.
+Status: **DRAFT — DO NOT SEND** · Updated in the consolidation phase ·
+Requires explicit human authorization before any external contact.
+Recipient line intentionally unresolved — see `bob_gray_contact_status.md`.
 
 ---
 
-**Subject:** Surviving analysis records from the 1997–99 Mt Pleasant Wow!-locale observations
+**Subject:** Surviving analysis records from the Mt Pleasant Wow!-locale follow-up observations
 
 Dear Bob Gray,
 
 We are a small independent research team preparing a reproducible,
-provenance-tracked reassessment of the archival follow-up observations of the
-1977 "Wow!" signal. Our aim is strictly methodological: to determine what the
-surviving records can and cannot establish. We make no assumption about the
-signal's origin, and our project has not reached any conclusion about it.
+provenance-tracked audit of the archival follow-up observations of the 1977
+"Wow!" signal. Our aim is strictly methodological: to recover and
+independently check the observational, instrumental, and search-selection
+evidence needed to determine whether a quantitatively defensible statistical
+treatment of the follow-up campaigns is possible. We make no assumption
+about the signal's origin, and the project has reached no conclusion about
+it.
 
-Prof. Simon Ellingsen has very kindly supplied us with the surviving data
-from the 1997–99 Mt Pleasant 26 m observations at the Wow! locale, and he
-indicated that you carried out the processing and analysis of that data. The
-raw data products themselves are in good shape, but nothing documenting the
-analysis side — search criteria, thresholds, candidate handling, or any
-record of what the searches found or ruled out — survives in the material
-Prof. Ellingsen holds.
+Prof. Simon Ellingsen has kindly supplied us with everything he still holds
+from the Mt Pleasant 26 m follow-up work — the 1998/99 autocorrelator data,
+the 2010 and 2013/14 observations, and the high-level processing program and
+its partial manual — and he indicated that you carried out the processing
+and analysis. Your 2002 paper with Prof. Ellingsen is fully part of our
+record: we have extracted its published search procedure, thresholds, and
+non-detection result.
 
-We are writing to ask whether any documentation of that analysis work still
-exists on your side. Anything along these lines would help: processing
-software or scripts, command notes or notebooks, summary plots beyond the
-SAS diagnostics we already have, candidate lists (including rejected items),
-working notes, correspondence, or draft manuscripts.
+What is missing for us is the analysis layer around and after that paper.
+Prof. Ellingsen holds no candidate lists, thresholds, or outcome records for
+the 2010 and 2013/14 observations, and the 2002 paper naturally describes
+the published procedure rather than the executed details. If any of the
+following still exist on your side, they would be genuinely valuable:
+candidate or working files from the 1998/99 reduction (including rejected
+items), any records from the later 2010/2013/14 searches — thresholds,
+scripts, notes, plots, outcome summaries — the processing software's
+subroutines or manual, or Figure 3's underlying data.
 
-We want to stress two things. First, a short answer is genuinely useful to
-us: knowing that nothing further survives, or that a particular step was
-never documented, is a substantive result for our reconstruction and we will
-record it as such. Second, we are not requesting any new data transfer —
-scans of notes, file pointers, or a few sentences of recollection are more
-than sufficient.
+We want to be clear about two things. First, "I don't have it" or "that's
+lost" are perfectly useful answers, and we will record them as substantive
+results. Second, we are not asking you to reconstruct decades-old work from
+memory or to provide anything beyond what you may still happen to hold;
+scans, file pointers, or a few sentences are more than sufficient.
 
 We will preserve the provenance of anything you are able to share and will
 clearly distinguish supplied primary material from our own inference. We
-would also be glad to send you a short summary of our reconstruction so far,
-if you would like to check it against your recollection.
+would also gladly send a short summary of our reconstruction so far if you
+would like to check it.
 
 Thank you for your time, and for the work on those observations.
 
@@ -50,25 +55,25 @@ With best regards,
 
 ---
 
-## Compliance checklist (directive §18)
+## Compliance checklist (directive Part 8)
 
-- [x] Identifies the project briefly; non-attributional framing; no ETI assumption.
-- [x] States Simon supplied the surviving data.
-- [x] States Simon indicated Bob performed the historical processing/analysis (verbatim-supported donor testimony; no stronger claim).
-- [x] No claim about the historical search outcome; "nothing survives" framed as valuable.
-- [x] Asks only for surviving analysis/search documentation.
-- [x] No large data transfer requested.
-- [x] No Bayesian result claimed or implied.
-- [x] Concise (~330 words); no technical overload.
+- [x] Concise (~350 words); professional; non-attributional framing; no ETI assumption.
+- [x] Acknowledges Simon identified Bob as the analyst.
+- [x] States Simon already supplied all material available to him.
+- [x] Explains we are recovering the historical analysis layer.
+- [x] Distinguishes essential from optional material (matches P0/P1 of `bob_gray_remaining_requirements.md`).
+- [x] Accepts "I don't have it"/"lost" as a valid answer; no memory-reconstruction pressure; no implication of entitlement.
+- [x] No private information requested beyond what is appropriate; no fabricated contact details.
+- [x] No unestablished results claimed (published non-detection cited as published; no Bayesian claims).
 
 ## Provenance for statements used
 
-| Statement in email | Source |
+| Statement | Source |
 |---|---|
-| Simon supplied 1997–99 Mt Pleasant data | `research/sources/ellingsen_hobart/` (5.8 GB donor transfer, frozen 2026-08-25) |
-| Simon indicated Bob did the processing/analysis | Donor response 2026-08-29 (freeze: `research/data/ellingsen_simon_response.yaml`) |
-| "SAS diagnostics we already have" | 4 × `.gsf.gz`, Sep–Oct 1998 (`ELLINGSEN_README_EXTRACTION.md` §4) |
-| Nothing documenting analysis survives donor-side | Donor response 2026-08-29 (freeze, per directive §7–8) |
+| Simon supplied everything he holds | Donor response Q1/Q6 (freeze: `ellingsen_simon_response.yaml`) |
+| Simon indicated Bob did the processing/analysis | Donor response Q5 (verbatim) |
+| G&E 2002 extracted: procedure, thresholds, non-detection | `ge2002_extraction.yaml`, `ge2002_search_outcome.yaml` |
+| Analysis layer for 2010/2013/14 absent donor-side | Donor response Q5/Q6; gap register v1.3 |
 
-*This email has NOT been sent. No contact information was searched for or
-included (directive §19).*
+**This email has NOT been sent. No contact information was searched for or
+included.**
