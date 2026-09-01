@@ -1,0 +1,184 @@
+mum time the target coordinates are above that telescope’s
+horizon.
+We tracked each of the two nominal positions during two
+days in 1998, for nearly 14 hr each. Additional observations
+were made in 1999, 150 north and south of the nominal coor-
+dinates, to fully cover the Ohio State 400 declination HPBW
+with the Hobart beam. Observations are summarized in
+Table 1.
+2.1. Instrumental Conﬁguration and Data Reduction
+The instrumental conﬁguration for the observations is
+summarized in Table 2. Lags from a one-bit digital autocor-
+relation spectrometer were transformed from the time to the
+frequency domain using a modiﬁed version of the observa-
+tory spectral line analysis software (Ellingsen 1996). Quo-
+tient spectra were formed to remove the eﬀect of front-end
+and
+correlator
+bandpass
+ﬁlters,
+using
+the
+relation
+Q ¼ ðS=RÞ  1 for each channel, where Q is the quotient, S
+is the spectrum of interest, and R is a reference spectrum.
+To produce a ﬂat baseline, a third-degree polynomial was
+ﬁtted to those regions of the spectrum free from H i emission
+and interference. A noise diode on the receiver was com-
+pared to the system total power once every 10 minutes to
+determine the system temperature. The system was cali-
+brated against Virgo A, assumed to have a ﬂux density of
+211 Jy at 1420 MHz (Baars et al. 1977).
+Reference spectra are typically obtained through oﬀ-
+source observations, but one of our goals was to observe
+continuously over many hours. Since we were searching for
+a strong, time-variable signal, we were able to use an alter-
+native approach: averaging smoothed on-source spectra
+taken at times near those of the signal spectrum. Reference
+spectra were formed by averaging groups of 30 s spectra
+between system calibrations at 10 minute intervals. This
+procedure has the drawback of including spectral features
+of potential interest in the reference spectrum, which would
+then be removed from the quotient spectrum. To avoid this,
+we used several techniques to exclude features from the
+reference spectra. To remove single-channel features, we
+median-smoothed each reference spectrum. To remove
+broader features, including H i, apparent radio frequency
+interference (RFI), and potentially interesting intermittent
+features, we ﬁrst used only prior spectra to form a reference,
+then
+identiﬁed
+features
+in
+subsequent
+spectra,
+then
+‘‘ bridged ’’ the reference spectrum with a straight line con-
+necting channels across the base of the feature, an iterative
+procedure.
+2.2. Sensitivity
+The theoretical rms () channel sensitivity of a spectrum
+obtained with the Mount Pleasant system is
+ ¼ 
+2
+Tsys
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ðNchanÞ
+p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ð2BtNpolÞ
+p
+;
+where Tsys is the system temperature in Jy, Nchan is the num-
+ber of spectral channels, B is the observed bandwidth of the
+spectrometer, t is the integration time in seconds, and Npol is
+the number of averaged polarizations. The factor of /2 is
+the decrease in sensitivity due to the 1 bit approximation
+made in the correlator, and the factor of
+ﬃﬃ
+2
+p
+is the increase
+in sensitivity due to Hanning smoothing. This yields
+ ¼ 2:46 Jy for a single 30 s spectrum and 0.55 Jy for a refer-
+ence spectrum consisting of 20 averaged spectra. The sensi-
+tivity expected for our quotient spectra is then 2.5 Jy (from
+standard propagation of errors), which is close to the 2.6–
+3.0 Jy rms obtained during our various observations.
+Our 3 Jy sensitivity was suﬃcient to yield an unambigu-
+ous detection of a 60 Jy source—the estimated Wow ﬂux—
+with a signal-to-noise ratio of 20.
+2.3. Interference Identiﬁcation and Excision
+The
+radio
+frequency
+interference
+environment
+was
+sampled for approximately 1 hr before and after each
+observing run, usually with the antenna pointed overhead.
+Signals detected during these oﬀ-source observations were
+assumed to be local interference, and those channels were
+ignored in subsequent analysis.
+TABLE 1
+Summary of Observations
+Field Name
+Date
+Day of Year
+R.A.
+(B1950.0)
+Decl.
+(B1950.0)
+Length of Observation
+(hr)
+Frequency
+(MHz)
+1922N ...........
+1999 Mar 22–23
+81/82
+19 22 22
+26 48
+14.1
+1420.5870
+1922 ..............
+1998 Oct 5
+278
+19 22 22
+27 03
+14.0
+1420.3146
+1922S ............
+1999 Mar 17–18
+76/77
+19 22 22
+27 18
+14.1
+1420.5837
+1925N2 .........
+1999 Apr 9–10
+99/100
+19 25 12
+26 48
+14.1
+1420.3135
+1925 ..............
+1998 Oct 9
+282
+19 25 12
+27 03
+14.3
+1420.3135
+1925S2 ..........
+1999 Mar 20–21
+79/80
+19 25 12
+27 18
+14.1a
+1420.5855
+Note.—Units of right ascension are hours, minutes, and seconds, and units of declination are degrees and arcminutes.
+a 1 hr missing mid-run.
+TABLE 2
+Instrument Description
+Parameter
+Value
+Telescope.....................................
+Mount Pleasant Radio Observatory
+Antenna.......................................
+University of Tasmania 26 m
+HPBW at 21 cm (arcmin) .............
+28
+Spectrometer resolution (kHz) .....
+4.88
+Observed bandwidth (kHz) ..........
+9.765 (due to Hanning smoothing)
+Channels......................................
+512 (each polarization)
+Polarizations................................
+Two linear (crossed dipoles)
+Integration time (s).......................
+30
+System temperature (Jy)...............
+1200 (120 K)
+No. 2, 2002
+SEARCH FOR PERIODIC EMISSIONS AT WOW LOCALE
+969

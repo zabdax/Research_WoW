@@ -1,0 +1,92 @@
+A SEARCH FOR PERIODIC EMISSIONS AT THE WOW LOCALE
+Robert H. Gray
+Gray Data Consulting, 3071 Palmer Square, Chicago, IL 60647; rgray@graydata.net
+and
+Simon Ellingsen
+School of Mathematics and Physics, University of Tasmania, GPO Box 252-21, Hobart 7001, TAS, Australia;
+simon.ellingsen@utas.edu.au
+Received 2001 May 21; accepted 2002 June 24
+ABSTRACT
+The Ohio State University Radio Observatory recorded a strong, narrowband emission near the 21 cm
+hydrogen line in 1977 during a search for extraterrestrial intelligence, an event known as the ‘‘ Wow ’’ signal.
+The few independent attempts to replicate the detection have failed. We have investigated the possibility of a
+periodic source—perhaps rotating and illuminating us once each cycle of many hours, like a lighthouse—
+which prior observations would have been unlikely to detect. We used the University of Tasmania Hobart 26
+m radio telescope to search for intermittent and possibly periodic emissions at the Wow locale by tracking
+the apparent source positions for nearly 14 hr continuously on multiple days. No emissions resembling the
+Wow were detected over a bandwidth of 2.5 MHz to a ﬂux density limit of about 18 Jy, with a detection
+threshold of 5.9  and rms noise of 3 Jy. We conclude that the Wow was not due to a source within our ﬂux
+density limits and repeating more often than every 14 hr, although the possibility of a longer period or non-
+periodic source cannot be ruled out.
+Subject headings: extraterrestrial intelligence — radio lines: general
+1. INTRODUCTION
+The Wow was a strong (30 , or about 60 Jy), narrow-
+band (<10 kHz) emission recorded near the 21 cm H i line at
+Ohio State University in 1977 (Kraus 1979; Ehman 19981)
+during a search for extraterrestrial intelligence (SETI), but
+not detected again in subsequent follow-up observations at
+Ohio State. The event is interesting because the time-
+dependent intensity of the emission matched the antenna
+pattern signature of a transiting celestial source (Gray &
+Marvel 2001), which would not be expected of interference.
+Two attempts to independently replicate the detection
+have been reported, both unsuccessful. One attempt (Gray
+1994) used the ultranarrowband Harvard/Smithsonian-
+META system (Horowitz et al. 1986). With 0.05 Hz chan-
+nels and a chirped receiver, the observations were sensitive
+only to very narrowband and Doppler-corrected artiﬁcial
+radio signals; none were detected. A second attempt used
+the Very Large Array (Gray & Marvel 2001). With spectral
+resolutions of 6.1 and 12.2 kHz, those observations approxi-
+mated Ohio State’s 10 kHz bandwidth and were much more
+sensitive (20 mJy), capable of detecting weak underlying
+continuous sources that might have been brieﬂy enhanced
+by interstellar scintillation to produce the Ohio Sate detec-
+tion. Dwelling on the apparent source locale for no more
+than 22 minutes, those observations were unlikely to detect
+intermittent sources.
+The Ohio State detection occurred in only one beam of a
+dual-beam transit antenna system (Dixon & Cole 1977),
+and a simple explanation is that the signal may have been
+present only during the time one beam swept past. The two
+beams were side by side and separated by 2m50s of right
+ascension; celestial sources were usually detected ﬁrst in one
+for 72 s, then in the other.
+One way to account for an emission present only part of
+the time is a rotating source, in which case the emission
+might appear periodically. Pulsars are a familiar example.
+In the context of interstellar radio signals, an example sce-
+nario would be a directional broadcast from a ﬁxed antenna
+on the surface of a rotating planet, sweeping across observ-
+ers once each ‘‘ day ’’ like a lighthouse. Terrestrial ballistic
+missile early warning system radars are an example of such
+emissions that are potentially detectable over interstellar
+distances (Sullivan, Brown, & Wetherill 1978).
+A second possible explanation for the single-beam detec-
+tion is a signal drifting in frequency, because the detection
+occurred in channel 2 of a 50 channel ﬁlter-bank receiver. It
+is possible that a signal with a fortuitous frequency drift
+rate, in the range of 100 to 150 Hz s1, drifted into or out
+of the band observed during the time between the passage of
+the two beams.
+We investigated a periodic emission hypothesis because it
+is possible to test by the simple expedient of suﬃciently
+extended observations. We also incidentally investigated a
+drifting frequency hypothesis by observing over a band 5
+times wider than Ohio State’s. Other hypotheses can be con-
+jured up, of course, including local interference, which is
+impossible to rule out.
+1.1. Statistics of the Wow Detection
+In this section we calculate the probability of the original
+Wow detection, assuming emissions of various periods and
+durations, with the goal of estimating how long observa-
+tions must be to detect a hypothetical periodic source.
+We treat each transit observation as a trial, which might
+or might not be looking in the right direction at the right
+time to observe a periodic source. The binomial distribution
+gives the probability PB of an event occurring x times in n
+independent trials, given the probability p of the event
+1 Available at http://www.bigear.org/wow20th.htm.
+The Astrophysical Journal, 578:967–971, 2002 October 20
+# 2002. The American Astronomical Society. All rights reserved. Printed in U.S.A.
+967

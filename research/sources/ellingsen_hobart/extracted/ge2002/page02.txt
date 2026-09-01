@@ -1,0 +1,134 @@
+occurring in a single trial (Zombeck 1990, p. 410). The origi-
+nal detection is taken as one success in 18 trials because the
+Ohio State transit antenna was typically kept at a constant
+declination for 3 days and moved in half-HPBW increments
+(Dixon 1985); strong continuous sources could be detected
+on 9 days, and the two beams yield 18 trials.
+The probability of a detection success during one daily
+transit of one beam is simply the fraction of the terrestrial
+day a signal is present—for example, p ¼ ð144  24Þ=
+86; 400 ¼ 0:04 for a 144 s signal repeating 24 times per
+day—and the two beams yield two trials per day. We con-
+sider signal durations of 72 (a lower limit for the Wow, since
+it was present during the full transit of one beam), 144, and
+288 s. Durations shorter than about 100 s guarantee detec-
+tion in only one of the two beams, so that the trials are inde-
+pendent. Durations longer than about 250 s could be
+detected in both beams, which begins to violate the assump-
+tion of independent trials.
+The probability of detecting a periodic source exactly
+once in 18 trials is given in Figure 1 for various periods and
+durations. For periods under about 2 hr the probability
+reaches over 0.35. For periods over 12 hr the probability of
+detection falls below 0.10, and over 24 hr is less than 0.05
+for all durations considered. The Wow detection would
+seem rather lucky for a source with such a long period,
+although the Ohio State survey ran for several years and
+covered approximately half of the sky, so if many such sour-
+ces existed, detecting one would not be too surprising. This
+analysis suggests that a search for periodic emissions should
+be extended in time, as long as 10 or 20 hr, but not very
+much longer.
+We note that the range of periods where detection is not
+too improbable (up to 10–20 hr) includes the length of short
+planetary days. Sidereal rotation periods probably cannot
+be much less than 6 hr because of dynamical considerations
+(Lightman 1984). In our solar system four of nine planets
+have periods between 10 and 17 hr, two others 24–25 hr,
+while the remaining three are much longer. The range of
+periods consistent with the Wow thus includes the intriguing
+scenario of an emission from the surface of a rotating
+planet, although periodicity could arise from other mecha-
+nisms as well.
+1.2. Conﬁrming Rotating Source Emissions
+Ohio State’s 100 follow-up transit observations would
+not signiﬁcantly constrain the possibility of a source with a
+period of more than several hours because they sampled
+sources for only 72 s twice each terrestrial day. For sources
+that are themselves periodic, periodic sampling makes a sec-
+ond, conﬁrming detection extremely diﬃcult because in
+many cases the source will be out of phase with the observa-
+tions for many subsequent transits.
+A simple discrete computer simulation was performed to
+investigate this eﬀect, using as its starting point Ohio State’s
+detection, and continuing over 500 subsequent days at 1 s
+intervals, for source periods up to 36 hr in 0.01 hr incre-
+ments. The source emission was taken as illuminating the
+Earth for 144 s during each extraterrestrial day—long
+enough for the observed 72 s detection, yet brief enough to
+avoid detection in Ohio State’s other beam. A simulated
+detection was declared whenever the two simulated rotating
+beams overlapped for even a few seconds.
+The simulation results show that Ohio State’s subsequent
+observations scattered over several hundred days would
+have had few opportunities for additional detections, mak-
+ing them a poor test for emissions with periods comparable
+to planetary days. For nearly half of the periods considered,
+a second detection would not occur for 100 days or more,
+when both the terrestrial antenna and the source point in
+the same direction again, illustrated in Figure 2.
+There is no evidence that the Wow was periodic, but a
+rotating source is one mechanism that naturally accounts
+for the single detection and failure of subsequent detection
+eﬀorts.
+2. OBSERVATIONS
+The apparent coordinates of the Wow emission were
+R:A: ¼ 19h22m22s
+or
+19h25m12s
+(both
+5s),
+decl: ¼
+27030  200 (B1950.0; J. D. Kraus 1990, private commu-
+nication). The two right ascensions result from the dual-feed
+antenna system forming two beams. Ohio State recorded
+the diﬀerence in intensity between the two beams, but not
+the sign, so there was an ambiguity in which beam the emis-
+sion was detected. Revisions to the coordinates have been
+proposed (Ehman 1998) but are small enough to neglect in
+the present work.
+Since objects at the Wow declination are visible for only
+4–6 hr daily from most observatories in the northern hemi-
+sphere, a southern hemisphere site was necessary. We used
+the University of Tasmania Hobart 26 m radio telescope,
+which allowed us to track continuously for 14 hr—the maxi-
+ 
+     
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 1.—Probability of exactly one detection in 18 trials. The solid line
+represents a signal duration of 144 s every n hours. The upper dotted line
+represents a signal duration twice as long, the lower dotted line half as long.
+The probability of exactly one detection falls oﬀrapidly for periods less
+than about 1 hr as a result of multiple detections.
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 2.—Number of days until a second opportunity for detection using
+the Ohio State transit telescope, for sources with periods up to 36 hr. Pros-
+pects are especially poor for sources with periods near but not equal to the
+terrestrial 23.9345 hr day.
+968
+GRAY & ELLINGSEN
+Vol. 578

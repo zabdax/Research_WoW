@@ -11,7 +11,7 @@
 # No gap below may be closed by assumption. "RESOLVED" requires a locator.
 # =============================================================================
 
-register_version: 1.2   # Round-3 amendment 2026-08-29: Simon Ellingsen's donor response frozen (research/data/ellingsen_simon_response.yaml); 1998/99 processing software (MPSLPP) supplied and frozen; statuses updated for GAP-001/004/005/006/007/008/009/010/011/012/014. Full audit trail: 'simon_response_round_2026_08_29' block at end of file. No historical states deleted.
+register_version: 1.3   # Round-4 amendment (GE2002 phase): Gray & Ellingsen 2002 text extracted from the frozen PDF (research/data/ge2002_extraction.yaml); 1998/99-era outcomes/thresholds/criteria/config now paper-documented. Era-split statuses below; audit block 'ge2002_extraction_round' at end of file. Historical states preserved.
 created_utc: "2026-08-25T00:00:00Z"
 archive_root: research/sources/ellingsen_hobart/original
 
@@ -91,12 +91,11 @@ gaps:
 
   GAP-HOB-005:
     title: Detection threshold(s)
-    status: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR   # v1.2 2026-08-29: redirected to Bob Gray (search-layer owner per donor)
-    round3_amendment:
-      previous_state: OPEN
-      new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
-      evidence: "Donor response Q5: 'Bob Gray did all the processing and analysis of the data, I simply collected it.'"
-      remaining_route: "Bob Gray information requirements (docs/acquisition/bob_gray_information_requirements.md P1)"
+    status: RESOLVED_LOCAL_1998_99__OPEN_2010_2014   # v1.3 GE2002: 5.9 sigma (P_e=0.05), 6.2 sigma combined, 15.7-18 Jy (Table 3) for 1998/99. 2010-14: still CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR (Bob-Gray route).
+    ge2002_amendment:
+      era: "1998/99 only"
+      evidence: "Gray & Ellingsen 2002 sections 3.2-3.3 + Table 3 (research/data/ge2002_extraction.yaml D_search_procedure_and_outcome)"
+      prior_state: "CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR (v1.2)"
     evidence_source: ["all three READMEs", "ricky_10228.log", "wow.py scripts", "gsf_text_tokens.json"]
     source_type: documentation_exhaustion
     confidence: high that it is absent locally
@@ -106,24 +105,30 @@ gaps:
 
   GAP-HOB-006:
     title: Candidate-selection rules
-    status: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR   # v1.2 2026-08-29: redirected to Bob Gray
+    status: RESOLVED_LOCAL_1998_99__OPEN_2010_2014   # v1.3 GE2002: statistical threshold + manual inspection + RFI presumption documented for 1998/99
     round3_amendment:
       previous_state: OPEN
       new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
       evidence: "Donor response Q5 (search layer attributed to Bob Gray; donor holds nothing)"
       remaining_route: "docs/acquisition/bob_gray_information_requirements.md P1"
+    ge2002_amendment:
+      era: "1998/99 only"
+      evidence: "GE2002 section 3.3 (candidate definition, manual inspection, RFI presumption); ge2002_search_outcome.yaml"
     source_type: documentation_exhaustion
     confidence: high absent locally
     information_origin: donor-provided (required)
 
   GAP-HOB-007:
     title: RFI/flagging semantics (incl. Row_Flagged header field)
-    status: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR   # v1.2 2026-08-29: redirected to Bob Gray
+    status: RESOLVED_LOCAL_1998_99__OPEN_2010_2014   # v1.3 GE2002: 1998/99 RFI procedure documented (off-source sampling, median smoothing, bridging). Row_Flagged (2013/14 exports) semantics still UNKNOWN.
     round3_amendment:
       previous_state: OPEN
       new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
       evidence: "Donor response Q5/Q6 (donor holds no search-processing records)"
       remaining_route: "docs/acquisition/bob_gray_information_requirements.md P1 (Q6)"
+    ge2002_amendment:
+      era: "1998/99 only"
+      evidence: "GE2002 sections 2.1/2.3/3.3; Row_Flagged semantics remain UNKNOWN (2013/14 exports)"
     evidence_source: ["spectrum_header_index.csv (Row_Flagged: Pol0:False present in newer exports)"]
     source_type: header_inventory
     confidence: medium that nothing further exists locally
@@ -131,19 +136,22 @@ gaps:
 
   GAP-HOB-008:
     title: Repeat-detection criteria
-    status: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR   # v1.2 2026-08-29: redirected to Bob Gray
+    status: RESOLVED_LOCAL_1998_99__OPEN_2010_2014   # v1.3 GE2002: 1998/99 period constraint documented (<14 hr detectable; P>0.90 to ~20 hr at nominal positions)
     round3_amendment:
       previous_state: OPEN
       new_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
       evidence: "Donor response Q5/Q6 (donor holds no search-processing records)"
       remaining_route: "docs/acquisition/bob_gray_information_requirements.md P1 (Q8)"
+    ge2002_amendment:
+      era: "1998/99 only"
+      evidence: "GE2002 sections 3.4 + 4 (Fig. 3 caption-level)"
     source_type: documentation_exhaustion
     confidence: high absent locally
     information_origin: donor-provided (required)
 
   GAP-HOB-009:
     title: Explicit search outcomes / non-detection statements
-    status: OPEN   # v1.2 2026-08-29: narrowed — historical candidate/search-result record NOT LOCATED in surviving donor-held material (Q6); NOT a no-candidates finding. Route: Bob Gray + G&E2002 OCR.
+    status: RESOLVED_LOCAL_1998_99__OPEN_2010_2014   # v1.3 GE2002: PUBLISHED NON-DETECTION for 1998/99 (abstract, section 3.3, section 4). 2010/2013/14 outcome still UNKNOWN (Bob-Gray route).
     round3_amendment:
       previous_state: OPEN
       new_state: OPEN (narrowed; donor route exhausted)
@@ -153,6 +161,15 @@ gaps:
         material does NOT establish that no candidates existed, that no event
         passed the criteria, or that a null result was issued.
       remaining_routes: "Bob Gray (docs/acquisition/bob_gray_information_requirements.md P0); G&E 2002 content (OCR authorization pending)"
+    ge2002_amendment:
+      era: "1998/99 only"
+      published_outcome: "PUBLISHED NON-DETECTION: 'No signals resembling the Ohio State Wow were detected in observations dwelling for up to 14 hr at the coordinates where the signal was reported' (section 4)"
+      qualification: >-
+        Published result WITHOUT surviving candidate-level data; two features
+        described; period constraint >14 hr (P>0.90 to ~20 hr at nominal
+        positions). NOT converted to any statistical quantity.
+      era_2010_2014: "NOT_STATED in paper; still UNKNOWN; Bob-Gray route"
+      locator: "research/data/ge2002_search_outcome.yaml"
     evidence_source:
       - "archive contains no candidate lists, outcome reports, or correspondence"
       - "Gray & Ellingsen 2002 PDF present (wow_published.pdf) may state the 1998-99 era outcome; text extraction blocked by vectorized PDF (see hobart_literature_reconciliation.md)"
@@ -198,7 +215,7 @@ gaps:
 
   GAP-HOB-012:
     title: 1998-1999 UTAS correlator configuration (lags->spectra conversion)
-    status: TECHNICALLY_OPEN   # v1.2 2026-08-29: donor supplied high-level Fortran (MPSLPP v1.8) + partial manual; kernels (subroutines/libraries) MISSING per donor
+    status: PARTIALLY_RESOLVED_LOCAL__TECHNICALLY_OPEN   # v1.3 GE2002: config now paper-documented (512 ch/pol, 4.88 kHz, 2.5 MHz, Hanning, 30 s, Tsys 1200 Jy, Virgo A cal); software-level reproduction still kernel-blocked
     round3_amendment:
       previous_state: OPEN
       new_state: TECHNICALLY_OPEN (partially recoverable)
@@ -217,6 +234,9 @@ gaps:
         analysis/fortran_dependency_map.json). Donor: cannot locate
         subroutines/libraries.
       remaining_route: "Bob Gray (P2: software version / missing routines); lag-to-channel mapping and bandwidth remain UNRESOLVED"
+    ge2002_amendment:
+      established: "512 channels/pol; 4.88 kHz spacing; 9.765 kHz effective (Hanning); 2.5 MHz band; 30 s integration; Tsys 1200 Jy (120 K); Virgo A = 211 Jy calibration; per-field center frequencies (Table 1); one-bit ACF spectrometer; modified observatory software (Ellingsen 1996)"
+      still_open: "executed software name/version; exact lag->channel mapping convention; window convention details (kernels still missing — no reconstruction performed)"
     evidence_source:
       - "data/*.fit.gz carry only DATE/ORIGIN/INSTRUME cards; 1024-lag ACF dumps, COUNTS"
       - "no frequency/bandwidth/windowing metadata anywhere in files"
@@ -277,7 +297,11 @@ gaps:
 
   GAP-HOB-016:
     title: Canonical Wow! error-box definition used by the follow-up campaigns
-    status: OPEN
+    status: OPEN   # v1.3: 1998/99-era working definition now paper-documented (see ge2002_amendment); which box the 2010-2014 campaigns targeted remains unrecorded
+    ge2002_amendment:
+      era: "1998/99 only"
+      established: "G&E 2002 used R.A. 19h22m22s / 19h25m12s (+/-5 s), Dec -27deg03arcmin +/-20 arcmin (B1950.0, Kraus 1990 priv. comm.), dual-feed beam ambiguity, Ehman (1998) revisions neglected; +/-15' offset fields for HPBW coverage"
+      status_note: "RESOLVED_LOCAL for the 1998/99 era definition as-published; relation to the Arecibo II (J2000) canonical locales recorded as a HISTORICAL DIFFERENCE, not adjudicated; 2010-2014 targeting still OPEN"
     evidence_source:
       - "project-canonical horn locales now fixed (Arecibo II Table 4, J2000; see ellingsen_coordinate_provenance.yaml)"
       - "what error box SIMON's campaigns targeted in 2010-2014 is not recorded"
@@ -288,7 +312,11 @@ gaps:
 
   GAP-HOB-017:
     title: Campaign-to-publication relationship
-    status: PARTIALLY_RESOLVED
+    status: RESOLVED_LOCAL_1998_99__UNKNOWN_2010_2014   # v1.3 GE2002: content of the 1997-99 publication now read and verified against the archive
+    ge2002_amendment:
+      era: "1998/99 only"
+      established: "wow_published.pdf IS Gray & Ellingsen 2002, ApJ 578:967-971: its Table 1 sessions/DOYs match the archived .fit.gz and README; its instrument description matches the one-bit ACF products; content extraction complete (research/data/ge2002_extraction.yaml)"
+      era_2010_2014: "2010 (Jaekle) and 2013/14 publication relationship remains UNKNOWN (NOT_STATED in paper; no records)"
     evidence_source:
       - "wow_published.pdf metadata matches ApJ 578:967-971 (Gray & Ellingsen 2002) -> covers the 1997-1999 era (verification of content pending: vectorized PDF)"
       - "2010 campaign made 'for Michael Jaekle' (2010obs/README) — publication relationship UNKNOWN"
@@ -432,6 +460,92 @@ simon_response_round_2026_08_29:
     - "docs/acquisition/bob_gray_email_draft.md (DO NOT SEND)"
     - "docs/acquisition/bob_gray_contact_status.md"
     - "tests/research/test_simon_response_and_fortran.py"
+
+# =============================================================================
+# ROUND-4 AUDIT TRAIL — GE2002 EXTRACTION (Gray & Ellingsen 2002)
+# Register v1.2 -> v1.3. Evidence: research/data/ge2002_extraction.yaml and
+# research/data/ge2002_search_outcome.yaml (text-layer extraction of the
+# frozen PDF, hash-verified; NO OCR needed; NO OCR was performed).
+# All changes are ERA-SPLIT: 1998/99 items move to paper-documented status;
+# 2010/2013/14 items are unchanged and remain Bob-Gray-dependent.
+# =============================================================================
+
+ge2002_extraction_round:
+  source:
+    pdf_sha256: 68c9a9c02a245df4dc0ae61b015856eea2e36f7c4e51f68c3673b73d5669e2b3
+    verified_against: hashes/SHA256SUMS.txt
+    extraction_script: scripts/ge2002_extract.py
+    pages_extracted: 5
+    ocr_performed: false
+  changes:
+    - gap: GAP-HOB-005
+      previous_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      new_state: RESOLVED_LOCAL_1998_99__OPEN_2010_2014
+      reason: "Paper documents 5.9 sigma (P_e=0.05) / 6.2 sigma combined / 15.7-18 Jy thresholds (Table 3) for 1998/99"
+      remaining_uncertainty: "2010/2013/14 thresholds"
+      donor_dependent: false
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-006
+      previous_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      new_state: RESOLVED_LOCAL_1998_99__OPEN_2010_2014
+      reason: "Paper documents candidate definition + manual inspection + RFI presumption for 1998/99"
+      remaining_uncertainty: "2010/2013/14 candidate rules"
+      donor_dependent: false
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-007
+      previous_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      new_state: RESOLVED_LOCAL_1998_99__OPEN_2010_2014
+      reason: "Paper documents 1998/99 RFI procedure (off-source sampling, median smoothing, bridging)"
+      remaining_uncertainty: "Row_Flagged semantics (2013/14 exports); 2010-14 RFI rules"
+      donor_dependent: false
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-008
+      previous_state: CLOSED_AS_UNRECOVERABLE_FROM_THIS_DONOR
+      new_state: RESOLVED_LOCAL_1998_99__OPEN_2010_2014
+      reason: "Paper documents the 1998/99 period constraint (<14 hr detectable; P>0.90 to ~20 hr)"
+      remaining_uncertainty: "2010/2013/14 repeat criteria"
+      donor_dependent: false
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-009
+      previous_state: OPEN (narrowed)
+      new_state: RESOLVED_LOCAL_1998_99__OPEN_2010_2014
+      reason: "PUBLISHED NON-DETECTION for 1998/99 (abstract/section 3.3/section 4); PUBLISHED_RESULT_WITHOUT_SURVIVING_CANDIDATE_LEVEL_DATA"
+      remaining_uncertainty: "2010/2013/14 search outcomes (Bob-Gray route); candidate-level data for 1998/99 (not published, not archived)"
+      donor_dependent: false
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-012
+      previous_state: TECHNICALLY_OPEN
+      new_state: PARTIALLY_RESOLVED_LOCAL__TECHNICALLY_OPEN
+      reason: "Paper documents the full 1998/99 instrument configuration (Table 2) + per-field frequencies (Table 1), which the .fit.gz headers lack"
+      remaining_uncertainty: "executed software version; exact lag->channel mapping; kernels still missing (no reconstruction)"
+      donor_dependent: true
+      technical_reconstruction_possible: "partial"
+    - gap: GAP-HOB-016
+      previous_state: OPEN
+      new_state: OPEN (1998/99 definition now documented; 2010-2014 targeting still unrecorded)
+      reason: "Paper documents the 1998/99 working error-box definition (B1950 dual-position, Kraus priv. comm.)"
+      remaining_uncertainty: "relation to Arecibo II J2000 locales (HISTORICAL DIFFERENCE, not adjudicated); 2010-14 box"
+      donor_dependent: false
+      technical_reconstruction_possible: false
+    - gap: GAP-HOB-017
+      previous_state: PARTIALLY_RESOLVED
+      new_state: RESOLVED_LOCAL_1998_99__UNKNOWN_2010_2014
+      reason: "Paper content verified: sessions/DOYs/instrument match the archived 1998/99 material"
+      remaining_uncertainty: "2010 (Jaekle) and 2013/14 publication status"
+      donor_dependent: false
+      technical_reconstruction_possible: false
+  new_artifacts_this_round:
+    - "research/sources/ellingsen_hobart/extracted/ge2002/ (page01-05.txt, fulltext.txt, extraction_manifest.json)"
+    - "scripts/ge2002_extract.py"
+    - "research/data/ge2002_extraction.yaml"
+    - "research/data/ge2002_search_outcome.yaml"
+    - "docs/acquisition/GE2002_OCR_REPORT.md"
+    - "docs/acquisition/GE2002_HOBART_RECONCILIATION.md"
+    - "docs/acquisition/GE2002_GAP_AMENDMENT.md"
+    - "docs/acquisition/bob_gray_remaining_requirements.md"
+    - "research/sources/ellingsen_hobart/hashes/GE2002_DERIVED_SHA256SUMS.txt"
+    - "tests/research/test_ge2002_extraction.py"
+
 
 
 

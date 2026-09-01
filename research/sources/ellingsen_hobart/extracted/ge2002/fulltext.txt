@@ -1,0 +1,696 @@
+===== PDF PAGE 1 (paper p.967) =====
+A SEARCH FOR PERIODIC EMISSIONS AT THE WOW LOCALE
+Robert H. Gray
+Gray Data Consulting, 3071 Palmer Square, Chicago, IL 60647; rgray@graydata.net
+and
+Simon Ellingsen
+School of Mathematics and Physics, University of Tasmania, GPO Box 252-21, Hobart 7001, TAS, Australia;
+simon.ellingsen@utas.edu.au
+Received 2001 May 21; accepted 2002 June 24
+ABSTRACT
+The Ohio State University Radio Observatory recorded a strong, narrowband emission near the 21 cm
+hydrogen line in 1977 during a search for extraterrestrial intelligence, an event known as the ‘‘ Wow ’’ signal.
+The few independent attempts to replicate the detection have failed. We have investigated the possibility of a
+periodic source—perhaps rotating and illuminating us once each cycle of many hours, like a lighthouse—
+which prior observations would have been unlikely to detect. We used the University of Tasmania Hobart 26
+m radio telescope to search for intermittent and possibly periodic emissions at the Wow locale by tracking
+the apparent source positions for nearly 14 hr continuously on multiple days. No emissions resembling the
+Wow were detected over a bandwidth of 2.5 MHz to a ﬂux density limit of about 18 Jy, with a detection
+threshold of 5.9  and rms noise of 3 Jy. We conclude that the Wow was not due to a source within our ﬂux
+density limits and repeating more often than every 14 hr, although the possibility of a longer period or non-
+periodic source cannot be ruled out.
+Subject headings: extraterrestrial intelligence — radio lines: general
+1. INTRODUCTION
+The Wow was a strong (30 , or about 60 Jy), narrow-
+band (<10 kHz) emission recorded near the 21 cm H i line at
+Ohio State University in 1977 (Kraus 1979; Ehman 19981)
+during a search for extraterrestrial intelligence (SETI), but
+not detected again in subsequent follow-up observations at
+Ohio State. The event is interesting because the time-
+dependent intensity of the emission matched the antenna
+pattern signature of a transiting celestial source (Gray &
+Marvel 2001), which would not be expected of interference.
+Two attempts to independently replicate the detection
+have been reported, both unsuccessful. One attempt (Gray
+1994) used the ultranarrowband Harvard/Smithsonian-
+META system (Horowitz et al. 1986). With 0.05 Hz chan-
+nels and a chirped receiver, the observations were sensitive
+only to very narrowband and Doppler-corrected artiﬁcial
+radio signals; none were detected. A second attempt used
+the Very Large Array (Gray & Marvel 2001). With spectral
+resolutions of 6.1 and 12.2 kHz, those observations approxi-
+mated Ohio State’s 10 kHz bandwidth and were much more
+sensitive (20 mJy), capable of detecting weak underlying
+continuous sources that might have been brieﬂy enhanced
+by interstellar scintillation to produce the Ohio Sate detec-
+tion. Dwelling on the apparent source locale for no more
+than 22 minutes, those observations were unlikely to detect
+intermittent sources.
+The Ohio State detection occurred in only one beam of a
+dual-beam transit antenna system (Dixon & Cole 1977),
+and a simple explanation is that the signal may have been
+present only during the time one beam swept past. The two
+beams were side by side and separated by 2m50s of right
+ascension; celestial sources were usually detected ﬁrst in one
+for 72 s, then in the other.
+One way to account for an emission present only part of
+the time is a rotating source, in which case the emission
+might appear periodically. Pulsars are a familiar example.
+In the context of interstellar radio signals, an example sce-
+nario would be a directional broadcast from a ﬁxed antenna
+on the surface of a rotating planet, sweeping across observ-
+ers once each ‘‘ day ’’ like a lighthouse. Terrestrial ballistic
+missile early warning system radars are an example of such
+emissions that are potentially detectable over interstellar
+distances (Sullivan, Brown, & Wetherill 1978).
+A second possible explanation for the single-beam detec-
+tion is a signal drifting in frequency, because the detection
+occurred in channel 2 of a 50 channel ﬁlter-bank receiver. It
+is possible that a signal with a fortuitous frequency drift
+rate, in the range of 100 to 150 Hz s1, drifted into or out
+of the band observed during the time between the passage of
+the two beams.
+We investigated a periodic emission hypothesis because it
+is possible to test by the simple expedient of suﬃciently
+extended observations. We also incidentally investigated a
+drifting frequency hypothesis by observing over a band 5
+times wider than Ohio State’s. Other hypotheses can be con-
+jured up, of course, including local interference, which is
+impossible to rule out.
+1.1. Statistics of the Wow Detection
+In this section we calculate the probability of the original
+Wow detection, assuming emissions of various periods and
+durations, with the goal of estimating how long observa-
+tions must be to detect a hypothetical periodic source.
+We treat each transit observation as a trial, which might
+or might not be looking in the right direction at the right
+time to observe a periodic source. The binomial distribution
+gives the probability PB of an event occurring x times in n
+independent trials, given the probability p of the event
+1 Available at http://www.bigear.org/wow20th.htm.
+The Astrophysical Journal, 578:967–971, 2002 October 20
+# 2002. The American Astronomical Society. All rights reserved. Printed in U.S.A.
+967
+
+===== PDF PAGE 2 (paper p.968) =====
+occurring in a single trial (Zombeck 1990, p. 410). The origi-
+nal detection is taken as one success in 18 trials because the
+Ohio State transit antenna was typically kept at a constant
+declination for 3 days and moved in half-HPBW increments
+(Dixon 1985); strong continuous sources could be detected
+on 9 days, and the two beams yield 18 trials.
+The probability of a detection success during one daily
+transit of one beam is simply the fraction of the terrestrial
+day a signal is present—for example, p ¼ ð144  24Þ=
+86; 400 ¼ 0:04 for a 144 s signal repeating 24 times per
+day—and the two beams yield two trials per day. We con-
+sider signal durations of 72 (a lower limit for the Wow, since
+it was present during the full transit of one beam), 144, and
+288 s. Durations shorter than about 100 s guarantee detec-
+tion in only one of the two beams, so that the trials are inde-
+pendent. Durations longer than about 250 s could be
+detected in both beams, which begins to violate the assump-
+tion of independent trials.
+The probability of detecting a periodic source exactly
+once in 18 trials is given in Figure 1 for various periods and
+durations. For periods under about 2 hr the probability
+reaches over 0.35. For periods over 12 hr the probability of
+detection falls below 0.10, and over 24 hr is less than 0.05
+for all durations considered. The Wow detection would
+seem rather lucky for a source with such a long period,
+although the Ohio State survey ran for several years and
+covered approximately half of the sky, so if many such sour-
+ces existed, detecting one would not be too surprising. This
+analysis suggests that a search for periodic emissions should
+be extended in time, as long as 10 or 20 hr, but not very
+much longer.
+We note that the range of periods where detection is not
+too improbable (up to 10–20 hr) includes the length of short
+planetary days. Sidereal rotation periods probably cannot
+be much less than 6 hr because of dynamical considerations
+(Lightman 1984). In our solar system four of nine planets
+have periods between 10 and 17 hr, two others 24–25 hr,
+while the remaining three are much longer. The range of
+periods consistent with the Wow thus includes the intriguing
+scenario of an emission from the surface of a rotating
+planet, although periodicity could arise from other mecha-
+nisms as well.
+1.2. Conﬁrming Rotating Source Emissions
+Ohio State’s 100 follow-up transit observations would
+not signiﬁcantly constrain the possibility of a source with a
+period of more than several hours because they sampled
+sources for only 72 s twice each terrestrial day. For sources
+that are themselves periodic, periodic sampling makes a sec-
+ond, conﬁrming detection extremely diﬃcult because in
+many cases the source will be out of phase with the observa-
+tions for many subsequent transits.
+A simple discrete computer simulation was performed to
+investigate this eﬀect, using as its starting point Ohio State’s
+detection, and continuing over 500 subsequent days at 1 s
+intervals, for source periods up to 36 hr in 0.01 hr incre-
+ments. The source emission was taken as illuminating the
+Earth for 144 s during each extraterrestrial day—long
+enough for the observed 72 s detection, yet brief enough to
+avoid detection in Ohio State’s other beam. A simulated
+detection was declared whenever the two simulated rotating
+beams overlapped for even a few seconds.
+The simulation results show that Ohio State’s subsequent
+observations scattered over several hundred days would
+have had few opportunities for additional detections, mak-
+ing them a poor test for emissions with periods comparable
+to planetary days. For nearly half of the periods considered,
+a second detection would not occur for 100 days or more,
+when both the terrestrial antenna and the source point in
+the same direction again, illustrated in Figure 2.
+There is no evidence that the Wow was periodic, but a
+rotating source is one mechanism that naturally accounts
+for the single detection and failure of subsequent detection
+eﬀorts.
+2. OBSERVATIONS
+The apparent coordinates of the Wow emission were
+R:A: ¼ 19h22m22s
+or
+19h25m12s
+(both
+5s),
+decl: ¼
+27030  200 (B1950.0; J. D. Kraus 1990, private commu-
+nication). The two right ascensions result from the dual-feed
+antenna system forming two beams. Ohio State recorded
+the diﬀerence in intensity between the two beams, but not
+the sign, so there was an ambiguity in which beam the emis-
+sion was detected. Revisions to the coordinates have been
+proposed (Ehman 1998) but are small enough to neglect in
+the present work.
+Since objects at the Wow declination are visible for only
+4–6 hr daily from most observatories in the northern hemi-
+sphere, a southern hemisphere site was necessary. We used
+the University of Tasmania Hobart 26 m radio telescope,
+which allowed us to track continuously for 14 hr—the maxi-
+ 
+     
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 1.—Probability of exactly one detection in 18 trials. The solid line
+represents a signal duration of 144 s every n hours. The upper dotted line
+represents a signal duration twice as long, the lower dotted line half as long.
+The probability of exactly one detection falls oﬀrapidly for periods less
+than about 1 hr as a result of multiple detections.
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 2.—Number of days until a second opportunity for detection using
+the Ohio State transit telescope, for sources with periods up to 36 hr. Pros-
+pects are especially poor for sources with periods near but not equal to the
+terrestrial 23.9345 hr day.
+968
+GRAY & ELLINGSEN
+Vol. 578
+
+===== PDF PAGE 3 (paper p.969) =====
+mum time the target coordinates are above that telescope’s
+horizon.
+We tracked each of the two nominal positions during two
+days in 1998, for nearly 14 hr each. Additional observations
+were made in 1999, 150 north and south of the nominal coor-
+dinates, to fully cover the Ohio State 400 declination HPBW
+with the Hobart beam. Observations are summarized in
+Table 1.
+2.1. Instrumental Conﬁguration and Data Reduction
+The instrumental conﬁguration for the observations is
+summarized in Table 2. Lags from a one-bit digital autocor-
+relation spectrometer were transformed from the time to the
+frequency domain using a modiﬁed version of the observa-
+tory spectral line analysis software (Ellingsen 1996). Quo-
+tient spectra were formed to remove the eﬀect of front-end
+and
+correlator
+bandpass
+ﬁlters,
+using
+the
+relation
+Q ¼ ðS=RÞ  1 for each channel, where Q is the quotient, S
+is the spectrum of interest, and R is a reference spectrum.
+To produce a ﬂat baseline, a third-degree polynomial was
+ﬁtted to those regions of the spectrum free from H i emission
+and interference. A noise diode on the receiver was com-
+pared to the system total power once every 10 minutes to
+determine the system temperature. The system was cali-
+brated against Virgo A, assumed to have a ﬂux density of
+211 Jy at 1420 MHz (Baars et al. 1977).
+Reference spectra are typically obtained through oﬀ-
+source observations, but one of our goals was to observe
+continuously over many hours. Since we were searching for
+a strong, time-variable signal, we were able to use an alter-
+native approach: averaging smoothed on-source spectra
+taken at times near those of the signal spectrum. Reference
+spectra were formed by averaging groups of 30 s spectra
+between system calibrations at 10 minute intervals. This
+procedure has the drawback of including spectral features
+of potential interest in the reference spectrum, which would
+then be removed from the quotient spectrum. To avoid this,
+we used several techniques to exclude features from the
+reference spectra. To remove single-channel features, we
+median-smoothed each reference spectrum. To remove
+broader features, including H i, apparent radio frequency
+interference (RFI), and potentially interesting intermittent
+features, we ﬁrst used only prior spectra to form a reference,
+then
+identiﬁed
+features
+in
+subsequent
+spectra,
+then
+‘‘ bridged ’’ the reference spectrum with a straight line con-
+necting channels across the base of the feature, an iterative
+procedure.
+2.2. Sensitivity
+The theoretical rms () channel sensitivity of a spectrum
+obtained with the Mount Pleasant system is
+ ¼ 
+2
+Tsys
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ðNchanÞ
+p
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃ
+ð2BtNpolÞ
+p
+;
+where Tsys is the system temperature in Jy, Nchan is the num-
+ber of spectral channels, B is the observed bandwidth of the
+spectrometer, t is the integration time in seconds, and Npol is
+the number of averaged polarizations. The factor of /2 is
+the decrease in sensitivity due to the 1 bit approximation
+made in the correlator, and the factor of
+ﬃﬃ
+2
+p
+is the increase
+in sensitivity due to Hanning smoothing. This yields
+ ¼ 2:46 Jy for a single 30 s spectrum and 0.55 Jy for a refer-
+ence spectrum consisting of 20 averaged spectra. The sensi-
+tivity expected for our quotient spectra is then 2.5 Jy (from
+standard propagation of errors), which is close to the 2.6–
+3.0 Jy rms obtained during our various observations.
+Our 3 Jy sensitivity was suﬃcient to yield an unambigu-
+ous detection of a 60 Jy source—the estimated Wow ﬂux—
+with a signal-to-noise ratio of 20.
+2.3. Interference Identiﬁcation and Excision
+The
+radio
+frequency
+interference
+environment
+was
+sampled for approximately 1 hr before and after each
+observing run, usually with the antenna pointed overhead.
+Signals detected during these oﬀ-source observations were
+assumed to be local interference, and those channels were
+ignored in subsequent analysis.
+TABLE 1
+Summary of Observations
+Field Name
+Date
+Day of Year
+R.A.
+(B1950.0)
+Decl.
+(B1950.0)
+Length of Observation
+(hr)
+Frequency
+(MHz)
+1922N ...........
+1999 Mar 22–23
+81/82
+19 22 22
+26 48
+14.1
+1420.5870
+1922 ..............
+1998 Oct 5
+278
+19 22 22
+27 03
+14.0
+1420.3146
+1922S ............
+1999 Mar 17–18
+76/77
+19 22 22
+27 18
+14.1
+1420.5837
+1925N2 .........
+1999 Apr 9–10
+99/100
+19 25 12
+26 48
+14.1
+1420.3135
+1925 ..............
+1998 Oct 9
+282
+19 25 12
+27 03
+14.3
+1420.3135
+1925S2 ..........
+1999 Mar 20–21
+79/80
+19 25 12
+27 18
+14.1a
+1420.5855
+Note.—Units of right ascension are hours, minutes, and seconds, and units of declination are degrees and arcminutes.
+a 1 hr missing mid-run.
+TABLE 2
+Instrument Description
+Parameter
+Value
+Telescope.....................................
+Mount Pleasant Radio Observatory
+Antenna.......................................
+University of Tasmania 26 m
+HPBW at 21 cm (arcmin) .............
+28
+Spectrometer resolution (kHz) .....
+4.88
+Observed bandwidth (kHz) ..........
+9.765 (due to Hanning smoothing)
+Channels......................................
+512 (each polarization)
+Polarizations................................
+Two linear (crossed dipoles)
+Integration time (s).......................
+30
+System temperature (Jy)...............
+1200 (120 K)
+No. 2, 2002
+SEARCH FOR PERIODIC EMISSIONS AT WOW LOCALE
+969
+
+===== PDF PAGE 4 (paper p.970) =====
+3. RESULTS AND DISCUSSION
+3.1. H i
+The hydrogen emission line was prominent in all spectra,
+with a measured ﬂux of 220  20 Jy. The H i peak was 15–
+20 kHz below the LSR-corrected H i frequency, indicating
+that interstellar hydrogen in the directions observed has a
+radial velocity of 3–4 km s1.
+We used several strategies to accommodate the possibility
+that a signal of interest might be obscured by the H i back-
+ground. To identify signals partly buried in H i, we calcu-
+lated a running baseline ﬂux for each channel, averaging the
+nine prior measurements in the channel, and subtracted it
+from the ﬂux for each spectrum, eﬀectively removing the
+constant H i proﬁle. Ohio State used a somewhat similar
+running baseline removal method. To identify signals
+entirely buried in H i emission during one set of observa-
+tions—and not ﬁxed in the same LSR reference frame—we
+staggered observations over approximately 6 months, so the
+H i emission would be Doppler shifted to diﬀerent sky
+frequencies.
+3.2. Statistical Analysis
+To identify spectral features of possible interest, we com-
+puted a ﬂux density threshold above which noise peaks are
+not expected. For n independent samples the probability of
+error Pe that one or more samples will exceed a value of Zm
+in the absence of a real signal is (after Thompson 1991)
+Pe ¼ 1  1  exp  Z2
+m
+22
+
+
+
+n
+:
+We choose threshold ﬂuxes Zm so that Pe ¼ 0:05, shown
+in Table 3 for various data sets.
+3.3. Spectral Features
+Several apparent narrowband features above our detec-
+tion threshold remained after excluding known interference
+and removing the H i proﬁle. Some were traced to a fault in
+the local oscillator (LO) used for Doppler tracking, which
+caused sudden frequency shifts of 5 kHz at certain settings,
+shifting the H i proﬁle one channel and causing the running
+baseline calculation to encounter a spurious ﬂux density
+increase. Removing those, two apparent features remained.
+Field 1922N contained a 14  feature spanning two chan-
+nels in both linear polarizations. It does not resemble the
+Ohio State event suﬃciently to be of interest for two rea-
+sons. First, it lasted only one 30 s integration period (com-
+pared to at least 72 s for the Wow), and second, its
+frequency was 456 kHz higher than the Wow. Field 1922N
+contained a second possible feature, weak but noted
+because its frequency corresponds to the Wow. At 5.6  it
+was below our 5.9  detection threshold (Pe ¼ 0:05) and
+below the 5.7  maximum expected over all observations
+(Pe ¼ 0:5) but above the typical 5  maximum noise peak
+during a single day’s observations. It appears as a sudden
+increase at the peak of the H i proﬁle, during just one inte-
+gration period, approximately 15 Jy above the ﬂux in adja-
+cent channels and observations. No simultaneous increase
+was found in the other polarization, evidence that it was not
+an LO shift. A check of those channels over the entire
+observing period found no other peaks of interest. Although
+the feature matched the Wow frequency, it was too near the
+statistical noise peaks to consider as a redetection.
+Given that RFI was observed in some channels, we must
+presume that features are RFI in the absence of evidence
+otherwise, such as obvious resemblance to the Wow in fre-
+quency and strength, or a characteristic such as repetition.
+Excluding these features as probable RFI, no spectral fea-
+tures remain that noticeably exceed the noise.
+3.4. Constraints on Periodic Sources
+Our observations would have detected a suﬃciently
+strong source with a period shorter than 14 hr. For sources
+with longer periods, the probability of detection is shown in
+Figure 3. During a single run that probability is approxi-
+mately 14/t, where t is the period in hours, which applies to
+the areas observed more than 150 north and south of the
+nominal positions, observed only one time. The nominal
+TABLE 3
+Threshold for Single-Channel Features
+Maximum Observed
+(s)
+Field Name
+Number of Samples
+rms
+(Jy)
+Signal Threshold
+(Pe ¼ 0:05)
+(s)
+Signal Threshold
+(Pe ¼ 0:05)
+(Jy)
+Features Included
+Features Excluded
+1922N ...........
+1631232
+2.82
+5.9
+16.6
+13.3
+4.74
+1922 ..............
+1624064
+3.0
+5.9
+17.7
+4.9
+. . .
+1922S ............
+1610752
+2.66
+5.9
+15.7
+5.18
+. . .
+1925N2 .........
+1605632
+2.66
+5.9
+15.7
+6.5
+4.97
+1925 ..............
+1642496
+2.9
+5.9
+17.2
+4.8
+. . .
+1925S2 ..........
+1473536
+2.97
+5.9
+17.4
+7.71
+5.05
+All.................
+9587712
+2.9
+6.2
+18.0
+. . .
+. . .
+ 
+ 
+  
+         
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 3.—Probability of detecting sources of various periods. The lower
+line represents one observing run of 14 hr, and the higher lines represent the
+binomial probability of detection for two, three, or four 14 hr runs,
+respectively.
+970
+GRAY & ELLINGSEN
+Vol. 578
+
+===== PDF PAGE 5 (paper p.971) =====
+positions were observed twice—directly, and partly covered
+during observations north and south—for a binomial prob-
+ability of detection of over 0.90 for sources with periods of
+up to about 20 hr.
+These constraints on period are statistical and therefore
+approximate, as a result of our small number of observing
+runs. A single 14 hr observing run, for example, would have
+no chance of detecting a source with a 24 hr period if the run
+happened to start just after the emission ended.
+3.5. Wow and H i Frequency
+We note that the Wow frequency given by Kraus corre-
+sponds to the frequency of the peak H i emission found in
+our observations: both were some 20 kHz below the LSR,
+implying a radial velocity of approximately 4 km s1. This
+could be taken as dynamical evidence that the Ohio State
+source was moving with the gas and hence was unlikely to
+be terrestrial interference, but that may be a coincidence.
+Since the Ohio State receiver had only 50 channels, there
+was a 2% chance that any detection would fall in the channel
+corresponding to the H i peak.
+3.6. Rotating Sources in SETI
+Several SETI surveys have reported one-time detections
+with some characteristics expected of interstellar signals,
+including narrow bandwidth (<1 Hz) and the terrestrial
+Doppler signature (Horowitz & Sagan 1993; Colomb et al.
+1995). None have been conﬁrmed during follow-up observa-
+tions, typically tracking the apparent source coordinates for
+on the order of 1 hr.
+One explanation that has been advanced is brief ﬂux den-
+sity enhancements of continuous emissions, caused by inter-
+stellar scintillation and noise variations (Cordes, Lazio, &
+Sagan 1997), but the probability of large scintillation gains
+is small. Rotating sources may provide an alternative
+explanation. Such sources might appear intermittent during
+transit survey observations and fail to be conﬁrmed with
+brief reobservations, but they might prove easily repeatable
+with suﬃciently extended observations—perhaps a single
+‘‘ day ’’ for planetary sources. While the length of extrasolar
+days is unknown and probably quite variable, observations
+over 25 hr would, for example, encompass the periods of
+more than half the planets in our solar system. It may be
+prudent to anticipate that the length of extrasolar planetary
+days could aﬀect interstellar broadcasts.
+4. CONCLUSIONS
+No signals resembling the Ohio State Wow were detected
+in observations dwelling for up to 14 hr at the coordinates
+where the signal was reported. This result constrains a puta-
+tive periodic emission to a period greater than 14 hr because
+our observations were suﬃciently sensitive and extended in
+time to detect emissions with a shorter period at least once.
+Since the probability of the original detection has been
+shown to be rather low (<0.10) for sources with periods
+over approximately 12 hr and a range of durations, the Ohio
+State detection would have been rather lucky if due to a
+periodic emission with a much longer period.
+Our observations cannot entirely rule out the possibility
+of a period longer than 14 hr or an emission that is not peri-
+odic at all. We also cannot rule out the possibility of a signal
+outside of the 2.5 MHz band we observed, although it was 5
+times wider than Ohio State’s frequency coverage and suﬃ-
+ciently wide to encompass the Doppler shifts expected of a
+planetary-based signal broadcast at the H i frequency.
+While these observations were undertaken to investigate
+the Ohio State signal, they also constitute a general search
+for periodic signals near H i over approximately 1 deg2 of
+sky, for periods as long as short planetary days. No prior
+SETI experiments appear to have searched for signals with
+such long periods (Tarter 1995). The sensitivity of the search
+was suﬃcient to detect a 1000 MW broadcast at over 100 lt-
+yr, assuming a 300 m transmitting antenna, or 1016 W radi-
+ated isotropically.
+R. G. thanks John Kraus, Robert Dixon, and Jerry
+Ehman at the Ohio State University Radio Observatory for
+providing information on the Wow emission. This work
+was supported in part by the SETI Institute.
+REFERENCES
+Baars, J. W. M., Genzel, R., Pauliny-Toth, I. I. K., & Witzel, A. 1977,
+A&A, 61, 99
+Colomb, F. R., Hurrell, E., Lemarchand, G. A., & Olald, J. C. 1995, in
+ASP Conf. Ser. 74, Progress in the Search for Extraterrestrial Life, ed.
+G. S. Shostak (San Francisco: ASP), 345
+Cordes, J. M., Lazio, T. J. W., & Sagan, C. 1997, ApJ, 487, 782
+Dixon, R. S. 1985, in IAU Symp. 112, The Search for Extraterrestrial Life:
+Recent Developments, ed. M. D. Papagiannis (Dordrecht: Reidel), 305
+Dixon, R. S., & Cole, D. M. 1977, Icarus, 30, 267
+Ehman, J. R. 1998, The Big Ear Wow! Signal: What We Know and Don’t
+Know About It after 20 Years, OSURO working paper
+Ellingsen, S. 1996, Ph.D. thesis, Univ. Tasmania
+Gray, R. H. 1994, Icarus, 112, 485
+Gray, R. H., & Marvel, K. B. 2001, ApJ, 546, 1171
+Horowitz, P., Matthews, B. S., Forster, J., Linscott, I., Teague, C. C.,
+Chen, K., & Backus, P. 1986, Icarus, 67, 525
+Horowitz, P., & Sagan, C. 1993, ApJ, 415, 218
+Kraus, J. D. 1979, Cosmic Search 1, 31
+Lightman, A. P. 1984, Am. J. Phys., 52, 211
+Sulivan, W. T., Brown, C., & Wetherill, C. 1978, Science, 199, 377
+Tarter, J. 1995, Summary of SETI Observing Programs (Mountain View:
+SETI Institute)
+Thompson, A. R. 1991, in Interferometry and Synthesis in Radio Astron-
+omy, ed. A. R. Thompson, J. M. Moran, & G. W. Swenson, Jr.
+(Malabar: Krieger), 264
+Zombeck, M. V. 1990, Handbook of Space Astronomy and Astrophysics
+(2d ed.; Cambridge: Cambridge Univ. Press)
+No. 2, 2002
+SEARCH FOR PERIODIC EMISSIONS AT WOW LOCALE
+971

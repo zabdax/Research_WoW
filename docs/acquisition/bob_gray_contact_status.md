@@ -13,11 +13,16 @@ explicit human authorization.**
 | Analysis products in archive | Four SAS 6.12/WinNT PROC GPLOT diagnostics, Sep 26–Oct 10 1998: `PLOT OF COUNT * SIGMA_RD`, `BUBBLE OF TIME * CHANNEL = SIGMA_P` (×2), `PLOT OF MAX_SIG * CHANNEL` | DOCUMENTED (file headers) | `docs/acquisition/ELLINGSEN_README_EXTRACTION.md` §4; `analysis/gsf_text_tokens.json` |
 | Publication association | The archive's published-paper PDF (`wow_published.pdf`) metadata matches Gray & Ellingsen 2002, ApJ 578:967–971, DOI 10.1086/342646 (Crossref-verified page-range/DOI identity) | DOCUMENTED (metadata) / content UNVERIFIED (vectorized PDF, unreadable without OCR) | `ellingsen_gap_register.yaml` GAP-HOB-009/017; `hobart_literature_reconciliation.md` |
 
-**Flagged inference (do not promote silently):** "Bob Gray" of the SAS plots
-and donor testimony is very plausibly the "Gray" of Gray & Ellingsen (2002),
-but the repo records only the surname from the Crossref-verified citation.
-The given name and any honorific are NOT established in-repo. If confirmed,
-the expansion of the name belongs to a human-authorized external search step.
+**Flagged inference — now RESOLVED by the GE2002 extraction:** "Bob Gray" of
+the SAS plots and donor testimony is **Robert H. Gray** (Gray Data
+Consulting, 3071 Palmer Square, Chicago, IL 60647), first author of Gray &
+Ellingsen 2002, ApJ 578:967–971 — directly stated in the extracted paper
+(`research/data/ge2002_extraction.yaml`, bibliographic block; the paper's
+acknowledgments confirm his Ohio State collaborations with Kraus, Dixon, and
+Ehman). The paper also publishes a 2002-era email address (rgray@graydata.net)
+as ordinary bibliographic information; it is recorded here for provenance
+only, is 24 years old, and its currency is UNKNOWN. Contact-route
+determination remains a separate human-authorized step.
 
 ## Public professional contact route
 

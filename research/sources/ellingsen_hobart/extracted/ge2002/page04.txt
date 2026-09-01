@@ -1,0 +1,171 @@
+3. RESULTS AND DISCUSSION
+3.1. H i
+The hydrogen emission line was prominent in all spectra,
+with a measured ﬂux of 220  20 Jy. The H i peak was 15–
+20 kHz below the LSR-corrected H i frequency, indicating
+that interstellar hydrogen in the directions observed has a
+radial velocity of 3–4 km s1.
+We used several strategies to accommodate the possibility
+that a signal of interest might be obscured by the H i back-
+ground. To identify signals partly buried in H i, we calcu-
+lated a running baseline ﬂux for each channel, averaging the
+nine prior measurements in the channel, and subtracted it
+from the ﬂux for each spectrum, eﬀectively removing the
+constant H i proﬁle. Ohio State used a somewhat similar
+running baseline removal method. To identify signals
+entirely buried in H i emission during one set of observa-
+tions—and not ﬁxed in the same LSR reference frame—we
+staggered observations over approximately 6 months, so the
+H i emission would be Doppler shifted to diﬀerent sky
+frequencies.
+3.2. Statistical Analysis
+To identify spectral features of possible interest, we com-
+puted a ﬂux density threshold above which noise peaks are
+not expected. For n independent samples the probability of
+error Pe that one or more samples will exceed a value of Zm
+in the absence of a real signal is (after Thompson 1991)
+Pe ¼ 1  1  exp  Z2
+m
+22
+
+
+
+n
+:
+We choose threshold ﬂuxes Zm so that Pe ¼ 0:05, shown
+in Table 3 for various data sets.
+3.3. Spectral Features
+Several apparent narrowband features above our detec-
+tion threshold remained after excluding known interference
+and removing the H i proﬁle. Some were traced to a fault in
+the local oscillator (LO) used for Doppler tracking, which
+caused sudden frequency shifts of 5 kHz at certain settings,
+shifting the H i proﬁle one channel and causing the running
+baseline calculation to encounter a spurious ﬂux density
+increase. Removing those, two apparent features remained.
+Field 1922N contained a 14  feature spanning two chan-
+nels in both linear polarizations. It does not resemble the
+Ohio State event suﬃciently to be of interest for two rea-
+sons. First, it lasted only one 30 s integration period (com-
+pared to at least 72 s for the Wow), and second, its
+frequency was 456 kHz higher than the Wow. Field 1922N
+contained a second possible feature, weak but noted
+because its frequency corresponds to the Wow. At 5.6  it
+was below our 5.9  detection threshold (Pe ¼ 0:05) and
+below the 5.7  maximum expected over all observations
+(Pe ¼ 0:5) but above the typical 5  maximum noise peak
+during a single day’s observations. It appears as a sudden
+increase at the peak of the H i proﬁle, during just one inte-
+gration period, approximately 15 Jy above the ﬂux in adja-
+cent channels and observations. No simultaneous increase
+was found in the other polarization, evidence that it was not
+an LO shift. A check of those channels over the entire
+observing period found no other peaks of interest. Although
+the feature matched the Wow frequency, it was too near the
+statistical noise peaks to consider as a redetection.
+Given that RFI was observed in some channels, we must
+presume that features are RFI in the absence of evidence
+otherwise, such as obvious resemblance to the Wow in fre-
+quency and strength, or a characteristic such as repetition.
+Excluding these features as probable RFI, no spectral fea-
+tures remain that noticeably exceed the noise.
+3.4. Constraints on Periodic Sources
+Our observations would have detected a suﬃciently
+strong source with a period shorter than 14 hr. For sources
+with longer periods, the probability of detection is shown in
+Figure 3. During a single run that probability is approxi-
+mately 14/t, where t is the period in hours, which applies to
+the areas observed more than 150 north and south of the
+nominal positions, observed only one time. The nominal
+TABLE 3
+Threshold for Single-Channel Features
+Maximum Observed
+(s)
+Field Name
+Number of Samples
+rms
+(Jy)
+Signal Threshold
+(Pe ¼ 0:05)
+(s)
+Signal Threshold
+(Pe ¼ 0:05)
+(Jy)
+Features Included
+Features Excluded
+1922N ...........
+1631232
+2.82
+5.9
+16.6
+13.3
+4.74
+1922 ..............
+1624064
+3.0
+5.9
+17.7
+4.9
+. . .
+1922S ............
+1610752
+2.66
+5.9
+15.7
+5.18
+. . .
+1925N2 .........
+1605632
+2.66
+5.9
+15.7
+6.5
+4.97
+1925 ..............
+1642496
+2.9
+5.9
+17.2
+4.8
+. . .
+1925S2 ..........
+1473536
+2.97
+5.9
+17.4
+7.71
+5.05
+All.................
+9587712
+2.9
+6.2
+18.0
+. . .
+. . .
+ 
+ 
+  
+         
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig. 3.—Probability of detecting sources of various periods. The lower
+line represents one observing run of 14 hr, and the higher lines represent the
+binomial probability of detection for two, three, or four 14 hr runs,
+respectively.
+970
+GRAY & ELLINGSEN
+Vol. 578

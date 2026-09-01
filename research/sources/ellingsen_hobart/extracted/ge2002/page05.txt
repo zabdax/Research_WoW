@@ -1,0 +1,106 @@
+positions were observed twice—directly, and partly covered
+during observations north and south—for a binomial prob-
+ability of detection of over 0.90 for sources with periods of
+up to about 20 hr.
+These constraints on period are statistical and therefore
+approximate, as a result of our small number of observing
+runs. A single 14 hr observing run, for example, would have
+no chance of detecting a source with a 24 hr period if the run
+happened to start just after the emission ended.
+3.5. Wow and H i Frequency
+We note that the Wow frequency given by Kraus corre-
+sponds to the frequency of the peak H i emission found in
+our observations: both were some 20 kHz below the LSR,
+implying a radial velocity of approximately 4 km s1. This
+could be taken as dynamical evidence that the Ohio State
+source was moving with the gas and hence was unlikely to
+be terrestrial interference, but that may be a coincidence.
+Since the Ohio State receiver had only 50 channels, there
+was a 2% chance that any detection would fall in the channel
+corresponding to the H i peak.
+3.6. Rotating Sources in SETI
+Several SETI surveys have reported one-time detections
+with some characteristics expected of interstellar signals,
+including narrow bandwidth (<1 Hz) and the terrestrial
+Doppler signature (Horowitz & Sagan 1993; Colomb et al.
+1995). None have been conﬁrmed during follow-up observa-
+tions, typically tracking the apparent source coordinates for
+on the order of 1 hr.
+One explanation that has been advanced is brief ﬂux den-
+sity enhancements of continuous emissions, caused by inter-
+stellar scintillation and noise variations (Cordes, Lazio, &
+Sagan 1997), but the probability of large scintillation gains
+is small. Rotating sources may provide an alternative
+explanation. Such sources might appear intermittent during
+transit survey observations and fail to be conﬁrmed with
+brief reobservations, but they might prove easily repeatable
+with suﬃciently extended observations—perhaps a single
+‘‘ day ’’ for planetary sources. While the length of extrasolar
+days is unknown and probably quite variable, observations
+over 25 hr would, for example, encompass the periods of
+more than half the planets in our solar system. It may be
+prudent to anticipate that the length of extrasolar planetary
+days could aﬀect interstellar broadcasts.
+4. CONCLUSIONS
+No signals resembling the Ohio State Wow were detected
+in observations dwelling for up to 14 hr at the coordinates
+where the signal was reported. This result constrains a puta-
+tive periodic emission to a period greater than 14 hr because
+our observations were suﬃciently sensitive and extended in
+time to detect emissions with a shorter period at least once.
+Since the probability of the original detection has been
+shown to be rather low (<0.10) for sources with periods
+over approximately 12 hr and a range of durations, the Ohio
+State detection would have been rather lucky if due to a
+periodic emission with a much longer period.
+Our observations cannot entirely rule out the possibility
+of a period longer than 14 hr or an emission that is not peri-
+odic at all. We also cannot rule out the possibility of a signal
+outside of the 2.5 MHz band we observed, although it was 5
+times wider than Ohio State’s frequency coverage and suﬃ-
+ciently wide to encompass the Doppler shifts expected of a
+planetary-based signal broadcast at the H i frequency.
+While these observations were undertaken to investigate
+the Ohio State signal, they also constitute a general search
+for periodic signals near H i over approximately 1 deg2 of
+sky, for periods as long as short planetary days. No prior
+SETI experiments appear to have searched for signals with
+such long periods (Tarter 1995). The sensitivity of the search
+was suﬃcient to detect a 1000 MW broadcast at over 100 lt-
+yr, assuming a 300 m transmitting antenna, or 1016 W radi-
+ated isotropically.
+R. G. thanks John Kraus, Robert Dixon, and Jerry
+Ehman at the Ohio State University Radio Observatory for
+providing information on the Wow emission. This work
+was supported in part by the SETI Institute.
+REFERENCES
+Baars, J. W. M., Genzel, R., Pauliny-Toth, I. I. K., & Witzel, A. 1977,
+A&A, 61, 99
+Colomb, F. R., Hurrell, E., Lemarchand, G. A., & Olald, J. C. 1995, in
+ASP Conf. Ser. 74, Progress in the Search for Extraterrestrial Life, ed.
+G. S. Shostak (San Francisco: ASP), 345
+Cordes, J. M., Lazio, T. J. W., & Sagan, C. 1997, ApJ, 487, 782
+Dixon, R. S. 1985, in IAU Symp. 112, The Search for Extraterrestrial Life:
+Recent Developments, ed. M. D. Papagiannis (Dordrecht: Reidel), 305
+Dixon, R. S., & Cole, D. M. 1977, Icarus, 30, 267
+Ehman, J. R. 1998, The Big Ear Wow! Signal: What We Know and Don’t
+Know About It after 20 Years, OSURO working paper
+Ellingsen, S. 1996, Ph.D. thesis, Univ. Tasmania
+Gray, R. H. 1994, Icarus, 112, 485
+Gray, R. H., & Marvel, K. B. 2001, ApJ, 546, 1171
+Horowitz, P., Matthews, B. S., Forster, J., Linscott, I., Teague, C. C.,
+Chen, K., & Backus, P. 1986, Icarus, 67, 525
+Horowitz, P., & Sagan, C. 1993, ApJ, 415, 218
+Kraus, J. D. 1979, Cosmic Search 1, 31
+Lightman, A. P. 1984, Am. J. Phys., 52, 211
+Sulivan, W. T., Brown, C., & Wetherill, C. 1978, Science, 199, 377
+Tarter, J. 1995, Summary of SETI Observing Programs (Mountain View:
+SETI Institute)
+Thompson, A. R. 1991, in Interferometry and Synthesis in Radio Astron-
+omy, ed. A. R. Thompson, J. M. Moran, & G. W. Swenson, Jr.
+(Malabar: Krieger), 264
+Zombeck, M. V. 1990, Handbook of Space Astronomy and Astrophysics
+(2d ed.; Cambridge: Cambridge Univ. Press)
+No. 2, 2002
+SEARCH FOR PERIODIC EMISSIONS AT WOW LOCALE
+971

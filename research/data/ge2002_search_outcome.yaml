@@ -1,0 +1,75 @@
+# =============================================================================
+# GRAY & ELLENSEN 2002 — PUBLISHED SEARCH OUTCOME (historical record)
+# Directive: GE2002 phase section 5/6. This file records what the paper
+# REPORTS. It is a published historical result, NOT a Bayesian ingredient.
+# The distinction between published outcome and reconstructable selection
+# function is maintained explicitly (directive section 6).
+# =============================================================================
+
+record_version: 1.0
+source:
+  paper: "Gray & Ellingsen 2002, ApJ 578:967-971, DOI 10.1086/342646"
+  pdf_sha256: 68c9a9c02a245df4dc0ae61b015856eea2e36f7c4e51f68c3673b73d5669e2b3
+  extraction: research/data/ge2002_extraction.yaml
+
+published_outcome:
+  verdict: PUBLISHED_NON_DETECTION
+  evidence_class: "DIRECTLY_STATED (PUBLISHED HISTORICAL RESULT)"
+  exact_claims:
+    - claim: "No emissions resembling the Wow were detected over a bandwidth of 2.5 MHz to a flux density limit of about 18 Jy, with a detection threshold of 5.9 sigma and rms noise of 3 Jy."
+      locator: "page01.txt ABSTRACT"
+    - claim: "Excluding these features as probable RFI, no spectral features remain that noticeably exceed the noise."
+      locator: "page04.txt section 3.3"
+    - claim: "No signals resembling the Ohio State Wow were detected in observations dwelling for up to 14 hr at the coordinates where the signal was reported."
+      locator: "page05.txt section 4 (CONCLUSIONS)"
+    - claim: "This result constrains a putative periodic emission to a period greater than 14 hr."
+      locator: "page05.txt section 4"
+  what_was_searched:
+    positions: "R.A. 19h22m22s / 19h25m12s (+/-5 s), Dec -27deg03arcmin +/-20 arcmin (B1950.0) + +/-15 arcmin offset fields"
+    dates: "1998 Oct 5 & Oct 9; 1999 Mar 17-18, Mar 20-21, Mar 22-23, Apr 9-10"
+    coverage: "6 x ~14 hr tracking runs; ~1 deg^2; nominal positions covered twice"
+    band: "2.5 MHz around 1420 MHz (per-field centers in Table 1)"
+    signal_class: "narrowband (~9.8 kHz effective channel) intermittent/periodic emission; durations considered 72/144/288 s ( Wow-like 72 s lower limit)"
+  documented_criteria:
+    threshold: "5.9 sigma per field, P_e = 0.05 (Thompson 1991); 6.2 sigma combined; Jy thresholds 15.7-18.0 (Table 3)"
+    candidate_definition: "features above threshold after RFI exclusion + H i profile removal"
+    rfi_rules: "off-source ~1 hr pre/post each run; offending channels ignored; median-smoothed references; iterative bridging"
+    persistence: "single 30 s integrations insufficient for interest (Wow lasted >=72 s)"
+    repeat_requirement: "periodicity constraint: detection of period <14 hr guaranteed at least once; P>0.90 up to ~20 hr at nominal positions"
+    manual_inspection: "yes (features individually inspected; LO-fault artifacts identified by inspection)"
+  candidates_encountered:
+    features:
+      - "1922N 14 sigma, 2 channels, both polarizations, single 30 s integration, +456 kHz from Wow -> rejected (not Wow-like)"
+      - "1922N 5.6 sigma at Wow frequency, single integration, no other-pol counterpart, no recurrence -> rejected (below threshold; 'too near the statistical noise peaks')"
+    status_note: "Only these two features are described. A complete candidate list was NOT published and none survives in the donor-held archive (NOT_FOUND_IN_SUPPLIED_ARCHIVE)."
+    classification: PUBLISHED_RESULT_WITHOUT_SURVIVING_CANDIDATE_LEVEL_DATA
+
+selection_function_status:
+  can_reconstruct_full_selection_function: "NO"
+  paper_provides:
+    - "statistical noise threshold per field (Table 3)"
+    - "rms values per field"
+    - "detection-probability-vs-period curves (Fig. 3, caption-level; curves not digitized)"
+    - "coverage geometry (nominal + +/-15' fields; HPBW 28')"
+    - "temporal coverage (6 runs, dates, 14 hr spans)"
+  paper_does_not_provide:
+    - "detection efficiency vs flux/position/linewidth/drift (NOT_STATED)"
+    - "completeness of the RFI flagging actually applied (qualitative only)"
+    - "executed software parameters beyond those published"
+    - "per-candidate data products"
+  consequence: >-
+    A defensible quantitative selection function for the 1998/99 search
+    requires additional assumptions (e.g., digitizing Fig. 3, reconstructing
+    the executed processing) and remains NON-IDENTIFIABLE from the published
+    text alone. No H5 quantity is derived from this record.
+
+interpretation_guard:
+  forbidden_conversions:
+    - "published non-detection -> P(no detection | H5)"
+    - "18 Jy flux limit -> campaign detection efficiency"
+    - "two described features -> complete candidate rate"
+    - "period constraint -> posterior on Wow periodicity"
+  permitted_use:
+    - "published historical outcome for the 1998/99 Hobart follow-up (GAP-HOB-009, 1998/99 era)"
+    - "documented search procedure / threshold / repeat criteria (GAP-HOB-005/006/007/008, 1998/99 era)"
+    - "constraint statement to carry qualitatively into any future H5 discussion, pending selection-function work"

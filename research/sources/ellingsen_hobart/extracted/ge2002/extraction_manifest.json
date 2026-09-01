@@ -1,0 +1,51 @@
+{
+  "artifact": "GE2002 text-layer extraction",
+  "generated_utc": "2026-08-31T07:15:30.751328+00:00",
+  "script": "scripts/ge2002_extract.py",
+  "source_pdf": "research/sources/ellingsen_hobart/original/drive-download-20260825T053211Z-1-001/wow_published.pdf",
+  "source_sha256": "68c9a9c02a245df4dc0ae61b015856eea2e36f7c4e51f68c3673b73d5669e2b3",
+  "pdf_metadata": {
+    "format": "PDF 1.2",
+    "title": "54084 967..971",
+    "creator": "3B2 Total Publishing System 7.51c/W",
+    "producer": "Acrobat Distiller 5.0 (Windows)",
+    "creationDate": "D:20020928100734+01'00'",
+    "modDate": "D:20020928100734+01'00'"
+  },
+  "page_count": 5,
+  "pages": [
+    {
+      "pdf_page_index": 1,
+      "n_chars_text_layer": 5405,
+      "n_images": 0,
+      "paper_page_label": 967
+    },
+    {
+      "pdf_page_index": 2,
+      "n_chars_text_layer": 5556,
+      "n_images": 0,
+      "paper_page_label": 968
+    },
+    {
+      "pdf_page_index": 3,
+      "n_chars_text_layer": 5249,
+      "n_images": 0,
+      "paper_page_label": 969
+    },
+    {
+      "pdf_page_index": 4,
+      "n_chars_text_layer": 4740,
+      "n_images": 0,
+      "paper_page_label": 970
+    },
+    {
+      "pdf_page_index": 5,
+      "n_chars_text_layer": 5597,
+      "n_images": 0,
+      "paper_page_label": 971
+    }
+  ],
+  "ocr_required": false,
+  "method": "pymupdf get_text() (text layer; no OCR performed)",
+  "source_modified": false
+}
